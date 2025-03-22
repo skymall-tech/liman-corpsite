@@ -26,10 +26,16 @@ export const LangIcon = styled.img`
   margin-left: 60px;
 `;
 
-export const TabsContainer = styled.div`
-  width: 100%;
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const TabsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 600px;
+  justify-content: space-between;
 `;
 
 export const TabButton = styled.button<{ isActive: boolean }>`

@@ -2,23 +2,22 @@ import React from 'react';
 import { usePopper } from 'react-popper';
 import { PopupContainer, PopupItem } from './style';
 
+interface PopUpItem {
+  label: string;
+  action?: () => void;
+}
+
 const PopupMenu: React.FC<{
-  items: string[];
+  items: PopUpItem[];
   referenceElement: HTMLElement | null;
-}> = ({ items, referenceElement }) => {
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+}> = ({ items, referenceElement, onMouseEnter, onMouseLeave }) => {
   const [popperElement, setPopperElement] = React.useState<HTMLElement | null>(
     null
   );
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: 'bottom',
-    modifiers: [
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 15],
-        },
-      },
-    ],
   });
 
   return (
@@ -27,9 +26,13 @@ const PopupMenu: React.FC<{
       ref={setPopperElement}
       style={styles.popper}
       {...attributes.popper}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {items.map((item, index) => (
-        <PopupItem key={index}>{item}</PopupItem>
+        <PopupItem key={index} onClick={item.action}>
+          {item.label}
+        </PopupItem>
       ))}
     </PopupContainer>
   );

@@ -5,6 +5,7 @@ import langIcon from '../../assets/langIcon.svg';
 import {
   Center,
   Container,
+  HeaderContainer,
   LangIcon,
   Logo,
   TabButton,
@@ -13,8 +14,11 @@ import {
 import { useLocation, useNavigate } from 'react-router';
 import { PAGE_PATH } from '../../consts/pagePath';
 import PopupMenu from '../PopupMenu';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 const NavigationTabs: React.FC = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const [activeTab, setActiveTab] = useState('business-map');
   const [showPopup, setShowPopup] = useState(false);
@@ -34,13 +38,14 @@ const NavigationTabs: React.FC = () => {
   return (
     <Container>
       <Center>
-        <TabsContainer>
+        <HeaderContainer>
           <Logo src={logo} />
-          <TabButton
-            isActive={activeTab === PAGE_PATH.learnAboutUs}
-            onClick={() => clickTab(PAGE_PATH.learnAboutUs)}
+          <TabsContainer>
+            <TabButton
+              isActive={activeTab === PAGE_PATH.learnAboutUs}
+              onClick={() => clickTab(PAGE_PATH.learnAboutUs)}
           >
-            Learn about Leman
+            {t('menu.learn_about_us')}
           </TabButton>
           <TabButton
             ref={businessMapRef}
@@ -49,20 +54,21 @@ const NavigationTabs: React.FC = () => {
             onMouseEnter={() => setShowPopup(true)}
             onMouseLeave={() => setShowPopup(false)}
           >
-            Business Map
+            {t('menu.business_map')}
           </TabButton>
           <TabButton
             isActive={activeTab === PAGE_PATH.cooperateCulture}
             onClick={() => clickTab(PAGE_PATH.cooperateCulture)}
           >
-            Corporate Culture
+            {t('menu.cooperate_culture')}
           </TabButton>
           <TabButton
             isActive={activeTab === PAGE_PATH.contactUs}
             onClick={() => clickTab(PAGE_PATH.contactUs)}
           >
-            Contact Us
-          </TabButton>
+            {t('menu.contact_us')}
+            </TabButton>
+          </TabsContainer>
           <LangIcon
             ref={langIconRef}
             src={langIcon}
@@ -71,18 +77,31 @@ const NavigationTabs: React.FC = () => {
           />
           {showLangPopup && (
             <PopupMenu
-              items={['EN', 'CN', 'TC']}
+              items={[
+                { label: 'EN', action: () => i18n.changeLanguage('en') },
+                { label: 'CN', action: () => i18n.changeLanguage('zh') },
+              ]}
               referenceElement={langIconRef.current}
+              onMouseEnter={() => setShowLangPopup(true)}
+              onMouseLeave={() => setShowLangPopup(false)}
             />
           )}
 
           {showPopup && (
             <PopupMenu
-              items={['Travel Agent', 'Culture Property']}
+              items={[
+                { label: 'Travel Agent', action: () => setShowPopup(false) },
+                {
+                  label: 'Culture Property',
+                  action: () => setShowPopup(false),
+                },
+              ]}
               referenceElement={businessMapRef.current}
+              onMouseEnter={() => setShowPopup(true)}
+              onMouseLeave={() => setShowPopup(false)}
             />
           )}
-        </TabsContainer>
+        </HeaderContainer>
       </Center>
     </Container>
   );
