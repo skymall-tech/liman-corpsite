@@ -1,8 +1,10 @@
 import { createBrowserRouter } from 'react-router';
-import Home from './pages/home';
-import { MainPage } from './pages/main';
-import { SatellitePage } from './pages/satellite';
-import { PropertyPage } from './pages/property';
+import Home from './pages/Home';
+import { MainPage } from './pages/Main';
+import { ContactUsPage } from './pages/ContactUs';
+import { CooperateCulturePage } from './pages/CooperateCulture';
+import { LearnAboutUsPage } from './pages/LearnAboutUs';
+import { PAGE_PATH } from './consts/pagePath';
 
 export const router = createBrowserRouter([
   {
@@ -13,12 +15,20 @@ export const router = createBrowserRouter([
         Component: MainPage,
       },
       {
-        path: '/property',
-        Component: PropertyPage,
+        path: `/${PAGE_PATH.learnAboutUs}`,
+        Component: LearnAboutUsPage,
       },
       {
-        path: '/satellite',
-        Component: SatellitePage,
+        path: `/${PAGE_PATH.businessMap}`,
+        Component: MainPage,
+      },
+      {
+        path: `/${PAGE_PATH.contactUs}`,
+        Component: ContactUsPage,
+      },
+      {
+        path: `/${PAGE_PATH.cooperateCulture}`,
+        Component: CooperateCulturePage,
       },
     ],
   },
