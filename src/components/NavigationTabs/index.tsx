@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useEffect, useState, useRef } from 'react';
-import logo from '../../assets/logo.svg'; // Adjust the path as necessary
-import langIcon from '../../assets/langIcon.svg';
+import logo from '../../assets/icons/logo.svg'; // Adjust the path as necessary
+import langIcon from '../../assets/icons/langIcon.svg';
 import {
   Center,
   Container,
@@ -44,29 +44,29 @@ const NavigationTabs: React.FC = () => {
             <TabButton
               isActive={activeTab === PAGE_PATH.learnAboutUs}
               onClick={() => clickTab(PAGE_PATH.learnAboutUs)}
-          >
-            {t('menu.learn_about_us')}
-          </TabButton>
-          <TabButton
-            ref={businessMapRef}
-            isActive={activeTab === PAGE_PATH.businessMap}
-            onClick={() => clickTab(PAGE_PATH.businessMap)}
-            onMouseEnter={() => setShowPopup(true)}
-            onMouseLeave={() => setShowPopup(false)}
-          >
-            {t('menu.business_map')}
-          </TabButton>
-          <TabButton
-            isActive={activeTab === PAGE_PATH.cooperateCulture}
-            onClick={() => clickTab(PAGE_PATH.cooperateCulture)}
-          >
-            {t('menu.cooperate_culture')}
-          </TabButton>
-          <TabButton
-            isActive={activeTab === PAGE_PATH.contactUs}
-            onClick={() => clickTab(PAGE_PATH.contactUs)}
-          >
-            {t('menu.contact_us')}
+            >
+              {t('menu.learn_about_us')}
+            </TabButton>
+            <TabButton
+              ref={businessMapRef}
+              isActive={activeTab === PAGE_PATH.businessMap}
+              onClick={() => clickTab(PAGE_PATH.businessMap)}
+              onMouseEnter={() => setShowPopup(true)}
+              onMouseLeave={() => setShowPopup(false)}
+            >
+              {t('menu.business_map')}
+            </TabButton>
+            <TabButton
+              isActive={activeTab === PAGE_PATH.cooperateCulture}
+              onClick={() => clickTab(PAGE_PATH.cooperateCulture)}
+            >
+              {t('menu.cooperate_culture')}
+            </TabButton>
+            <TabButton
+              isActive={activeTab === PAGE_PATH.contactUs}
+              onClick={() => clickTab(PAGE_PATH.contactUs)}
+            >
+              {t('menu.contact_us')}
             </TabButton>
           </TabsContainer>
           <LangIcon
