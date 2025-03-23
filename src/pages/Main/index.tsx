@@ -16,6 +16,7 @@ const MainContainer = styled.div`
 const CardWrapper = styled.div`
   display: flex;
   gap: 20px;
+  margin-top: 46px;
 `;
 
 export const MainPage: React.FC = () => {

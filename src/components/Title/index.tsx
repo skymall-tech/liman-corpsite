@@ -6,7 +6,7 @@ const TitleContainer = styled.div`
   margin-bottom: 20px;
 `;
 
-const TitleText = styled.h2`
+const TitleText = styled.h1`
   color: var(--color-secondary);
 `;
 
