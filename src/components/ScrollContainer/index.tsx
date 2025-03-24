@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   overflow-x: auto;
-  padding: 20px 0;
+  padding: 62px 0;
   cursor: grab;
 
   &:active {
@@ -21,8 +21,8 @@ const Wrapper = styled.div`
 const ContentContainer = styled.div<{ hasOverflow: boolean }>`
   display: flex;
   flex-direction: row;
-  padding: 0 20px;
-  padding-right: ${(props) => (props.hasOverflow ? '120px' : '20px')};
+  padding: 0 40px;
+  padding-right: ${(props) => (props.hasOverflow ? '140px' : '40px')};
   width: ${(props) => (props.hasOverflow ? 'max-content' : '100%')};
   justify-content: ${(props) => (props.hasOverflow ? 'flex-start' : 'center')};
 `;
@@ -42,7 +42,7 @@ const RightMask = styled.div`
 const Indicators = styled.div<{ show: boolean }>`
   width: 312px;
   height: 4px;
-  margin: 20px auto 0;
+  margin: 16px auto 0;
   background-color: #e0e0e0;
   position: relative;
   display: ${(props) => (props.show ? 'block' : 'none')};
