@@ -1,5 +1,5 @@
 export const PAGE_PATH = {
-  learnAboutUs: 'learn-about-us',
+  learnAboutUs: '',
   businessMap: 'business-map',
   cooperateCulture: 'corporate-culture',
   contactUs: 'contact-us',

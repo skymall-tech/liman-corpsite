@@ -32,7 +32,7 @@ const NavigationTabs: React.FC = () => {
   };
 
   useEffect(() => {
-    setActiveTab(location.pathname.substring(1) || 'business-map');
+    setActiveTab(location.pathname.substring(1) || '');
   }, [location.pathname]);
 
   return (

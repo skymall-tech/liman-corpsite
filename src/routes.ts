@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        Component: MainPage,
+        Component: LearnAboutUsPage,
       },
       {
         path: `/${PAGE_PATH.learnAboutUs}`,

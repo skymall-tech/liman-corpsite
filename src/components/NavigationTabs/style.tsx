@@ -47,7 +47,7 @@ export const TabButton = styled.button<{ isActive: boolean }>`
   cursor: pointer;
   border-bottom: ${({ isActive }) =>
     isActive ? '2px solid var(--color-primary)' : 'none'};
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: color 0.1s, border-bottom 0.1s;
   &:hover {
     color: var(--color-primary);
   }
