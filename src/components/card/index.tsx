@@ -2,10 +2,11 @@ import styled from '@emotion/styled';
 
 const CardContainer = styled.div`
   width: 300px;
-  height: 400px;
+  height: 520px;
   background-color: #f5f5f5;
   border-radius: 10px;
   overflow: hidden;
+  margin: 0 10px;
   transition: transform 0.3s;
   &:hover {
     transform: scale(1.05);

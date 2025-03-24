@@ -36,7 +36,7 @@ const NavigationTabs: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <Container>
+    <Container id="navigation-container">
       <Center>
         <HeaderContainer>
           <Logo src={logo} />

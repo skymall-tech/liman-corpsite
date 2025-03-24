@@ -1,6 +1,17 @@
 /** @jsxImportSource @emotion/react */
 import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
+import moreIcon from '../../assets/icons/more.svg';
+import { keyframes } from '@emotion/react';
+
+const bounce = keyframes`
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+`;
 
 export const ImageContainer = styled.div<{ navHeight: number }>`
   width: 100vw;
@@ -16,21 +27,49 @@ export const StyledImage = styled.img`
   object-position: center;
 `;
 
+export const IconContainer = styled.div`
+  position: absolute;
+  bottom: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  animation: ${bounce} 2s ease-in-out infinite;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateX(-50%) scale(1.2);
+    animation-play-state: paused;
+  }
+`;
+
 export const FirstScreen = () => {
-  const [navHeight, setNavHeight] = useState(0);
+  const [navHeight, setNavHeight] = useState(100);
   useEffect(() => {
-    // Get navigation height
-    const navElement = document.querySelector('nav, [role="navigation"]');
+    // Get navigation height by querying the Container component
+    const navElement = document.getElementById('navigation-container');
     if (navElement) {
       setNavHeight(navElement.getBoundingClientRect().height);
     }
   }, []);
+
+  const handleIconClick = () => {
+    const element = document.getElementById('business-map-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <ImageContainer navHeight={navHeight}>
+    <ImageContainer navHeight={navHeight} id="first-screen">
       <StyledImage
         src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/fp-2WMg2tmioyR6C0Qn0lPQGgkzZ6wve1.jpg"
         alt="Main background"
       />
+      <IconContainer onClick={handleIconClick}>
+        <img src={moreIcon} alt="More" width={45} height={45} />
+      </IconContainer>
     </ImageContainer>
   );
 };

@@ -22,7 +22,10 @@ const CardWrapper = styled.div`
 export const MainPage: React.FC = () => {
   return (
     <MainContainer>
-      <SectionTitle />
+      <SectionTitle
+        title="OUR BUSINESS"
+        subtitle="The main business includes the following items."
+      />
       <CardWrapper>
         <BusinessCard image={MOCK_IMAGE} />
         <BusinessCard image={MOCK_IMAGE} />

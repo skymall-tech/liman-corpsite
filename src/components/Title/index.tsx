@@ -4,6 +4,9 @@ const TitleContainer = styled.div`
   margin-top: 40px;
   text-align: center;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const TitleText = styled.h1`
@@ -12,11 +15,25 @@ const TitleText = styled.h1`
 
 const SubtitleText = styled.p`
   color: var(--color-primary);
+  width: 300px;
+`;
+const Divider = styled.div`
+  width: 430px;
+  height: 2px;
+  margin: 8px 0 16px 0;
+  background-color: var(--color-primary);
 `;
 
-export const SectionTitle = () => (
+export const SectionTitle = ({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) => (
   <TitleContainer>
-    <TitleText>OUR BUSINESS</TitleText>
-    <SubtitleText>The main business includes the following items.</SubtitleText>
+    <TitleText>{title}</TitleText>
+    <Divider />
+    <SubtitleText>{subtitle}</SubtitleText>
   </TitleContainer>
 );
