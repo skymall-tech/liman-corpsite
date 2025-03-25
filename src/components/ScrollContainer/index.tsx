@@ -3,8 +3,9 @@ import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
+  // width: 100%;
   overflow-x: auto;
+  overflow-y: visible;
   padding: 62px 0;
   cursor: grab;
 
@@ -33,9 +34,8 @@ const RightMask = styled.div`
   right: 0;
   width: 100px;
   height: 100%;
-  background: linear-gradient(to right, transparent, #ffffff);
+  background: linear-gradient(to right, transparent, #f3f0ec);
   pointer-events: none;
-  position: fixed;
   z-index: 1;
 `;
 
@@ -169,7 +169,7 @@ export const ScrollContainer = ({
   }, [handleIndicatorMouseMove, handleIndicatorMouseUp]);
 
   return (
-    <div className={className}>
+    <div className={className} style={{ position: 'relative' }}>
       <Wrapper
         ref={wrapperRef}
         onMouseDown={handleMouseDown}
@@ -181,8 +181,8 @@ export const ScrollContainer = ({
         <ContentContainer hasOverflow={hasOverflow}>
           {children}
         </ContentContainer>
-        {hasOverflow && <RightMask />}
       </Wrapper>
+      {hasOverflow && <RightMask />}
       <Indicators
         show={hasOverflow}
         ref={indicatorsRef}

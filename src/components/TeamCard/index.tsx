@@ -7,36 +7,45 @@ interface TeamCardProps {
   image: string;
 }
 
+const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+`;
 const Card = styled.div`
   position: relative;
   width: 122px;
   height: 308px;
-  margin: 0 4px;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(${201 / 122}, ${432 / 308});
-    z-index: 99;
-  }
-`;
-
-const ImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
   overflow: hidden;
-`;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  transform-origin: center;
+  &:hover {
+    transform: scale(1.7, 1.4) translateY(-10%);
+    border: 4px solid rgba(226, 199, 153, 0.4);
+    z-index: 10;
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    img {
+      transform: scale(1, 1.21);
+      transition: all 0.1s ease;
+    }
+  }
 `;
 
 const Overlay = styled.div`
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent, #c4a484);
+  background: linear-gradient(to bottom, transparent, #a4792c);
   opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75%;
   transition: opacity 0.3s ease;
   &:hover {
     opacity: 1;
@@ -51,7 +60,7 @@ const TextContent = styled.div`
   color: white;
 `;
 
-const Name = styled.h3`
+const Name = styled.p`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 4px;
@@ -60,13 +69,13 @@ const Name = styled.h3`
 const Title = styled.p`
   font-size: 12px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 const Description = styled.p`
   font-size: 12px;
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 `;
 
 export const TeamCard = ({
@@ -77,16 +86,14 @@ export const TeamCard = ({
 }: TeamCardProps) => {
   return (
     <Card>
-      <ImageContainer>
-        <Image src={image} alt={name} />
-        <Overlay>
-          <TextContent>
-            <Description>{description}</Description>
-            <Title>{title}</Title>
-            <Name>{name}</Name>
-          </TextContent>
-        </Overlay>
-      </ImageContainer>
+      <Image src={image} alt={name} />
+      <Overlay>
+        <TextContent>
+          <Description>{description}</Description>
+          <Title>{title}</Title>
+          <Name>{name}</Name>
+        </TextContent>
+      </Overlay>
     </Card>
   );
 };

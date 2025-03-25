@@ -5,11 +5,13 @@ import { FirstScreen } from './FirstScreen';
 import { BusinessMapSection } from './BusinessMap';
 import { OdysseySection } from './Odyssey';
 import { TeamSection } from './Team';
+import { Footer } from '../../components/Footer';
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 `;
 
 export const LearnAboutUsPage: React.FC = () => {
@@ -103,6 +105,7 @@ export const LearnAboutUsPage: React.FC = () => {
       <BusinessMapSection />
       <OdysseySection />
       <TeamSection />
+      <Footer />
     </MainContainer>
   );
 };

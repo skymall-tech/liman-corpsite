@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import moreIcon from '../../assets/icons/more.svg';
 import { keyframes } from '@emotion/react';
+import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 
 const bounce = keyframes`
   0%, 100% {
@@ -45,14 +45,7 @@ export const IconContainer = styled.div`
 `;
 
 export const FirstScreen = () => {
-  const [navHeight, setNavHeight] = useState(100);
-  useEffect(() => {
-    // Get navigation height by querying the Container component
-    const navElement = document.getElementById('navigation-container');
-    if (navElement) {
-      setNavHeight(navElement.getBoundingClientRect().height);
-    }
-  }, []);
+  const navHeight = useNavigationHeight();
 
   const handleIconClick = () => {
     const element = document.getElementById('business-map-section');

@@ -15,20 +15,16 @@ export const router = createBrowserRouter([
         Component: LearnAboutUsPage,
       },
       {
-        path: `/${PAGE_PATH.learnAboutUs}`,
-        Component: LearnAboutUsPage,
-      },
-      {
         path: `/${PAGE_PATH.businessMap}`,
         Component: MainPage,
       },
       {
-        path: `/${PAGE_PATH.contactUs}`,
-        Component: ContactUsPage,
-      },
-      {
         path: `/${PAGE_PATH.cooperateCulture}`,
         Component: CooperateCulturePage,
+      },
+      {
+        path: `/${PAGE_PATH.contactUs}`,
+        Component: ContactUsPage,
       },
     ],
   },
