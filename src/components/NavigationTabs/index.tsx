@@ -49,7 +49,11 @@ const NavigationTabs: React.FC = () => {
             </TabButton>
             <TabButton
               ref={businessMapRef}
-              isActive={activeTab === PAGE_PATH.businessMap}
+              isActive={
+                activeTab === PAGE_PATH.businessMap ||
+                activeTab === PAGE_PATH.estate ||
+                activeTab === PAGE_PATH.satellite
+              }
               onClick={() => clickTab(PAGE_PATH.businessMap)}
               onMouseEnter={() => setShowPopup(true)}
               onMouseLeave={() => setShowPopup(false)}
