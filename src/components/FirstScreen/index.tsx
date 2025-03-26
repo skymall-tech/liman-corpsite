@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import moreIcon from '../../assets/icons/more.svg';
 import { keyframes } from '@emotion/react';
 import { useNavigationHeight } from '../../hooks/useNavigationHeight';
+import { LargeTitle } from '../../components/largeTitle';
 
 const bounce = keyframes`
   0%, 100% {
@@ -27,6 +28,17 @@ export const StyledImage = styled.img`
   object-position: center;
 `;
 
+export const ImageOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #412c07;
+  opacity: 0.8;
+  pointer-events: none;
+`;
+
 export const IconContainer = styled.div`
   position: absolute;
   bottom: 62px;
@@ -44,7 +56,15 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const FirstScreen = () => {
+export const FirstScreen = ({
+  title,
+  desc,
+  image,
+}: {
+  title: string;
+  desc: string;
+  image: string;
+}) => {
   const navHeight = useNavigationHeight();
 
   const handleIconClick = () => {
@@ -56,13 +76,12 @@ export const FirstScreen = () => {
 
   return (
     <ImageContainer navHeight={navHeight} id="first-screen">
-      <StyledImage
-        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/fp-2WMg2tmioyR6C0Qn0lPQGgkzZ6wve1.jpg"
-        alt="Main background"
-      />
+      <StyledImage src={image} alt="Main background" />
+      <ImageOverlay />
       <IconContainer onClick={handleIconClick}>
         <img src={moreIcon} alt="More" width={45} height={45} />
       </IconContainer>
+      <LargeTitle title={title} desc={desc} />
     </ImageContainer>
   );
 };

@@ -90,10 +90,26 @@ const NavigationTabs: React.FC = () => {
           {showPopup && (
             <PopupMenu
               items={[
-                { label: 'Travel Agent', action: () => setShowPopup(false) },
                 {
-                  label: 'Culture Property',
-                  action: () => setShowPopup(false),
+                  label: 'Travel Agent',
+                  action: () => {
+                    setShowPopup(false);
+                    navigate(`/${PAGE_PATH.businessMap}`);
+                  },
+                },
+                {
+                  label: 'Satellite Paris',
+                  action: () => {
+                    setShowPopup(false);
+                    navigate(`/${PAGE_PATH.satellite}`);
+                  },
+                },
+                {
+                  label: 'Culture Estate',
+                  action: () => {
+                    setShowPopup(false);
+                    navigate(`/${PAGE_PATH.estate}`);
+                  },
                 },
               ]}
               referenceElement={businessMapRef.current}

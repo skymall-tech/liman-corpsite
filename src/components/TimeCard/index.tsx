@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const Card = styled.div<{ active: boolean }>`
+const Card = styled.div<{ active: boolean; isLast?: boolean }>`
   width: 200px;
   height: 400px;
   padding: 37px 21px 30px 21px;
@@ -13,12 +13,14 @@ const Card = styled.div<{ active: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-right: ${({ isLast }) => (isLast ? '100vw' : '0')};
 `;
 
 const Year = styled.h2<{ active: boolean }>`
   color: var(--color-primary);
   font-size: ${({ active }) => (active ? '32px' : '22px')};
   margin-bottom: 16px;
+  transition: font-size 0.3s ease;
 `;
 
 const Description = styled.p`
@@ -52,6 +54,7 @@ const Image = styled.img<{ active: boolean }>`
   height: 94px;
   object-fit: cover;
   border-radius: 8px;
+  transition: all 0.3s ease;
   filter: ${({ active }) => (active ? 'none' : 'sepia(100%)')};
   border: ${({ active }) =>
     active ? 'none' : '2px solid var(--color-primary)'};
@@ -59,24 +62,50 @@ const Image = styled.img<{ active: boolean }>`
 
 export interface TimeCardProps {
   year: string;
-  description: string;
+  description1: string;
+  description2?: string;
   logo: string;
   active: boolean;
   shortDesc?: string;
+  isLast?: boolean;
+  onClick?: ({
+    event,
+    year,
+  }: {
+    event: React.MouseEvent<HTMLDivElement>;
+    year: string;
+  }) => void;
 }
 
 export const TimeCard = ({
   year,
-  description,
+  description1,
+  description2,
   logo,
   active,
   shortDesc,
+  isLast,
+  onClick,
 }: TimeCardProps) => {
   return (
-    <Card active={active}>
+    <Card
+      active={active}
+      isLast={isLast}
+      onClick={(event) => {
+        onClick?.({
+          event,
+          year,
+        });
+      }}
+    >
       <Year active={active}>{year}</Year>
       {!active && <TopDivider />}
-      {active && <Description>{description}</Description>}
+      {active && (
+        <Description>
+          <p>{description1}</p>
+          {description2 && <p style={{ marginTop: '20px' }}>{description2}</p>}
+        </Description>
+      )}
       {!active && <ShortDesc>{shortDesc}</ShortDesc>}
       {!active && <BottomDivider />}
       <Image src={logo} active={active} />
