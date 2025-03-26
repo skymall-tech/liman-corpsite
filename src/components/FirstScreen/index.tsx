@@ -78,10 +78,10 @@ export const FirstScreen = ({
     <ImageContainer navHeight={navHeight} id="first-screen">
       <StyledImage src={image} alt="Main background" />
       <ImageOverlay />
+      <LargeTitle title={title} desc={desc} />
       <IconContainer onClick={handleIconClick}>
         <img src={moreIcon} alt="More" width={45} height={45} />
       </IconContainer>
-      <LargeTitle title={title} desc={desc} />
     </ImageContainer>
   );
 };
