@@ -54,26 +54,26 @@ const Overlay = styled.div`
 
 const TextContent = styled.div`
   position: absolute;
-  bottom: 32px;
+  bottom: 12px;
   left: 16px;
   right: 16px;
   color: white;
 `;
 
 const Name = styled.p`
-  font-size: 24px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 4px;
 `;
 
 const Title = styled.p`
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const Description = styled.p`
-  font-size: 12px;
+  font-size: 8px;
   font-weight: 300;
   margin-bottom: 15px;
 `;

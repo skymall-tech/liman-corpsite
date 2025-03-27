@@ -10,6 +10,7 @@ export const SatellitePage: React.FC = () => {
   return (
     <PageContainer>
       <FirstScreen
+        nextSectionId="business-map-section"
         title="SATELLITE PARIS"
         desc="Wander with a Compass of Conviction"
         image={

@@ -21,6 +21,7 @@ export const LearnAboutUsPage: React.FC = () => {
   return (
     <PageContainer>
       <FirstScreen
+        nextSectionId="business-map-section"
         title="LIMAN GROUP"
         desc="LIMAN GROUP CO. (LIMITED) was established in Hong Kong in 2009, focusing on international high-end fashion."
         image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/first-Rao41GIGdVpGef4MpWC4hHe4RAXSFL.jpeg"

@@ -60,15 +60,17 @@ export const FirstScreen = ({
   title,
   desc,
   image,
+  nextSectionId,
 }: {
   title: string;
   desc: string;
   image: string;
+  nextSectionId: string;
 }) => {
   const navHeight = useNavigationHeight();
 
   const handleIconClick = () => {
-    const element = document.getElementById('business-map-section');
+    const element = document.getElementById(nextSectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }

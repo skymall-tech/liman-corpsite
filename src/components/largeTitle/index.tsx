@@ -24,6 +24,10 @@ const Desc = styled.p`
   text-align: center;
 `;
 
+const Logo = styled.img`
+  width: 580px;
+`;
+
 export const LargeTitle = ({
   title,
   desc,
@@ -32,9 +36,14 @@ export const LargeTitle = ({
   desc: string;
 }) => {
   return (
-    <TitleContainer>
-      <Title>{title}</Title>
-      <Desc>{desc}</Desc>
-    </TitleContainer>
+    <>
+      <TitleContainer>
+        <Logo src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/LM-52Sc6NnIIH12Warrw1g78NJgemY0wb.png" />
+      </TitleContainer>
+      <TitleContainer>
+        <Title>{title}</Title>
+        <Desc>{desc}</Desc>
+      </TitleContainer>
+    </>
   );
 };

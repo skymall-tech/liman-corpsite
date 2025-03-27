@@ -10,6 +10,7 @@ export const EstatePage: React.FC = () => {
   return (
     <PageContainer>
       <FirstScreen
+        nextSectionId="business-map-section"
         title="CULTURAL ESTATE"
         desc="Liman & TopEast"
         image={

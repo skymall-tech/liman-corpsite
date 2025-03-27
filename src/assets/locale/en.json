@@ -4,5 +4,42 @@
     "business_map": "Business Map",
     "cooperate_culture": "Cooperate Culture",
     "contact_us": "Contact Us"
+  },
+  "team": {
+    "luke":{
+      "name":"杨光",
+      "title": "Vice General Manager",
+      "description": "Responsible for the marketing and digital sectors, he constructs an integrated online and offline symbiotic marketing system and digital system for the group. In his youth, he was selected for the annual innovation list of 'China Entrepreneur' magazine, and later served as the general manager of Tencent Innovation Institute, responsible for the design and operation of Tencent's billion-user platform. Possessing disruptive innovative thinking, he uses technology to help the group ride the waves."
+    },
+    "ligufeng":{
+      "name": "李丰谷",
+      "title": "Chief Executive Officer",
+      "description": "Founder of Leman Group, pioneer in China's travel retail industry, and primary practitioner of corporate social responsibility. Focuses on the group's global business project investments, development of operational strategies, and talent cultivation."
+    },
+    "chenli":{
+      "name": "陈立",
+      "title": "Executive Director",
+      "description": "Responsible for international business development and coordination, formulating cooperation strategies with global business partners, implementing key cooperation initiatives, exploring new business models, and maintaining the group's leading position in the global travel retail industry."
+    },
+    "lizhihua":{
+      "name": "李治华",
+      "title": "Executive Director",
+      "description": "Responsible for the group's global business project investments, development of operational strategies, and talent cultivation."
+    },
+    "zhangchi":{
+      "name": "张驰",
+      "title": "Artistic Director",
+      "description": "Responsible for artistic strategy coordination with global brands, ensuring brand integrity during localization in China. Ms. Zhang Chi possesses a profound background in art appreciation and has established a membership service system based on Chinese high-net-worth clients' aesthetic preferences, bringing exceptional consumption and emotional experiences to our members."
+    },
+    "lushaojuan":{
+      "name": "卢少娟",
+      "title": "Deputy General Manager",
+      "description": "Oversees the group's human resources sector and serves as the public relations director for Macao Qingmao Duty-Free Business. Well-versed in various business operations, leads the establishment of major projects, team development, and performance incentives, facilitating rapid business growth. Expertise in team building and decision-making mechanism design, driving group upgrades with innovative thinking and leading excellence with integrity and perseverance."
+    },
+    "liwan":{
+      "name": "李弯",
+      "title": "Operations Director",
+      "description": "Specializes in retail store operations strategy and staff training, with over ten years of senior corporate management background. Fully responsible for airport travel channel and key subsidiary operations coordination, ensuring operational smoothness and efficiency, leading the team to achieve performance growth and talent development, helping Leman steadily progress towards excellence."
+    }
   }
 }

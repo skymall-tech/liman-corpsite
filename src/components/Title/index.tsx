@@ -15,7 +15,8 @@ const TitleText = styled.h1`
 
 const SubtitleText = styled.p`
   color: var(--color-primary);
-  width: 300px;
+  width: 440px;
+  font-size: 12px;
 `;
 const Divider = styled.div`
   width: 430px;
