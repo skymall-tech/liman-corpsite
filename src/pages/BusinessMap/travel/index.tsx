@@ -17,7 +17,7 @@ export const TravelPage: React.FC = () => {
         title="TRAVEL RETAIL"
         desc="Global Essence  Local Elegance"
         image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2-ZPXJPfCJtLftzO5J8oEoSELPR3DjBF.png'
+          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/3-xnqCK3LeLXGbMZzlbkmAQ26C05vnGA.png'
         }
       />
       <GlobalRetailSection />

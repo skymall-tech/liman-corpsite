@@ -2,41 +2,13 @@ import styled from '@emotion/styled';
 import { useState } from 'react';
 
 interface StorySlide {
-  title: string;
-  subtitle: string;
-  content: string;
-  quote?: string;
+  title?: string;
+  src: string;
+  paragraph: string[];
 }
 
-const stories: StorySlide[] = [
-  {
-    title: 'Disruption: When',
-    subtitle: 'Residences Become Art',
-    content:
-      "In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury. Amid Dubai's dunes and Miami's coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle's angle, every vein in marble, bore Armani's personal approval.",
-    quote:
-      '"I don\'t design houses," he asserted. "I design lifestyles—where the dweller becomes the protagonist."',
-  },
-  {
-    title: 'Disruption: When',
-    subtitle: 'Residences Become Art',
-    content:
-      "In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury. Amid Dubai's dunes and Miami's coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle's angle, every vein in marble, bore Armani's personal approval.",
-    quote:
-      '"I don\'t design houses," he asserted. "I design lifestyles—where the dweller becomes the protagonist."',
-  },
-  {
-    title: 'Disruption: When',
-    subtitle: 'Residences Become Art',
-    content:
-      "In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury. Amid Dubai's dunes and Miami's coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle's angle, every vein in marble, bore Armani's personal approval.",
-    quote:
-      '"I don\'t design houses," he asserted. "I design lifestyles—where the dweller becomes the protagonist."',
-  },
-  // Add more stories as needed
-];
-
 const Container = styled.div`
+  margin-top: 50px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -44,20 +16,53 @@ const Container = styled.div`
 
 const SlideContainer = styled.div<{ offset: number }>`
   display: flex;
-  transition: transform 0.3s ease-in-out;
   transform: translateX(${(props) => props.offset}%);
+  transition: ${(props) =>
+    props.offset % 100 === 0 ? 'transform 0.3s ease-in-out' : 'none'};
+  user-select: none;
+  background: var(--color-primary);
+  overflow: visible;
 `;
 
 const Slide = styled.div`
-  min-width: 100%;
-  height: 500px;
-  padding: 60px;
+  position: relative;
+  min-width: 100vw;
+  height: calc(100vh - 250px);
   background: linear-gradient(
     to right,
-    rgba(139, 69, 19, 0.8),
-    rgba(139, 69, 19, 0.6)
+    var(--color-primary),
+    rgba(0, 0, 0, 0.1)
   );
   color: white;
+`;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+`;
+
+const Gradient = styled.div`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #946a20, #f9f3ea 20.69%);
+  opacity: 0.1;
+`;
+
+const DescContainer = styled.div`
+  position: absolute;
+  left: 50px;
+  top: 58px;
+  width: 360px;
+`;
+
+const ParagraphContainer = styled.div`
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 `;
 
 const Title = styled.h2`
@@ -66,25 +71,11 @@ const Title = styled.h2`
   color: white;
 `;
 
-const Subtitle = styled.h3`
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: white;
-`;
-
-const Content = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  max-width: 600px;
-`;
-
-const Quote = styled.blockquote`
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  padding-left: 1rem;
-  border-left: 3px solid #e2c799;
+const Paragraph = styled.p`
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 30px;
+  line-height: 1.3;
 `;
 
 const NavigationDots = styled.div`
@@ -103,18 +94,67 @@ const Dot = styled.button<{ active: boolean }>`
   transition: background-color 0.3s ease;
 `;
 
-export const Carousel = () => {
+export const Carousel = ({ stories }: { stories: StorySlide[] }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true);
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    setStartX(clientX);
+  };
+
+  const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const diff = clientX - startX;
+    setDragOffset(diff);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging) return;
+
+    const slideThreshold = window.innerWidth * 0.2; // 20% of screen width
+    if (Math.abs(dragOffset) > slideThreshold) {
+      if (dragOffset > 0 && currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      } else if (dragOffset < 0 && currentSlide < stories.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    }
+
+    setIsDragging(false);
+    setDragOffset(0);
+  };
 
   return (
     <Container>
-      <SlideContainer offset={-currentSlide * 100}>
+      <SlideContainer
+        offset={-currentSlide * 100 + (dragOffset / window.innerWidth) * 100}
+        onMouseDown={handleDragStart}
+        onMouseMove={handleDragMove}
+        onMouseUp={handleDragEnd}
+        onMouseLeave={handleDragEnd}
+        onTouchStart={handleDragStart}
+        onTouchMove={handleDragMove}
+        onTouchEnd={handleDragEnd}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      >
         {stories.map((story, index) => (
           <Slide key={index}>
-            <Title>{story.title}</Title>
-            <Subtitle>{story.subtitle}</Subtitle>
-            <Content>{story.content}</Content>
-            {story.quote && <Quote>{story.quote}</Quote>}
+            <Image src={story.src}></Image>
+            <Gradient></Gradient>
+            <DescContainer>
+              {story.title && <Title>{story.title}</Title>}
+              <ParagraphContainer>
+                {story.paragraph.map((para, i) => (
+                  <Paragraph key={i}>{para}</Paragraph>
+                ))}
+              </ParagraphContainer>
+            </DescContainer>
           </Slide>
         ))}
       </SlideContainer>

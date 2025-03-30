@@ -15,7 +15,7 @@ export const SatellitePage: React.FC = () => {
         title="SATELLITE PARIS"
         desc="Wander with a Compass of Conviction"
         image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/3-xnqCK3LeLXGbMZzlbkmAQ26C05vnGA.png'
+          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2-ZPXJPfCJtLftzO5J8oEoSELPR3DjBF.png'
         }
       />
       <BrandStorySection />
