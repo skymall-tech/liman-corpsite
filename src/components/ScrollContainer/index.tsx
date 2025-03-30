@@ -3,8 +3,6 @@ import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 
 const Wrapper = styled.div`
   position: relative;
-  // width: 100%;
-  overflow-x: auto;
   overflow-y: visible;
   padding: 62px 0;
   cursor: grab;
@@ -19,13 +17,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const ContentContainer = styled.div<{ hasOverflow: boolean }>`
+const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0 40px;
-  padding-right: ${(props) => (props.hasOverflow ? '140px' : '40px')};
-  width: ${(props) => (props.hasOverflow ? 'max-content' : '100%')};
-  justify-content: ${(props) => (props.hasOverflow ? 'flex-start' : 'center')};
+  overflow-y: visible;
+  padding-right: '140px';
+  width: 'max-content';
+  justify-content: 'flex-start';
 `;
 
 const RightMask = styled.div`
@@ -79,28 +78,8 @@ export const ScrollContainer = ({
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [hasOverflow, setHasOverflow] = useState(false);
   const [isIndicatorDragging, setIsIndicatorDragging] = useState(false);
   const indicatorsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const checkOverflow = () => {
-      if (wrapperRef.current) {
-        const { scrollWidth, clientWidth } = wrapperRef.current;
-        setHasOverflow(scrollWidth > clientWidth);
-      }
-    };
-
-    // Run after a short delay to ensure content is rendered
-    const timeoutId = setTimeout(checkOverflow, 0);
-
-    window.addEventListener('resize', checkOverflow);
-
-    return () => {
-      window.removeEventListener('resize', checkOverflow);
-      clearTimeout(timeoutId);
-    };
-  }, [children]); // Add children to dependencies to recheck when content changes
 
   const handleScroll = useCallback(() => {
     if (wrapperRef.current) {
@@ -169,7 +148,10 @@ export const ScrollContainer = ({
   }, [handleIndicatorMouseMove, handleIndicatorMouseUp]);
 
   return (
-    <div className={className} style={{ position: 'relative' }}>
+    <div
+      className={className}
+      style={{ position: 'relative', overflowY: 'visible' }}
+    >
       <Wrapper
         ref={wrapperRef}
         onMouseDown={handleMouseDown}
@@ -178,13 +160,11 @@ export const ScrollContainer = ({
         onMouseLeave={handleMouseUp}
         onScroll={handleScroll}
       >
-        <ContentContainer hasOverflow={hasOverflow}>
-          {children}
-        </ContentContainer>
+        <ContentContainer>{children}</ContentContainer>
       </Wrapper>
-      {hasOverflow && <RightMask />}
+      <RightMask />
       <Indicators
-        show={hasOverflow}
+        show={true}
         ref={indicatorsRef}
         onClick={(e) => {
           if (!isIndicatorDragging) {

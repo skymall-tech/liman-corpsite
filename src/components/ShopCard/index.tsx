@@ -5,18 +5,20 @@ const CardContainer = styled.div`
   width: 300px;
   height: 520px;
   background-color: #f5f5f5;
-  border-radius: 10px;
+  border-radius: 16px;
   overflow: hidden;
   margin: 0 10px;
+  border: 1px solid #b59152;
+  flex-shrink: 0;
   transition: transform 0.3s;
   &:hover {
     cursor: pointer;
     transform: scale(1.05);
     .overlay-mask {
-      opacity: 0;
+      background: #966b20;
     }
-    .card-image {
-      filter: sepia(0);
+    .card-title {
+      color: #fff;
     }
   }
 `;
@@ -27,9 +29,8 @@ const OverlayMask = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #b38c48 0%, #71511a 100%);
-  opacity: 0;
-  mix-blend-mode: overlay;
+  background: #fff;
+  opacity: 0.5;
 `;
 
 const CardImage = styled.div<{ image: string }>`
@@ -38,26 +39,20 @@ const CardImage = styled.div<{ image: string }>`
   background-position: center;
   height: 100%;
   transition: filter 0.3s;
-  filter: sepia(0.9);
-  &:hover {
-    filter: sepia(0);
-  }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 `;
 
-const CardTitle = styled.div<{ titleOnCenter: boolean }>`
-  margin-top: ${(props) => (props.titleOnCenter ? '0' : '38px')};
-  color: white;
+const CardTitle = styled.div`
+  color: #946a20;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 26px;
   display: flex;
   flex-direction: column;
-  justify-content: ${(props) =>
-    props.titleOnCenter ? 'center' : 'flex-start'};
+  justify-content: center;
   height: 100%;
 `;
 
@@ -72,24 +67,20 @@ const OverlayTextContainer = styled.div`
   align-items: center;
 `;
 
-const BusinessCard = ({
+export const ShopCard = ({
   image,
   title,
-  titleOnCenter = false,
   onClick,
 }: {
   image: string;
   title: string;
-  titleOnCenter?: boolean;
   onClick?: () => void;
 }) => (
   <CardContainer onClick={onClick}>
     <CardImage image={image} className="card-image" />
     <OverlayMask className="overlay-mask" />
     <OverlayTextContainer>
-      <CardTitle titleOnCenter={titleOnCenter}>{title}</CardTitle>
+      <CardTitle className="card-title">{title}</CardTitle>
     </OverlayTextContainer>
   </CardContainer>
 );
-
-export default BusinessCard;

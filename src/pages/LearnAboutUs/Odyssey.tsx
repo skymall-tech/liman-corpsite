@@ -10,6 +10,7 @@ const OdysseyContainer = styled.div`
 `;
 
 const CardsContainer = styled.div`
+  margin-top: 60px;
   margin-bottom: 40px;
   display: flex;
   overflow-x: auto;
