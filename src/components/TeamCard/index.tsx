@@ -27,55 +27,61 @@ const Card = styled.div`
   border: 4px solid transparent;
   transform-origin: center;
   &:hover {
-    transform: scale(1.7, 1.4) translateY(-10%);
+    transform: translateY(-15%);
+    width: 578px;
+    height: 506px;
     border: 4px solid rgba(226, 199, 153, 0.4);
     z-index: 10;
-
-    img {
-      transform: scale(1, 1.21);
-      transition: all 0.1s ease;
-    }
   }
 `;
 
 const Overlay = styled.div`
   position: absolute;
-  background: linear-gradient(to bottom, transparent, #a4792c);
+  background: linear-gradient(to left, #a4792c, #b5915200);
   opacity: 0;
-  bottom: 0;
-  left: 0;
   right: 0;
-  height: 75%;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
   transition: opacity 0.3s ease;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   &:hover {
     opacity: 1;
   }
 `;
 
 const TextContent = styled.div`
-  position: absolute;
-  bottom: 12px;
-  left: 16px;
-  right: 16px;
-  color: white;
+  margin-top: 180px;
+  width: 300px;
+  margin-right: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
 const Name = styled.p`
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 4px;
+  font-weight: 900;
 `;
 
 const Title = styled.p`
   font-size: 10px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
 `;
 
 const Description = styled.p`
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 300;
   margin-bottom: 15px;
+  text-align: right;
 `;
 
 export const TeamCard = ({
@@ -89,9 +95,9 @@ export const TeamCard = ({
       <Image src={image} alt={name} />
       <Overlay>
         <TextContent>
-          <Description>{description}</Description>
-          <Title>{title}</Title>
           <Name>{name}</Name>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
         </TextContent>
       </Overlay>
     </Card>
