@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../../components/Title';
 import { ImgWithSearch } from '../../../components/ImgWithSearch';
-import SearchIcon from '../../../assets/icons/search.svg';
+import SearchIcon from '../../../assets/icons/Search.svg';
 const TaxFreeContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
