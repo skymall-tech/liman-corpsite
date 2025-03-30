@@ -16,7 +16,7 @@ export const MVVSection = () => {
   const navHeight = useNavigationHeight();
 
   return (
-    <MVVContainer id="brand-story" navHeight={navHeight}>
+    <MVVContainer id="mvv-section" navHeight={navHeight}>
       <CultureCard
         title={'Mission'}
         shortDescription={
