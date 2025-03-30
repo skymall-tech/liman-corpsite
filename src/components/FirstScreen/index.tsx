@@ -26,6 +26,7 @@ export const StyledImage = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: center;
+  background-color: #412c07;
 `;
 
 export const ImageOverlay = styled.div`
@@ -34,7 +35,7 @@ export const ImageOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #412c07;
+  background-color: #746242ed;
   opacity: 0.8;
   pointer-events: none;
 `;
@@ -61,11 +62,13 @@ export const FirstScreen = ({
   desc,
   image,
   nextSectionId,
+  showOverlay = false,
 }: {
   title: string;
   desc: string;
   image: string;
   nextSectionId: string;
+  showOverlay?: boolean;
 }) => {
   const navHeight = useNavigationHeight();
 
@@ -79,7 +82,7 @@ export const FirstScreen = ({
   return (
     <ImageContainer navHeight={navHeight} id="first-screen">
       <StyledImage src={image} alt="Main background" />
-      <ImageOverlay />
+      {showOverlay && <ImageOverlay />}
       <LargeTitle title={title} desc={desc} />
       <IconContainer onClick={handleIconClick}>
         <img src={moreIcon} alt="More" width={45} height={45} />

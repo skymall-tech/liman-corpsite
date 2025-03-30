@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import Logo from '../../assets/icons/logo.svg';
+import { Link } from 'react-router';
+import { PAGE_PATH } from '../../consts/pagePath';
 
 const FooterWrapper = styled.footer`
   border-top: 1px solid var(--color-primary);
@@ -12,15 +14,12 @@ const FooterWrapper = styled.footer`
 const FooterContent = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const TopSection = styled.div`
-  display: flex;
   flex-direction: row;
-  gap: 70px;
-  margin-bottom: 46px;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
 `;
+
 const LogoImage = styled.img`
   width: 127px;
   height: 58px;
@@ -36,6 +35,7 @@ const QRCodeText = styled.h3`
   color: var(--color-primary);
   margin-top: 12px;
   font-weight: 700;
+  text-align: center;
 `;
 
 const Divider = styled.div`
@@ -44,18 +44,11 @@ const Divider = styled.div`
   background-color: var(--color-primary);
 `;
 
-const BottomSection = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 46px;
-  gap: 120px;
-`;
-
 const QRSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 120px;
 `;
 
 const LinkSection = styled.div`
@@ -85,70 +78,74 @@ const Copyright = styled.div`
   text-align: center;
   font-size: 12px;
   color: var(--color-primary);
+  margin-top: 70px;
 `;
 
 export const Footer = () => {
   return (
     <FooterWrapper>
       <FooterContent>
-        <TopSection>
-          <LogoImage src={Logo} alt="Liman Logo" />
-          <Divider />
-          <QRSection>
-            <QRCodeImage
-              src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/qr-temp-9yoMRi4mzKUH1pxEPhKESYyaAEZ50m"
-              alt="WeChat QR Code"
-            />
-            <QRCodeText>Search in WeChat Mini Program</QRCodeText>
-          </QRSection>
-        </TopSection>
-        <BottomSection>
-          <LinkSection>
-            <h3>Terms and Conditions</h3>
-            <ul>
-              <li>
-                <a href="#">Document Information</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Platform Purchase Rules</a>
-              </li>
-            </ul>
-          </LinkSection>
+        <LogoImage src={Logo} alt="Liman Logo" />
+        <Divider />
+        <QRSection>
+          <QRCodeImage
+            src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/qr-temp-9yoMRi4mzKUH1pxEPhKESYyaAEZ50m"
+            alt="WeChat QR Code"
+          />
+          <QRCodeText>Search in WeChat Mini Program</QRCodeText>
+        </QRSection>
 
-          <LinkSection>
-            <h3>Business Map</h3>
-            <ul>
-              <li>
-                <a href="#">Travel Retail</a>
-              </li>
-              <li>
-                <a href="#">Satellite Paris</a>
-              </li>
-              <li>
-                <a href="#">Cultural Estate</a>
-              </li>
-            </ul>
-          </LinkSection>
-          <LinkSection>
-            <h3>Business cooperation </h3>
-            <ul>
-              <li>
-                <a href="#">Travel Retail</a>
-              </li>
-            </ul>
-            <h3>Join us </h3>
-            <ul>
-              <li>
-                <a href="#">hr@liman.group</a>
-              </li>
-            </ul>
-          </LinkSection>
-        </BottomSection>
+        <LinkSection style={{ marginLeft: '30px' }}>
+          <h3>Business Map</h3>
+          <ul>
+            <li>
+              <Link
+                to={{
+                  pathname: PAGE_PATH.businessMap,
+                }}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Travel Retail
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={{
+                  pathname: PAGE_PATH.satellite,
+                }}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Satellite Paris
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={{
+                  pathname: PAGE_PATH.estate,
+                }}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Cultural Estate
+              </Link>
+            </li>
+          </ul>
+        </LinkSection>
+
+        <LinkSection>
+          <h3>Business cooperation </h3>
+          <ul>
+            <li>
+              <a href="mailto:bc@sky-mall.com">bc@sky-mall.com</a>
+            </li>
+          </ul>
+          <h3>Join us </h3>
+          <ul>
+            <li>
+              <a href="mailto:hr@liman.group">hr@liman.group</a>
+            </li>
+          </ul>
+        </LinkSection>
       </FooterContent>
-
       <Copyright>
         Deep ICP No. 2025015255-1 Copyright © 2021-2023 Liman Technology Co.,
         LTD

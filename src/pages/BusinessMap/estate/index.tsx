@@ -14,7 +14,7 @@ export const EstatePage: React.FC = () => {
         title="CULTURAL ESTATE"
         desc="Liman & TopEast"
         image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/cultureestate-VWAPOptvgKEhpw0GRnA26H7Ecvc7FG.jpeg'
+          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/4-dlYBTOlIIhNHmyjtJA8SNuW57yRSaG.png'
         }
       />
       <Footer />

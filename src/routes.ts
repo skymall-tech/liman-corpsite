@@ -18,23 +18,23 @@ export const router = createBrowserRouter([
         Component: LearnAboutUsPage,
       },
       {
-        path: `/${PAGE_PATH.businessMap}`,
+        path: PAGE_PATH.businessMap,
         Component: TravelPage,
       },
       {
-        path: `/${PAGE_PATH.estate}`,
+        path: PAGE_PATH.estate,
         Component: EstatePage,
       },
       {
-        path: `/${PAGE_PATH.satellite}`,
+        path: PAGE_PATH.satellite,
         Component: SatellitePage,
       },
       {
-        path: `/${PAGE_PATH.cooperateCulture}`,
+        path: PAGE_PATH.cooperateCulture,
         Component: CooperateCulturePage,
       },
       {
-        path: `/${PAGE_PATH.contactUs}`,
+        path: PAGE_PATH.contactUs,
         Component: ContactUsPage,
       },
     ],

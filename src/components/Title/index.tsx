@@ -11,6 +11,7 @@ const TitleContainer = styled.div`
 
 const TitleText = styled.h1`
   color: var(--color-secondary);
+  text-transform: uppercase;
 `;
 
 const SubtitleText = styled.p`

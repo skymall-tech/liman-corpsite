@@ -3,7 +3,7 @@ import { Footer } from '../../../components/Footer';
 import { PageContainer } from '../../../components/PageConatiner';
 import { useScrollSections } from '../../../hooks/useScrollSections';
 import { BrandSection } from './BrandSection';
-import { PartnerPortSection } from './PartnerPortSection';
+import { GlobalRetailSection } from './GlobalRetailSection';
 import { TaxFreeSection } from './TaxFree';
 
 export const TravelPage: React.FC = () => {
@@ -17,10 +17,10 @@ export const TravelPage: React.FC = () => {
         title="TRAVEL RETAIL"
         desc="Global Essence  Local Elegance"
         image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel-hpwkZunpQG4vKhLY5f7TQCmptVHwbg.jpeg'
+          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2-ZPXJPfCJtLftzO5J8oEoSELPR3DjBF.png'
         }
       />
-      <PartnerPortSection />
+      <GlobalRetailSection />
       <BrandSection />
       <TaxFreeSection />
       <Footer />

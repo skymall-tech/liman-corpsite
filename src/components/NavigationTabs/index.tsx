@@ -28,11 +28,11 @@ const NavigationTabs: React.FC = () => {
   const langIconRef = useRef<HTMLImageElement | null>(null);
 
   const clickTab = (tab: string) => {
-    navigate(`/${tab}`);
+    navigate(tab);
   };
 
   useEffect(() => {
-    setActiveTab(location.pathname.substring(1) || '');
+    setActiveTab(location.pathname);
   }, [location.pathname]);
 
   return (
@@ -98,21 +98,21 @@ const NavigationTabs: React.FC = () => {
                   label: 'Travel Agent',
                   action: () => {
                     setShowPopup(false);
-                    navigate(`/${PAGE_PATH.businessMap}`);
+                    navigate(PAGE_PATH.businessMap);
                   },
                 },
                 {
                   label: 'Satellite Paris',
                   action: () => {
                     setShowPopup(false);
-                    navigate(`/${PAGE_PATH.satellite}`);
+                    navigate(PAGE_PATH.satellite);
                   },
                 },
                 {
                   label: 'Culture Estate',
                   action: () => {
                     setShowPopup(false);
-                    navigate(`/${PAGE_PATH.estate}`);
+                    navigate(PAGE_PATH.estate);
                   },
                 },
               ]}

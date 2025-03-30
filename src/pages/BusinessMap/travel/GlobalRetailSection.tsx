@@ -6,7 +6,7 @@ const PartnerPortContainer = styled.div`
   min-height: 100vh;
 `;
 
-export const PartnerPortSection = () => {
+export const GlobalRetailSection = () => {
   return (
     <PartnerPortContainer id="partner-port">
       <SectionTitle
