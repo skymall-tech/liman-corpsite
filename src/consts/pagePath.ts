@@ -1,5 +1,5 @@
 export const PAGE_PATH = {
-  learnAboutUs: '',
+  learnAboutUs: '/',
   businessMap: '/business-map',
   satellite: '/satellite',
   estate: '/estate',

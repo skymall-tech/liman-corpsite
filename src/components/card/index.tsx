@@ -10,6 +10,7 @@ const CardContainer = styled.div`
   margin: 0 10px;
   transition: transform 0.3s;
   &:hover {
+    cursor: pointer;
     transform: scale(1.05);
     .overlay-mask {
       opacity: 0;
@@ -66,8 +67,16 @@ const OverlayTextContainer = styled.div`
   align-items: center;
 `;
 
-const BusinessCard = ({ image, title }: { image: string; title: string }) => (
-  <CardContainer>
+const BusinessCard = ({
+  image,
+  title,
+  onClick,
+}: {
+  image: string;
+  title: string;
+  onClick: () => void;
+}) => (
+  <CardContainer onClick={onClick}>
     <CardImage image={image} className="card-image" />
     <OverlayMask className="overlay-mask" />
     <OverlayTextContainer>
