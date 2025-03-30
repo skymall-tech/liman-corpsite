@@ -82,8 +82,16 @@ const NavigationTabs: React.FC = () => {
           {showLangPopup && (
             <PopupMenu
               items={[
-                { label: 'EN', action: () => i18n.changeLanguage('en') },
-                { label: 'CN', action: () => i18n.changeLanguage('zh') },
+                {
+                  label: 'English',
+                  action: () => i18n.changeLanguage('en'),
+                  isActive: i18n.language == 'en',
+                },
+                {
+                  label: '简体中文',
+                  action: () => i18n.changeLanguage('zh'),
+                  isActive: i18n.language == 'zh',
+                },
               ]}
               referenceElement={langIconRef.current}
               onMouseEnter={() => setShowLangPopup(true)}
@@ -96,6 +104,7 @@ const NavigationTabs: React.FC = () => {
               items={[
                 {
                   label: 'Travel Agent',
+                  isActive: activeTab === PAGE_PATH.businessMap,
                   action: () => {
                     setShowPopup(false);
                     navigate(PAGE_PATH.businessMap);
@@ -103,6 +112,7 @@ const NavigationTabs: React.FC = () => {
                 },
                 {
                   label: 'Satellite Paris',
+                  isActive: activeTab === PAGE_PATH.satellite,
                   action: () => {
                     setShowPopup(false);
                     navigate(PAGE_PATH.satellite);
@@ -110,6 +120,7 @@ const NavigationTabs: React.FC = () => {
                 },
                 {
                   label: 'Culture Estate',
+                  isActive: activeTab === PAGE_PATH.estate,
                   action: () => {
                     setShowPopup(false);
                     navigate(PAGE_PATH.estate);

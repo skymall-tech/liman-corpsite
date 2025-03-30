@@ -10,9 +10,9 @@ export const GlobalRetailSection = () => {
   return (
     <PartnerPortContainer id="partner-port">
       <SectionTitle
-        title="PARTNER PORTS"
+        title="GLOBAL RETAIL LOUNGE"
         subtitle={
-          'We forge premium alliances with globally acclaimed brands — from luxury icons to curated local craftsmanship.'
+          'A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques.'
         }
       />
     </PartnerPortContainer>

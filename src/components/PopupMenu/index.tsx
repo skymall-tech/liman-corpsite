@@ -4,6 +4,7 @@ import { PopupContainer, PopupItem } from './style';
 
 interface PopUpItem {
   label: string;
+  isActive: boolean;
   action?: () => void;
 }
 
@@ -30,7 +31,7 @@ const PopupMenu: React.FC<{
       onMouseLeave={onMouseLeave}
     >
       {items.map((item, index) => (
-        <PopupItem key={index} onClick={item.action}>
+        <PopupItem key={index} onClick={item.action} isActive={item.isActive}>
           {item.label}
         </PopupItem>
       ))}
