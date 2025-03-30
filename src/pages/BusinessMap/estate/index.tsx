@@ -2,11 +2,12 @@ import { FirstScreen } from '../../../components/FirstScreen';
 import { Footer } from '../../../components/Footer';
 import { PageContainer } from '../../../components/PageConatiner';
 import { useScrollSections } from '../../../hooks/useScrollSections';
+import { ArmaniCasa } from './ArmaniCasa';
 import { BrandStorySection } from './brandStory';
 
 export const EstatePage: React.FC = () => {
   useScrollSections({
-    sections: ['first-screen', 'brand-story'],
+    sections: ['first-screen', 'brand-story', 'armani-casa'],
   });
   return (
     <PageContainer>
@@ -19,6 +20,7 @@ export const EstatePage: React.FC = () => {
         }
       />
       <BrandStorySection />
+      <ArmaniCasa></ArmaniCasa>
       <Footer />
     </PageContainer>
   );

@@ -47,8 +47,11 @@ const Gradient = styled.div`
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #946a20, #f9f3ea 20.69%);
-  opacity: 0.1;
+  background: linear-gradient(
+    to right,
+    rgba(148, 106, 32, 0.7) 5%,
+    transparent
+  );
 `;
 
 const DescContainer = styled.div`
@@ -66,8 +69,8 @@ const ParagraphContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: 800;
   color: white;
 `;
 

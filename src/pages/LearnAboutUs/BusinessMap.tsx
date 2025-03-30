@@ -14,6 +14,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  overflow: visible;
 `;
 
 export const BusinessMapSection = () => {

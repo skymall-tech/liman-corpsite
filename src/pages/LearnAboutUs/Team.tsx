@@ -9,6 +9,7 @@ const TeamContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: visible;
 `;
 
 const CardContainer = styled.div`
@@ -17,6 +18,7 @@ const CardContainer = styled.div`
   margin-top: 90px;
   height: 400px;
   width: 100%;
+  overflow: visible;
 `;
 
 const DescSection = styled.div`

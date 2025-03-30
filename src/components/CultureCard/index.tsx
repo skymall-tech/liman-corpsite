@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React, { useState } from 'react';
-import Down from '../../assets/icons/down.svg';
-import Up from '../../assets/icons/up.svg';
+import Down from '../../assets/icons/Down.svg';
+import Up from '../../assets/icons/Up.svg';
 import { keyframes } from '@emotion/react';
 
 interface CultureCardProps {
