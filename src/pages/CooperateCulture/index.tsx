@@ -1,3 +1,10 @@
+import { PageContainer } from '../../components/PageConatiner';
+import { MVVSection } from './MvvSection';
+
 export const CooperateCulturePage: React.FC = () => {
-  return <div>Cooperate Culture</div>;
+  return (
+    <PageContainer>
+      <MVVSection></MVVSection>
+    </PageContainer>
+  );
 };
