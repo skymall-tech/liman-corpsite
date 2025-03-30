@@ -8,7 +8,7 @@ const FooterWrapper = styled.footer`
   padding: 40px 0;
   background-color: var(--color-background-primary);
   color: var(--color-primary);
-  width: calc(100% - 88px);
+  width: calc(100% - 100px);
 `;
 
 const FooterContent = styled.div`

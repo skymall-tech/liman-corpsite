@@ -34,7 +34,6 @@ const CardsContainer = styled.div`
 `;
 
 const TimelineContainer = styled.div`
-  width: 100%;
   margin: 0 76px;
   border-bottom: 4px solid var(--color-primary);
   display: flex;
