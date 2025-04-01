@@ -23,7 +23,7 @@ const ContactGrid = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 64px;
-  width: 800px;
+  width: max(800px, 40vw);
   margin: 64px auto;
 `;
 
@@ -32,9 +32,9 @@ const ContactSection = styled.div`
   flex-direction: column;
 `;
 
-const SectionHeading = styled.h2`
+const SectionHeading = styled.h3`
   color: var(--color-primary);
-  font-size: 16px;
+  font-size: var(--font-size-h3);
   display: flex;
   align-items: center;
   margin-bottom: 12px;
@@ -46,7 +46,7 @@ const SectionHeading = styled.h2`
 
 const ContactLink = styled.a`
   margin-left: 20px;
-  font-size: 12px;
+  font-size: var(--font-size-body);
   color: var(--color-primary);
   text-decoration: underline;
 `;

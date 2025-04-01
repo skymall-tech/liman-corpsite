@@ -2,12 +2,13 @@ import { FirstScreen } from '../../../components/FirstScreen';
 import { Footer } from '../../../components/Footer';
 import { PageContainer } from '../../../components/PageConatiner';
 import { useScrollSections } from '../../../hooks/useScrollSections';
+import { ArtSection } from './Art';
 import { BrandStorySection } from './BrandStory';
 import { JewelrySection } from './JewelrySection';
 
 export const SatellitePage: React.FC = () => {
   useScrollSections({
-    sections: ['first-screen', 'brand-story', 'jewelry'],
+    sections: ['first-screen', 'brand-story', 'art-section', 'jewelry'],
   });
   return (
     <PageContainer>
@@ -20,6 +21,7 @@ export const SatellitePage: React.FC = () => {
         }
       />
       <BrandStorySection />
+      <ArtSection></ArtSection>
       <JewelrySection></JewelrySection>
       <Footer />
     </PageContainer>

@@ -30,8 +30,8 @@ const QRCodeImage = styled.img`
   height: 60px;
 `;
 
-const QRCodeText = styled.h3`
-  font-size: 12px;
+const QRCodeText = styled.p`
+  font-size: var(--font-size-body);
   color: var(--color-primary);
   margin-top: 12px;
   font-weight: 700;
@@ -48,22 +48,23 @@ const QRSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 120px;
+  width: max(10vw, 200px);
 `;
 
 const LinkSection = styled.div`
   h3 {
     color: var(--color-primary);
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: var(--font-size-h3);
   }
   ul {
     list-style: none;
     padding: 0;
     li {
-      font-size: 12px;
+      font-size: var(--font-size-body);
       margin-bottom: 15px;
       a {
+        font-size: var(--font-size-body);
         color: var(--color-primary);
         text-decoration: none;
         &:hover {
@@ -73,10 +74,13 @@ const LinkSection = styled.div`
     }
   }
 `;
+const LinkElement = styled(Link)`
+  font-size: var(--font-size-body);
+`;
 
 const Copyright = styled.div`
   text-align: center;
-  font-size: 12px;
+  font-size: var(--font-size-body);
   color: var(--color-primary);
   margin-top: 70px;
 `;
@@ -99,34 +103,34 @@ export const Footer = () => {
           <h3>Business Map</h3>
           <ul>
             <li>
-              <Link
+              <LinkElement
                 to={{
                   pathname: PAGE_PATH.businessMap,
                 }}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Travel Retail
-              </Link>
+              </LinkElement>
             </li>
             <li>
-              <Link
+              <LinkElement
                 to={{
                   pathname: PAGE_PATH.satellite,
                 }}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Satellite Paris
-              </Link>
+              </LinkElement>
             </li>
             <li>
-              <Link
+              <LinkElement
                 to={{
                   pathname: PAGE_PATH.estate,
                 }}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Cultural Estate
-              </Link>
+              </LinkElement>
             </li>
           </ul>
         </LinkSection>

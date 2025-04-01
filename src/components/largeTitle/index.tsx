@@ -15,12 +15,15 @@ const Title = styled.h1`
   font-size: 70px;
   font-weight: 900;
   color: var(--color-primary);
+  @media screen and (min-width: 2000px) {
+    font-size: 90px;
+  }
 `;
 
 const Desc = styled.p`
-  font-size: 14px;
+  font-size: var(--font-size-body);
   color: var(--color-primary);
-  width: 430px;
+  width: max(30vw, 430px);
   text-align: center;
 `;
 

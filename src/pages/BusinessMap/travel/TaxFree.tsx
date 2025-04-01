@@ -15,7 +15,7 @@ export const TaxFreeSection = () => {
         subtitle={'Unlock global tax-exclusive treasures in the cloud'}
       />
       <ImgWithSearch
-        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/last-sitelite-O3ZyuDcTzJrKipcUTQlnJzkxKTOuew.png"
+        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/skymall-XO6fb3cpJORWuM6RIZqILgNrE4DxCx.png"
         desc="Search in Wechat Mini Program"
         icon={SearchIcon}
       ></ImgWithSearch>

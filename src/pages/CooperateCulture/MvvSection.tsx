@@ -9,7 +9,7 @@ const MVVContainer = styled.div<{ navHeight: number }>`
   flex-direction: row;
   justify-content: center;
   padding-top: 66px;
-  gap: 40px;
+  gap: 3vw;
 `;
 
 export const MVVSection = () => {

@@ -5,7 +5,26 @@ interface TeamCardProps {
   title: string;
   description: string;
   image: string;
+  transformX?: string;
 }
+
+const Card = styled.div<{ transformX?: string }>`
+  position: relative;
+  width: 12vw;
+  height: 27vw;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  transform-origin: center;
+  &:hover {
+    transform: translateY(-15%) translateX(${(props) => props.transformX});
+    width: 50vw;
+    height: 38.4vw;
+    border: 4px solid rgba(226, 199, 153, 0.4);
+    z-index: 10;
+  }
+`;
 
 const Image = styled.img`
   position: absolute;
@@ -14,25 +33,7 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s ease;
-`;
-const Card = styled.div`
-  position: relative;
-  width: 122px;
-  height: 308px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  border: 4px solid transparent;
-  transform-origin: center;
-  &:hover {
-    transform: translateY(-15%);
-    width: 578px;
-    height: 506px;
-    border: 4px solid rgba(226, 199, 153, 0.4);
-    z-index: 10;
-  }
+  object-position: 18% center;
 `;
 
 const Overlay = styled.div`
@@ -65,20 +66,20 @@ const TextContent = styled.div`
 `;
 
 const Name = styled.p`
-  font-size: 24px;
+  font-size: var(--font-size-h2);
   font-weight: bold;
   margin-bottom: 4px;
   font-weight: 900;
 `;
 
 const Title = styled.p`
-  font-size: 10px;
+  font-size: var(--font-size-body);
   font-weight: 700;
   margin-bottom: 50px;
 `;
 
 const Description = styled.p`
-  font-size: 12px;
+  font-size: var(--font-size-body);
   font-weight: 300;
   margin-bottom: 15px;
   text-align: right;
@@ -89,9 +90,10 @@ export const TeamCard = ({
   title,
   description,
   image,
+  transformX = '0%',
 }: TeamCardProps) => {
   return (
-    <Card>
+    <Card transformX={transformX}>
       <Image src={image} alt={name} />
       <Overlay>
         <TextContent>

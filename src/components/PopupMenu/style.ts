@@ -13,7 +13,7 @@ export const PopupContainer = styled.div<{ isLarge: boolean }>`
 export const PopupItem = styled.div<{ isActive: boolean }>`
   margin-top: 10px;
   cursor: pointer;
-  color: ${({ isActive }) => (isActive ? 'var(--color-primary)' : '#d9d9d9')};
+  color: ${({ isActive }) => (isActive ? 'var(--color-primary)' : '#b3b3b3')};
   &:hover {
     color: var(--color-primary);
   }

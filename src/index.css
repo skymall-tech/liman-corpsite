@@ -29,6 +29,10 @@
   --color-background-primary: #F2F0EC;
   --color-background-secondary: #D2B583;
   --color-text-disabled: #D9D9D9;
+  --font-size-h1: 36px;
+  --font-size-h2: 26px;
+  --font-size-h3: 16px;
+  --font-size-body: 12px;
   background-color: var(--color-background-primary);
 }
 * {
@@ -46,11 +50,33 @@ body {
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 26px;
+  font-size: var(--font-size-h1);
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 16px;
+  font-size: var(--font-size-h2);
 }
+
+
+@media screen and (min-width: 1800px) {
+  :root {
+    --font-size-h1: 38px;
+    --font-size-h2: 28px;
+    --font-size-h3: 18px;
+    --font-size-body: 14px;
+  }
+
+}
+
+@media screen and (min-width: 2200px) {
+  :root {
+    --font-size-h1: 42px;
+    --font-size-h2: 32px;
+    --font-size-h3: 22px;
+    --font-size-body: 18px;
+  }
+
+}
+

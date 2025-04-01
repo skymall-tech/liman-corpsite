@@ -21,8 +21,8 @@ const bounce = keyframes`
 
 const Card = styled.div<{ isExpanded: boolean }>`
   box-sizing: border-box;
-  width: 350px;
-  height: ${({ isExpanded }) => (isExpanded ? '620px' : '450px')};
+  width: 18vw;
+  height: ${({ isExpanded }) => (isExpanded ? '38vw' : '26vw')};
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 2px 10px #946a20;
@@ -38,23 +38,23 @@ const Card = styled.div<{ isExpanded: boolean }>`
 const Title = styled.div`
   background: #946a20;
   width: 100%;
-  height: 160px;
+  height: 9vw;
   color: white;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: var(--font-size-h2);
   font-weight: 700;
   flex-shrink: 0;
-  margin-bottom: 30px;
+  margin-bottom: 2vw;
 `;
 
 const Description = styled.div`
   text-align: center;
   color: var(--color-primary);
-  width: 240px;
-  font-size: 14px;
+  width: 80%;
+  font-size: var(--font-size-body);
   font-weight: 700;
 `;
 
@@ -66,12 +66,14 @@ const ExpandedContainer = styled.div`
   color: var(--color-primary);
   text-align: center;
   h3 {
-    font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
+    font-size: var(--font-size-body);
+    line-height: 1.5;
   }
   p {
     margin-bottom: 20px;
+    font-size: var(--font-size-body);
   }
 `;
 

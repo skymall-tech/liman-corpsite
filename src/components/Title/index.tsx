@@ -9,15 +9,15 @@ const TitleContainer = styled.div`
   align-items: center;
 `;
 
-const TitleText = styled.h1`
+const TitleText = styled.h2`
   color: var(--color-secondary);
   text-transform: uppercase;
 `;
 
 const SubtitleText = styled.p`
   color: var(--color-primary);
-  width: 440px;
-  font-size: 12px;
+  width: max(30vw, 400px);
+  font-size: var(--font-size-body);
 `;
 const Divider = styled.div`
   width: 430px;

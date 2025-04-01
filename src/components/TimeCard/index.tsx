@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 const Card = styled.div<{ active: boolean; isLast?: boolean }>`
-  width: 200px;
-  height: 400px;
+  width: 15vw;
+  height: 30vw;
   padding: 37px 21px 30px 21px;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -18,7 +18,8 @@ const Card = styled.div<{ active: boolean; isLast?: boolean }>`
 
 const Year = styled.h2<{ active: boolean }>`
   color: var(--color-primary);
-  font-size: ${({ active }) => (active ? '32px' : '22px')};
+  font-size: ${({ active }) =>
+    active ? 'calc(var(--font-size-h2) + 2px)' : 'var(--font-size-h2)'};
   margin-bottom: 16px;
   transition: font-size 0.3s ease;
 `;
@@ -26,8 +27,11 @@ const Year = styled.h2<{ active: boolean }>`
 const Description = styled.p`
   color: var(--color-primary);
   text-align: center;
-  font-size: 12px;
+  font-size: var(--font-size-body);
   font-weight: 400;
+  p {
+    font-size: var(--font-size-body);
+  }
 `;
 
 const TopDivider = styled.div`
@@ -45,7 +49,7 @@ const BottomDivider = styled.div`
 const ShortDesc = styled.div`
   color: var(--color-primary);
   text-align: center;
-  font-size: 12px;
+  font-size: var(--font-size-body);
   font-weight: 400;
 `;
 

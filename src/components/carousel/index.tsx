@@ -58,24 +58,24 @@ const DescContainer = styled.div`
   position: absolute;
   left: 50px;
   top: 58px;
-  width: 360px;
+  width: max(30vw, 360px);
 `;
 
 const ParagraphContainer = styled.div`
-  width: 240px;
+  width: max(20vw, 240px);
   display: flex;
   flex-direction: column;
   margin-top: 30px;
 `;
 
 const Title = styled.h2`
-  font-size: 20px;
+  font-size: var(--font-size-h2);
   font-weight: 800;
   color: white;
 `;
 
 const Paragraph = styled.p`
-  font-size: 12px;
+  font-size: var(--font-size-body);
   font-weight: 400;
   margin-top: 30px;
   line-height: 1.3;

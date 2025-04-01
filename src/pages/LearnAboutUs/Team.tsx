@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next';
 
 const TeamContainer = styled.div`
   height: 100vh;
-  overflow-y: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: visible;
+  overflow-y: visible;
+  overflow-x: hidden;
 `;
 
 const CardContainer = styled.div`
@@ -38,22 +38,23 @@ export const TeamSection = () => {
       />
       <CardContainer>
         <TeamCard
+          transformX="23%"
           name={t('team.luke.name')}
           title={t('team.luke.title')}
           description={t('team.luke.description')}
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/%E6%9D%A8%E5%85%89-3uAsMycA7xWc3T3d4Ix7OUgtx2EOtY.PNG"
+          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%881%3A7%EF%BC%89-tlVl9ntPE3tQN66W1exxqL52wN2ih1.png"
         />
         <TeamCard
           name={t('team.lizhihua.name')}
           title={t('team.lizhihua.title')}
           description={t('team.lizhihua.description')}
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/%E6%9D%8E%E6%B2%BB%E5%8D%8E-N8xb6Qbq7ScmMNplp0jVqRmk9ZU02i.jpg"
+          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%883%3A7%EF%BC%89-kbobUTiegMFDvvhlzUjUG4CRlpR9Xy.png"
         />
         <TeamCard
           name={t('team.chenli.name')}
           title={t('team.chenli.title')}
           description={t('team.chenli.description')}
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/%E9%99%88%E7%AB%8B-Hu2FIfEauTWsg6bcg6i4OcK5VZ4ktn.PNG"
+          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/pic1%281%29-vYOwaIeGTLepM4Vo0vIQsbmXAGo4DN.jpg"
         />
         <TeamCard
           name={t('team.lifenggu.name')}
@@ -65,19 +66,20 @@ export const TeamSection = () => {
           name={t('team.zhangchi.name')}
           title={t('team.zhangchi.title')}
           description={t('team.zhangchi.description')}
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/%E5%BC%A0%E9%A9%B0-1791CjzJh6lV8olONo8zPzzTMYN4fp.jpg"
+          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%885%3A7%EF%BC%89-vJfQH58EKeCmAen45ydLcybT1Qr2Tv.png"
         />
         <TeamCard
           name={t('team.liwan.name')}
           title={t('team.liwan.title')}
           description={t('team.liwan.description')}
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/%E6%9D%8E%E5%BC%AF-56gpGXCleMJELlZYatShAE5hoBqIaJ.jpg"
+          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%886%3A7%EF%BC%89-xE4Ef4nowdQJrxZTqjbZnXGJ9Ncj5y.png"
         />
         <TeamCard
+          transformX="-23%"
           name={t('team.lushaojuan.name')}
           title={t('team.lushaojuan.title')}
           description={t('team.lushaojuan.description')}
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/%E5%8D%A2%E5%B0%91%E5%A8%9F-UYJ2lvr1uhFAjVWSaLIMg6yZ4cfQl3.jpg"
+          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/pic1%281%29-vYOwaIeGTLepM4Vo0vIQsbmXAGo4DN.jpg"
         />
       </CardContainer>
       <DescSection>

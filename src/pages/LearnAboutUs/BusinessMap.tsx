@@ -15,6 +15,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: visible;
+  margin-top: 30px;
 `;
 
 export const BusinessMapSection = () => {

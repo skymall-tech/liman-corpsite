@@ -10,7 +10,7 @@ const OdysseyContainer = styled.div`
 `;
 
 const CardsContainer = styled.div`
-  margin-top: 60px;
+  margin-top: 70px;
   margin-bottom: 40px;
   display: flex;
   overflow-x: auto;
@@ -39,7 +39,7 @@ const TimelineContainer = styled.div`
   border-bottom: 4px solid var(--color-primary);
   display: flex;
   justify-content: flex-start;
-  padding-left: 60px;
+  padding-left: 5vw;
   margin-top: -45px;
 `;
 const Logo = styled.img`

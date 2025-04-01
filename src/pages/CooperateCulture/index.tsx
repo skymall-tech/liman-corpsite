@@ -1,3 +1,4 @@
+import { Footer } from '../../components/Footer';
 import { PageContainer } from '../../components/PageConatiner';
 import { useScrollSections } from '../../hooks/useScrollSections';
 import { MVVSection } from './MvvSection';
@@ -9,6 +10,7 @@ export const CooperateCulturePage: React.FC = () => {
   return (
     <PageContainer>
       <MVVSection></MVVSection>
+      <Footer></Footer>
     </PageContainer>
   );
 };

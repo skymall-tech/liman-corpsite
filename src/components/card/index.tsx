@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 
 const CardContainer = styled.div`
   position: relative;
-  width: 300px;
-  height: 520px;
+  width: 23vw;
+  height: 38vw;
   background-color: #f5f5f5;
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 10px;
+  margin: 0 1vw;
   transition: transform 0.3s;
   &:hover {
     cursor: pointer;
@@ -53,7 +53,7 @@ const CardTitle = styled.div<{ titleOnCenter: boolean }>`
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: var(--font-size-h2);
   display: flex;
   flex-direction: column;
   justify-content: ${(props) =>

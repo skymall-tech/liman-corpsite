@@ -25,7 +25,6 @@ const SearchContainer = styled.div`
   left: 0;
   width: 100%;
   display: flex;
-  height: 60px;
   flex-direction: row;
   justify-content: center;
 `;
