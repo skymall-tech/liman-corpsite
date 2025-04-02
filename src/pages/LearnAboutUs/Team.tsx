@@ -33,52 +33,52 @@ export const TeamSection = () => {
   return (
     <TeamContainer id="team-section">
       <SectionTitle
-        title="OUR VISIONARY HELM"
-        subtitle="Gather experts from around the world"
+        title={t('about_us.team.title')}
+        subtitle={t('about_us.team.subtitle')}
       />
       <CardContainer>
         <TeamCard
           transformX="23%"
-          name={t('team.luke.name')}
-          title={t('team.luke.title')}
-          description={t('team.luke.description')}
+          name={t('about_us.team.luke.name')}
+          title={t('about_us.team.luke.title')}
+          description={t('about_us.team.luke.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%881%3A7%EF%BC%89-tlVl9ntPE3tQN66W1exxqL52wN2ih1.png"
         />
         <TeamCard
-          name={t('team.lizhihua.name')}
-          title={t('team.lizhihua.title')}
-          description={t('team.lizhihua.description')}
+          name={t('about_us.team.lizhihua.name')}
+          title={t('about_us.team.lizhihua.title')}
+          description={t('about_us.team.lizhihua.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%883%3A7%EF%BC%89-kbobUTiegMFDvvhlzUjUG4CRlpR9Xy.png"
         />
         <TeamCard
-          name={t('team.chenli.name')}
-          title={t('team.chenli.title')}
-          description={t('team.chenli.description')}
+          name={t('about_us.team.chenli.name')}
+          title={t('about_us.team.chenli.title')}
+          description={t('about_us.team.chenli.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/pic1%281%29-vYOwaIeGTLepM4Vo0vIQsbmXAGo4DN.jpg"
         />
         <TeamCard
-          name={t('team.lifenggu.name')}
-          title={t('team.lifenggu.title')}
-          description={t('team.lifenggu.description')}
+          name={t('about_us.team.lifenggu.name')}
+          title={t('about_us.team.lifenggu.title')}
+          description={t('about_us.team.lifenggu.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/pic1%281%29-vYOwaIeGTLepM4Vo0vIQsbmXAGo4DN.jpg"
         />
         <TeamCard
-          name={t('team.zhangchi.name')}
-          title={t('team.zhangchi.title')}
-          description={t('team.zhangchi.description')}
+          name={t('about_us.team.zhangchi.name')}
+          title={t('about_us.team.zhangchi.title')}
+          description={t('about_us.team.zhangchi.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%885%3A7%EF%BC%89-vJfQH58EKeCmAen45ydLcybT1Qr2Tv.png"
         />
         <TeamCard
-          name={t('team.liwan.name')}
-          title={t('team.liwan.title')}
-          description={t('team.liwan.description')}
+          name={t('about_us.team.liwan.name')}
+          title={t('about_us.team.liwan.title')}
+          description={t('about_us.team.liwan.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%886%3A7%EF%BC%89-xE4Ef4nowdQJrxZTqjbZnXGJ9Ncj5y.png"
         />
         <TeamCard
           transformX="-23%"
-          name={t('team.lushaojuan.name')}
-          title={t('team.lushaojuan.title')}
-          description={t('team.lushaojuan.description')}
+          name={t('about_us.team.lushaojuan.name')}
+          title={t('about_us.team.lushaojuan.title')}
+          description={t('about_us.team.lushaojuan.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/pic1%281%29-vYOwaIeGTLepM4Vo0vIQsbmXAGo4DN.jpg"
         />
       </CardContainer>

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../../components/Title';
+import { useTranslation } from 'react-i18next';
 
 const ArtContainer = styled.div`
   width: 100vw;
@@ -7,11 +8,12 @@ const ArtContainer = styled.div`
 `;
 
 export const ArtSection = () => {
+  const { t } = useTranslation();
   return (
     <ArtContainer id="art-section">
       <SectionTitle
-        title="L'ATELIER DES ARTS"
-        subtitle="World Artisan Heritage Gallery"
+        title={t('satellite_paris.art.title')}
+        subtitle={t('satellite_paris.art.subtitle')}
       />
     </ArtContainer>
   );

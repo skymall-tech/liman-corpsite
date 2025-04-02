@@ -1,45 +1,241 @@
 {
+  "common":{
+    "travel_retail":"旅游零售",
+    "satellite_paris":"Satellite Paris",
+    "culture_estate":"文化地产"
+  },
+  "footer":{
+    "search_in_wechat":"小程序中搜索",
+    "business_map":"商业版图",
+    "business_cooperation":"商业合作",
+    "join_us":"加入我们"
+  },
   "menu": {
     "learn_about_us": "了解利曼",
     "business_map": "商业版图",
     "cooperate_culture": "企业文化",
     "contact_us": "联系我们"
   },
-  "team": {
-    "luke": { 
-      "name": "Luke",
-      "title": "副总经理",
-      "description": "分管营销与数字化板块，为集团打造线上线下一体共生的营销体系和数字系统。青年时期入选《中国企业家》杂志年度创新榜，后曾担任腾讯创新院总经理、负责腾讯亿级用户平台的设计与运营。身具颠覆式创新思维，以科技手段助力集团乘风踏浪。"
+  "about_us":{
+    "page_title":"利曼集团",
+    "page_subtitle":"利曼集团有限公司成立于2009年，总部位于香港，专注于国际高端时尚领域",
+    "business_map":{
+      "title":"商业版图",
+      "subtitle":"聚焦三大领域"
     },
-    "ligufeng":{
-      "name": "李丰谷",
-      "title": "CEO",
-      "description": "利曼集团创始人，中国旅游零售行业的先行者，企业社会责任的首要践行人。关注集团在全球各地区商业项目的投资、经营战略的制定和人才培养。"
+    "odyssey":{
+      "title":"OUR ODYSSEY CHRONICLE",
+      "subtitle":"Two decades rooted in luxury dominance, now pioneering duty-free frontiers.",
+      "2006":{
+        "desc1":"Beishan Industrial (Guangzhou) Co., LTD., the predecessor of Leman, was established.",
+         "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+         "short_desc":"The predecessor of Liman, Beishan Industrial (Guangzhou) Co., Ltd., was established."
+      },
+      "2008":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2012":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2014":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2015":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2017":{
+        "desc1":"The group became the largest luxury goods operator at Chongqing. Jiangbei International Airport and began representing the Satellite Paris brand in the same year.",
+        "short_desc":"The group became the largest luxury goods operator at Chongqing."
+      },
+      "2019":{
+        "desc1":"Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area.",
+        "short_desc":"Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area."
+      },
+      "2023":{
+        "desc1":"The group re-entered Beijing Capital International Airport.",
+        "desc2":"And opened 9 offline stores the following year.",
+        "short_desc":"The group re-entered Beijing Capital International Airport."
+      },
+      "2024":{
+        "desc1":"The group is preparing to establish a comprehensive duty-free mall at the Qingmao Port. Marking its entry into the duty-free industry.",
+        "desc2":"In the same year, the group will also re-enter Shenzhen Baoan International Airport.",
+        "short_desc":"The the group is preparing to establish a comprehensive duty-free mall at the Qingmao Port."
+      }
     },
-    "chenli":{
-      "name": "陈立",
-      "title": "执行董事",
-      "description": "负责国际商业拓展与统筹，与全球各地区商业伙伴的合作策略制定、重点合作事项的落实，探索新兴经营业态、全面保持集团在全球旅游零售行业的领先身位。"
+    "team": {
+      "title":"OUR VISIONARY HELM",
+      "subtitle":"Gather experts from around the world",
+      "luke": { 
+        "name": "杨光",
+        "title": "副总经理",
+        "description": "分管营销与数字化板块，为集团打造线上线下一体共生的营销体系和数字系统。青年时期入选《中国企业家》杂志年度创新榜，后曾担任腾讯创新院总经理、负责腾讯亿级用户平台的设计与运营。身具颠覆式创新思维，以科技手段助力集团乘风踏浪。"
+      },
+      "ligufeng":{
+        "name": "李丰谷",
+        "title": "CEO",
+        "description": "利曼集团创始人，中国旅游零售行业的先行者，企业社会责任的首要践行人。关注集团在全球各地区商业项目的投资、经营战略的制定和人才培养。"
+      },
+      "chenli":{
+        "name": "陈立",
+        "title": "执行董事",
+        "description": "负责国际商业拓展与统筹，与全球各地区商业伙伴的合作策略制定、重点合作事项的落实，探索新兴经营业态、全面保持集团在全球旅游零售行业的领先身位。"
+      },
+      "lizhihua":{
+        "name": "李治华",
+        "title": "执行董事",
+        "description": "负责集团全球商业项目的投资、经营战略的制定和人才培养。"
+      },
+      "zhangchi":{
+        "name": "张驰",
+        "title": "艺术总监",
+        "description": "负责与全球品牌的艺术战略协同，确保品牌调性在华落地时的艺术完整性。张驰女士拥有深厚的艺术品鉴背景，基于中国高净值客群的审美偏好建立会员服务体系，为我们的会员带来卓越的消费和情感体验。"
+      },
+      "lushaojuan":{
+        "name": "卢少娟",
+        "title": "副总经理",
+        "description": "分管集团人力板块、兼任澳门青茂免税品业务公共关系负责人。熟稔各类企业经营脉络，主导多个重大项目的创始组建、梯队培养、激励考核，助力业务发展快速向好。精通团队建设与决策机制设计，以创新思维推动集团升级，以诚信坚韧引领卓越前行。"
+      },
+      "liwan":{
+        "name": "李弯",
+        "title": "营运总监",
+        "description": "专长于零售门店运营策略与人员培训，具备逾十年的高级企业管理背景。全面负责机场旅行渠道以及重要子公司的运营统筹，确保业务运营的流畅性与效率，带领团队实现业绩增长与人才建设，助力利曼稳步迈向卓越。"
+      }
+    }
+  },
+  "travel":{
+    "page_title":"Travel Retail",
+    "page_subtitle":"Global Essence Local Elegance",
+    "global_retail_lounge":{
+      "title":"GLOBAL RETAIL LOUNGE",
+      "subtitle":"A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques."
     },
-    "lizhihua":{
-      "name": "李治华",
-      "title": "执行董事",
-      "description": "负责集团全球商业项目的投资、经营战略的制定和人才培养。"
+    "partner_brands":{
+      "title":"OUR PARTNER BRANDS",
+      "subtitle":"A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques."
     },
-    "zhangchi":{
-      "name": "张驰",
-      "title": "艺术总监",
-      "description": "负责与全球品牌的艺术战略协同，确保品牌调性在华落地时的艺术完整性。张驰女士拥有深厚的艺术品鉴背景，基于中国高净值客群的审美偏好建立会员服务体系，为我们的会员带来卓越的消费和情感体验。"
+    "tax_free":{
+      "title":"OUR E-TAX FREE HARBOR",
+      "subtitle":"Unlock global tax-exclusive treasures in the cloud",
+      "search":"Search in Wechat Mini Program"
+    }
+  },
+  "satellite_paris":{
+    "page_title":"Satellite Paris",
+    "page_subtitle":"Wander with a Compass of Conviction",
+    "brand_story":{
+      "title":"BRAND STORY",
+      "subtitle":"A global luxury brand with a unique French style"
     },
-    "lushaojuan":{
-      "name": "卢少娟",
-      "title": "副总经理",
-      "description": "分管集团人力板块、兼任澳门青茂免税品业务公共关系负责人。熟稔各类企业经营脉络，主导多个重大项目的创始组建、梯队培养、激励考核，助力业务发展快速向好。精通团队建设与决策机制设计，以创新思维推动集团升级，以诚信坚韧引领卓越前行。"
+    "art":{
+      "title":"L'ATELIER DES ARTS",
+      "subtitle":"World Artisan Heritage Gallery"
     },
-    "liwan":{
-      "name": "李弯",
-      "title": "营运总监",
-      "description": "专长于零售门店运营策略与人员培训，具备逾十年的高级企业管理背景。全面负责机场旅行渠道以及重要子公司的运营统筹，确保业务运营的流畅性与效率，带领团队实现业绩增长与人才建设，助力利曼稳步迈向卓越。"
+    "jewelry":{
+      "title":"OUR JEWELRY CONSTELLATION",
+      "subtitle":"Navigate the cloud to unlock humanity's living chronicles across civilizations.",
+      "search":"Click to go to the official Taobao store"
+    }
+  },
+  "culture_estate":{
+    "page_title":"CULTURAL ESTATE",
+    "page_subtitle":"Liman & TopEast",
+    "brand_story":{
+      "title":"BRAND STORY",
+      "subtitle":"Global souls, crafted light — one spark ignites her world.",
+      "stories":{
+        "1":{
+          "title":"Disruption: When Residences Become Art",
+          "p1":"In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
+          "p2":"Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
+          "p3":"“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
+        },
+        "2":{
+          "title":"Origins: From Fabric Folds to Spatial Poetry",
+          "p1":"Under the spotlights of fashion runways, Armani’s scissors carved fluid silhouettes. Yet in his Milan studio, he pondered: What if the drape of silk became curtains? What if the texture of suiting fabrics enveloped a sofa? What if the gleam of jewelry illuminated a lamp?",
+          "p2":"Thus, Armani Casa’s first furniture piece emerged—no ornate carvings, only restrained curves and neutral tones, as if crystallizing the essence of haute couture into spatial language.",
+          "p3":"“True luxury,” he declared, “lies in the dialogue between objects and space.”"
+        },
+        "3":{
+          "title":"Disruption: When Residences Become Art",
+          "p1":"In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
+          "p2":"Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
+          "p3":"“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
+        },
+        "4":{
+          "title":"An Epic of Timeless Elegance",
+          "p1":"While the world chased extravagance, Giorgio Armani defined eternity with a single line. ",
+          "p2":"In 2000, the Italian maestro who revolutionized fashion with his power suits extended his aesthetic empire into the realm of living—thus Armani Casa was born. ",
+          "p3":"This was not merely a cross-border venture, but a design philosopher reinterpretation of home: a sanctuary stripped of noise, where space becomes a refuge for the soul"
+        },
+        "5":{
+          "p1":"Today, Armani Casa residences stand as global icons of refined living. ",
+          "p2":"Silent as poetry, they whisper a secret to those who enter: true elegance needs no proclamation. It transcends time."
+        }
+      }
+    },
+    "armani_casa":{
+      "title":"OUR ARMANI CASA",
+      "subtitle":"East Meet West",
+      "stories":{
+        "1":{
+          "title":"Disruption: When Residences Become Art",
+          "p1":"In 2019, Liman Company obtained the Greater Bay Area development authorization of ARMANI Armani apartment brand with good reputation.",
+          "p2":"Thus opening the deep cooperation with Armani brand real estate and customized high-end home."
+        },
+        "2":{
+          "title":"Origins: From Fabric Folds to Spatial Poetry",
+          "p1":"The project is located in Lingshan Island, one of the international financial Islands of Mingzhu Bay, Nansha District, Guangzhou, and has a commercial and apartment complex with a sea view.",
+          "p2":"The project consists of two plots. Two 40-meter-high commercial buildings are planned to be built on the western plot, covering an area of 9,900 square meters. ",
+          "p3":"Eastern plot construction one a 184-meter-high apartment building and a 46-meter-high apartment building with an area of 7,200 square meters"
+        }
+      }
+    }
+  },
+  "cooperate_culture":{
+    "mvv":{
+      "mission":{
+        "title":"Mission",
+        "short_desc":"To carve excellence with a pioneering spirit and safeguard growth with an integrity-driven heritage.",
+        "p1":"Guided by integrity as our compass and craftsmanship as our foundation.",
+        "p2":"we transform challenges into stepping stones for progress and temptations into touchstones of resilience.",
+        "p3":"Through relentless refinement of our expertise, we create sustainable value for customers and partners alike."
+      },
+      "value":{
+        "title":"Value",
+        "short_desc":"Diligence with Compound Impact",
+        "p1":"We believe persistent dedication yields exponential rewards. By honing unparalleled service capabilities, we deliver exceptional returns that transcend expectations.",
+        "h1":"Leadership by Example",
+        "p2":"Managers are the first ambassadors of excellence. Through rigorous self-discipline and elevated standards, we inspire teams to rise and thrive.",
+        "h2":"Purpose-Driven Altruism",
+        "p3":"\"Empower stakeholders with tangible benefits.\" We resist short-term allure, prioritize collective growth, and co-create enduring value with integrity."
+      },
+      "vision":{
+        "title":"Vision",
+        "short_desc":"To co-define the journey to a better future"
+      }
+    },
+    "social_responsibility":{
+      "title":"Social Responsibility",
+      "subtitle":"Commitment in Action, Building Futures",
+      "customer_rights":"Customer Rights & Experience",
+      "p1":"We uphold the highest standards of customer service and satisfaction. Our dedicated team ensures that every interaction is seamless, from initial inquiry to post-purchase support",
+      "p2":"Recognized by Aviation Administration in 2010 with Premium Service Merchant and \"Best Staff Image Award\"",
+      "p3":"In 2011, ten stores under Ruijie received the \"2009 Trusted Consumer Store\" designation from Guangzhou Consumer Council, making the company the most awarded merchant at Baiyun Airport with this honor.",
+      "p4":"Honored by Aviation Administration in 2011 with \"Outstanding Asian Games Contribution Merchant Award\"."
+    },
+    "customer_rights":{
+      "p1":"Honored with the \"Public Welfare Supporter Enterprise\" award by Huadu District, Guangzhou City from 2010 to 2011",
+      "p2":"Awarded the \"Community Ambassador Award\" by Huadong Town, Huadu District, Guangzhou City in 2014",
+      "p3":"Received the \"Outstanding Philanthropy Award\" from Huadu District, Guangzhou City between 2014 and 2015.",
+      "p4":"Recognized as a \"Caring Enterprise\" for the Jiusan-New Social Stratum Association – Love & Peace Philanthropy Initiative in 2015."
     }
   }
 }

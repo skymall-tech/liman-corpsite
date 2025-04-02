@@ -7,8 +7,10 @@ import { Footer } from '../../components/Footer';
 import { FirstScreen } from '../../components/FirstScreen';
 import { useScrollSections } from '../../hooks/useScrollSections';
 import { PageContainer } from '../../components/PageConatiner';
+import { useTranslation } from 'react-i18next';
 
 export const LearnAboutUsPage: React.FC = () => {
+  const { t } = useTranslation();
   useScrollSections({
     sections: [
       'first-screen',
@@ -23,8 +25,8 @@ export const LearnAboutUsPage: React.FC = () => {
       <FirstScreen
         showOverlay={false}
         nextSectionId="business-map-section"
-        title="LIMAN GROUP"
-        desc="LIMAN GROUP CO. (LIMITED) was established in Hong Kong in 2009, focusing on international high-end fashion."
+        title={t('about_us.page_title')}
+        desc={t('about_us.page_subtitle')}
         image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/first-Rao41GIGdVpGef4MpWC4hHe4RAXSFL.jpeg"
       />
       <BusinessMapSection />

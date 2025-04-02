@@ -1,45 +1,241 @@
 {
+  "common":{
+    "travel_retail":"Travel Retail",
+    "satellite_paris":"Satellite Paris",
+    "culture_estate":"Culture Estate"
+  },
+  "footer":{
+    "search_in_wechat":"Search in Wechat Mini Program",
+    "business_map":"Business Map",
+    "business_cooperation":"Business cooperation",
+    "join_us":"Join us"
+  },
   "menu": {
     "learn_about_us": "Learn About Us",
     "business_map": "Business Map",
     "cooperate_culture": "Cooperate Culture",
     "contact_us": "Contact Us"
   },
-  "team": {
-    "luke":{
-      "name":"杨光",
-      "title": "Vice General Manager",
-      "description": "Responsible for the marketing and digital sectors, he constructs an integrated online and offline symbiotic marketing system and digital system for the group. In his youth, he was selected for the annual innovation list of 'China Entrepreneur' magazine, and later served as the general manager of Tencent Innovation Institute, responsible for the design and operation of Tencent's billion-user platform. Possessing disruptive innovative thinking, he uses technology to help the group ride the waves."
+  "about_us":{
+    "page_title":"LIMAN GROUP",
+    "page_subtitle":"LIMAN GROUP CO. (LIMITED) was established in Hong Kong in 2009, focusing on international high-end fashion.",
+    "business_map":{
+      "title":"Business Map",
+      "subtitle":"Focus on three strategic areas"
     },
-    "lifenggu":{
-      "name": "李丰谷",
-      "title": "Chief Executive Officer",
-      "description": "Founder of Leman Group, pioneer in China's travel retail industry, and primary practitioner of corporate social responsibility. Focuses on the group's global business project investments, development of operational strategies, and talent cultivation."
+    "odyssey":{
+      "title":"OUR ODYSSEY CHRONICLE",
+      "subtitle":"Two decades rooted in luxury dominance, now pioneering duty-free frontiers.",
+      "2006":{
+        "desc1":"Beishan Industrial (Guangzhou) Co., LTD., the predecessor of Leman, was established.",
+         "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+         "short_desc":"The predecessor of Liman, Beishan Industrial (Guangzhou) Co., Ltd., was established."
+      },
+      "2008":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2012":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2014":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2015":{
+        "desc1":"Group offline stores exceeded 10",
+        "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
+        "short_desc":"Group offline stores exceeded 10"
+      },
+      "2017":{
+        "desc1":"The group became the largest luxury goods operator at Chongqing. Jiangbei International Airport and began representing the Satellite Paris brand in the same year.",
+        "short_desc":"The group became the largest luxury goods operator at Chongqing."
+      },
+      "2019":{
+        "desc1":"Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area.",
+        "short_desc":"Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area."
+      },
+      "2023":{
+        "desc1":"The group re-entered Beijing Capital International Airport.",
+        "desc2":"And opened 9 offline stores the following year.",
+        "short_desc":"The group re-entered Beijing Capital International Airport."
+      },
+      "2024":{
+        "desc1":"The group is preparing to establish a comprehensive duty-free mall at the Qingmao Port. Marking its entry into the duty-free industry.",
+        "desc2":"In the same year, the group will also re-enter Shenzhen Baoan International Airport.",
+        "short_desc":"The the group is preparing to establish a comprehensive duty-free mall at the Qingmao Port."
+      }
     },
-    "chenli":{
-      "name": "陈立",
-      "title": "Executive Director",
-      "description": "Responsible for international business development and coordination, formulating cooperation strategies with global business partners, implementing key cooperation initiatives, exploring new business models, and maintaining the group's leading position in the global travel retail industry."
+    "team": {
+      "title":"OUR VISIONARY HELM",
+      "subtitle":"Gather experts from around the world",
+      "luke":{
+        "name":"Luke",
+        "title": "Vice General Manager",
+        "description": "Responsible for the marketing and digital sectors, he constructs an integrated online and offline symbiotic marketing system and digital system for the group. In his youth, he was selected for the annual innovation list of 'China Entrepreneur' magazine, and later served as the general manager of Tencent Innovation Institute, responsible for the design and operation of Tencent's billion-user platform. Possessing disruptive innovative thinking, he uses technology to help the group ride the waves."
+      },
+      "lifenggu":{
+        "name": "Leon", 
+        "title": "Chief Executive Officer",
+        "description": "Founder of Leman Group, pioneer in China's travel retail industry, and primary practitioner of corporate social responsibility. Focuses on the group's global business project investments, development of operational strategies, and talent cultivation."
+      },
+      "chenli":{
+        "name": "Charly Chen",
+        "title": "Executive Director",
+        "description": "Responsible for international business development and coordination, formulating cooperation strategies with global business partners, implementing key cooperation initiatives, exploring new business models, and maintaining the group's leading position in the global travel retail industry."
+      },
+      "lizhihua":{
+        "name": "Tim",
+        "title": "Executive Director",
+        "description": "Responsible for the group's global business project investments, development of operational strategies, and talent cultivation."
+      },
+      "zhangchi":{
+        "name": "Esa",
+        "title": "Artistic Director",
+        "description": "Responsible for artistic strategy coordination with global brands, ensuring brand integrity during localization in China. Ms. Zhang Chi possesses a profound background in art appreciation and has established a membership service system based on Chinese high-net-worth clients' aesthetic preferences, bringing exceptional consumption and emotional experiences to our members."
+      },
+      "lushaojuan":{
+        "name": "Jenny",
+        "title": "Deputy General Manager",
+        "description": "Oversees the group's human resources sector and serves as the public relations director for Macao Qingmao Duty-Free Business. Well-versed in various business operations, leads the establishment of major projects, team development, and performance incentives, facilitating rapid business growth. Expertise in team building and decision-making mechanism design, driving group upgrades with innovative thinking and leading excellence with integrity and perseverance."
+      },
+      "liwan":{
+        "name": "Grace",
+        "title": "Operations Director",
+        "description": "Specializes in retail store operations strategy and staff training, with over ten years of senior corporate management background. Fully responsible for airport travel channel and key subsidiary operations coordination, ensuring operational smoothness and efficiency, leading the team to achieve performance growth and talent development, helping Leman steadily progress towards excellence."
+      }
+    }
+  },
+  "travel":{
+    "page_title":"Travel Retail",
+    "page_subtitle":"Global Essence Local Elegance",
+    "global_retail_lounge":{
+      "title":"GLOBAL RETAIL LOUNGE",
+      "subtitle":"A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques."
     },
-    "lizhihua":{
-      "name": "李治华",
-      "title": "Executive Director",
-      "description": "Responsible for the group's global business project investments, development of operational strategies, and talent cultivation."
+    "partner_brands":{
+      "title":"OUR PARTNER BRANDS",
+      "subtitle":"A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques."
     },
-    "zhangchi":{
-      "name": "张驰",
-      "title": "Artistic Director",
-      "description": "Responsible for artistic strategy coordination with global brands, ensuring brand integrity during localization in China. Ms. Zhang Chi possesses a profound background in art appreciation and has established a membership service system based on Chinese high-net-worth clients' aesthetic preferences, bringing exceptional consumption and emotional experiences to our members."
+    "tax_free":{
+      "title":"OUR E-TAX FREE HARBOR",
+      "subtitle":"Unlock global tax-exclusive treasures in the cloud",
+      "search":"Search in Wechat Mini Program"
+    }
+  },
+  "satellite_paris":{
+    "page_title":"Satellite Paris",
+    "page_subtitle":"Wander with a Compass of Conviction",
+    "brand_story":{
+      "title":"BRAND STORY",
+      "subtitle":"A global luxury brand with a unique French style"
     },
-    "lushaojuan":{
-      "name": "卢少娟",
-      "title": "Deputy General Manager",
-      "description": "Oversees the group's human resources sector and serves as the public relations director for Macao Qingmao Duty-Free Business. Well-versed in various business operations, leads the establishment of major projects, team development, and performance incentives, facilitating rapid business growth. Expertise in team building and decision-making mechanism design, driving group upgrades with innovative thinking and leading excellence with integrity and perseverance."
+    "art":{
+      "title":"L'ATELIER DES ARTS",
+      "subtitle":"World Artisan Heritage Gallery"
     },
-    "liwan":{
-      "name": "李弯",
-      "title": "Operations Director",
-      "description": "Specializes in retail store operations strategy and staff training, with over ten years of senior corporate management background. Fully responsible for airport travel channel and key subsidiary operations coordination, ensuring operational smoothness and efficiency, leading the team to achieve performance growth and talent development, helping Leman steadily progress towards excellence."
+    "jewelry":{
+      "title":"OUR JEWELRY CONSTELLATION",
+      "subtitle":"Navigate the cloud to unlock humanity's living chronicles across civilizations.",
+      "search":"Click to go to the official Taobao store"
+    }
+  },
+  "culture_estate":{
+    "page_title":"CULTURAL ESTATE",
+    "page_subtitle":"Liman & TopEast",
+    "brand_story":{
+      "title":"BRAND STORY",
+      "subtitle":"Global souls, crafted light — one spark ignites her world.",
+      "stories":{
+        "1":{
+          "title":"Disruption: When Residences Become Art",
+          "p1":"In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
+          "p2":"Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
+          "p3":"“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
+        },
+        "2":{
+          "title":"Origins: From Fabric Folds to Spatial Poetry",
+          "p1":"Under the spotlights of fashion runways, Armani’s scissors carved fluid silhouettes. Yet in his Milan studio, he pondered: What if the drape of silk became curtains? What if the texture of suiting fabrics enveloped a sofa? What if the gleam of jewelry illuminated a lamp?",
+          "p2":"Thus, Armani Casa’s first furniture piece emerged—no ornate carvings, only restrained curves and neutral tones, as if crystallizing the essence of haute couture into spatial language.",
+          "p3":"“True luxury,” he declared, “lies in the dialogue between objects and space.”"
+        },
+        "3":{
+          "title":"Disruption: When Residences Become Art",
+          "p1":"In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
+          "p2":"Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
+          "p3":"“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
+        },
+        "4":{
+          "title":"An Epic of Timeless Elegance",
+          "p1":"While the world chased extravagance, Giorgio Armani defined eternity with a single line. ",
+          "p2":"In 2000, the Italian maestro who revolutionized fashion with his power suits extended his aesthetic empire into the realm of living—thus Armani Casa was born. ",
+          "p3":"This was not merely a cross-border venture, but a design philosopher reinterpretation of home: a sanctuary stripped of noise, where space becomes a refuge for the soul"
+        },
+        "5":{
+          "p1":"Today, Armani Casa residences stand as global icons of refined living. ",
+          "p2":"Silent as poetry, they whisper a secret to those who enter: true elegance needs no proclamation. It transcends time."
+        }
+      }
+    },
+    "armani_casa":{
+      "title":"OUR ARMANI CASA",
+      "subtitle":"East Meet West",
+      "stories":{
+        "1":{
+          "title":"Disruption: When Residences Become Art",
+          "p1":"In 2019, Liman Company obtained the Greater Bay Area development authorization of ARMANI Armani apartment brand with good reputation.",
+          "p2":"Thus opening the deep cooperation with Armani brand real estate and customized high-end home."
+        },
+        "2":{
+          "title":"Origins: From Fabric Folds to Spatial Poetry",
+          "p1":"The project is located in Lingshan Island, one of the international financial Islands of Mingzhu Bay, Nansha District, Guangzhou, and has a commercial and apartment complex with a sea view.",
+          "p2":"The project consists of two plots. Two 40-meter-high commercial buildings are planned to be built on the western plot, covering an area of 9,900 square meters. ",
+          "p3":"Eastern plot construction one a 184-meter-high apartment building and a 46-meter-high apartment building with an area of 7,200 square meters"
+        }
+      }
+    }
+  },
+  "cooperate_culture":{
+    "mvv":{
+      "mission":{
+        "title":"Mission",
+        "short_desc":"To carve excellence with a pioneering spirit and safeguard growth with an integrity-driven heritage.",
+        "p1":"Guided by integrity as our compass and craftsmanship as our foundation.",
+        "p2":"we transform challenges into stepping stones for progress and temptations into touchstones of resilience.",
+        "p3":"Through relentless refinement of our expertise, we create sustainable value for customers and partners alike."
+      },
+      "value":{
+        "title":"Value",
+        "short_desc":"Diligence with Compound Impact",
+        "p1":"We believe persistent dedication yields exponential rewards. By honing unparalleled service capabilities, we deliver exceptional returns that transcend expectations.",
+        "h1":"Leadership by Example",
+        "p2":"Managers are the first ambassadors of excellence. Through rigorous self-discipline and elevated standards, we inspire teams to rise and thrive.",
+        "h2":"Purpose-Driven Altruism",
+        "p3":"\"Empower stakeholders with tangible benefits.\" We resist short-term allure, prioritize collective growth, and co-create enduring value with integrity."
+      },
+      "vision":{
+        "title":"Vision",
+        "short_desc":"To co-define the journey to a better future"
+      }
+    },
+    "social_responsibility":{
+      "title":"Social Responsibility",
+      "subtitle":"Commitment in Action, Building Futures",
+      "customer_rights":"Customer Rights & Experience",
+      "p1":"We uphold the highest standards of customer service and satisfaction. Our dedicated team ensures that every interaction is seamless, from initial inquiry to post-purchase support",
+      "p2":"Recognized by Aviation Administration in 2010 with Premium Service Merchant and \"Best Staff Image Award\"",
+      "p3":"In 2011, ten stores under Ruijie received the \"2009 Trusted Consumer Store\" designation from Guangzhou Consumer Council, making the company the most awarded merchant at Baiyun Airport with this honor.",
+      "p4":"Honored by Aviation Administration in 2011 with \"Outstanding Asian Games Contribution Merchant Award\"."
+    },
+    "customer_rights":{
+      "p1":"Honored with the \"Public Welfare Supporter Enterprise\" award by Huadu District, Guangzhou City from 2010 to 2011",
+      "p2":"Awarded the \"Community Ambassador Award\" by Huadong Town, Huadu District, Guangzhou City in 2014",
+      "p3":"Received the \"Outstanding Philanthropy Award\" from Huadu District, Guangzhou City between 2014 and 2015.",
+      "p4":"Recognized as a \"Caring Enterprise\" for the Jiusan-New Social Stratum Association – Love & Peace Philanthropy Initiative in 2015."
     }
   }
 }

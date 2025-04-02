@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { RotateCard } from '../../components/RotateCard';
 import { RotateCardContent } from '../../components/RotateCard/Content';
+import { useTranslation } from 'react-i18next';
+import { TFunction } from 'i18next';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
@@ -18,20 +20,25 @@ const RotateCardContainer = styled.div`
   gap: 4vw;
   overflow: visible;
 `;
-const PARAGRAPHS = [
-  'Honored with the "Public Welfare Supporter Enterprise" award by Huadu District, Guangzhou City from 2010 to 2011',
-  'Awarded the "Community Ambassador Award" by Huadong Town, Huadu District, Guangzhou City in 2014',
-  'Received the "Outstanding Philanthropy Award" from Huadu District, Guangzhou City between 2014 and 2015.',
-  'Recognized as a "Caring Enterprise" for the Jiusan-New Social Stratum Association – Love & Peace Philanthropy Initiative in 2015.',
-];
+
+const getParagraphs = (t: TFunction) => {
+  return [
+    t('cooperate_culture.customer_rights.p1'),
+    t('cooperate_culture.customer_rights.p2'),
+    t('cooperate_culture.customer_rights.p3'),
+    t('cooperate_culture.customer_rights.p4'),
+  ];
+};
 
 export const CustomerRights = () => {
+  const { t } = useTranslation();
+  const paragraphs = getParagraphs(t);
   return (
     <Container id="customer-rights">
       <RotateCardContainer>
         <RotateCardContent
-          paragraphs={PARAGRAPHS}
-          title={'Customer Rights & Experience'}
+          paragraphs={paragraphs}
+          title={t('cooperate_culture.social_responsibility.customer_rights')}
           textAlign="right"
         ></RotateCardContent>
         <RotateCard

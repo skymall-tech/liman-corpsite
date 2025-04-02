@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../../components/Title';
 import { Carousel } from '../../../components/carousel';
+import { useTranslation } from 'react-i18next';
 
 const BrandContainer = styled.div`
   width: 100vw;
@@ -19,11 +20,12 @@ const stories = [
 ];
 
 export const BrandStorySection = () => {
+  const { t } = useTranslation();
   return (
     <BrandContainer id="brand-story">
       <SectionTitle
-        title="Brand Story"
-        subtitle="Global souls, crafted light — one spark ignites her world."
+        title={t('satellite_paris.brand_story.title')}
+        subtitle={t('satellite_paris.brand_story.subtitle')}
       />
       <Carousel stories={stories} />
     </BrandContainer>

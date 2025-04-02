@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import Logo from '../../assets/icons/logo.svg';
 import { Link } from 'react-router';
 import { PAGE_PATH } from '../../consts/pagePath';
+import { useTranslation } from 'react-i18next';
 
 const FooterWrapper = styled.footer`
   border-top: 1px solid var(--color-primary);
@@ -86,6 +87,7 @@ const Copyright = styled.div`
 `;
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <FooterWrapper>
       <FooterContent>
@@ -96,11 +98,11 @@ export const Footer = () => {
             src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/qr-temp-9yoMRi4mzKUH1pxEPhKESYyaAEZ50m"
             alt="WeChat QR Code"
           />
-          <QRCodeText>Search in WeChat Mini Program</QRCodeText>
+          <QRCodeText>{t('footer.search_in_wechat')}</QRCodeText>
         </QRSection>
 
         <LinkSection style={{ marginLeft: '30px' }}>
-          <h3>Business Map</h3>
+          <h3>{t('footer.business_map')}</h3>
           <ul>
             <li>
               <LinkElement
@@ -109,7 +111,7 @@ export const Footer = () => {
                 }}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Travel Retail
+                {t('common.travel_retail')}
               </LinkElement>
             </li>
             <li>
@@ -119,7 +121,7 @@ export const Footer = () => {
                 }}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Satellite Paris
+                {t('common.satellite_paris')}
               </LinkElement>
             </li>
             <li>
@@ -129,20 +131,20 @@ export const Footer = () => {
                 }}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Cultural Estate
+                {t('common.culture_estate')}
               </LinkElement>
             </li>
           </ul>
         </LinkSection>
 
         <LinkSection>
-          <h3>Business cooperation </h3>
+          <h3>{t('footer.business_cooperation')}</h3>
           <ul>
             <li>
               <a href="mailto:bc@sky-mall.com">bc@sky-mall.com</a>
             </li>
           </ul>
-          <h3>Join us </h3>
+          <h3>{t('footer.join_us')}</h3>
           <ul>
             <li>
               <a href="mailto:hr@liman.group">hr@liman.group</a>

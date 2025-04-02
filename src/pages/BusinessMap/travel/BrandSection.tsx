@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../../components/Title';
+import { useTranslation } from 'react-i18next';
 
 const BrandContainer = styled.div`
   width: 100vw;
@@ -45,13 +46,12 @@ const LogoList = [
 ];
 
 export const BrandSection = () => {
+  const { t } = useTranslation();
   return (
     <BrandContainer id="brand">
       <SectionTitle
-        title="OUR PARTNER BRANDS"
-        subtitle={
-          'A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques.'
-        }
+        title={t('travel.partner_brands.title')}
+        subtitle={t('travel.partner_brands.subtitle')}
       />
       <LogoContainer>
         {LogoList.map((logo) => (

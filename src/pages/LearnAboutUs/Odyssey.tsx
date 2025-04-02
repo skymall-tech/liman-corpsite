@@ -3,6 +3,8 @@ import { SectionTitle } from '../../components/Title';
 import { TimeCard } from '../../components/TimeCard';
 import { useState, useEffect } from 'react';
 import indicator from '../../assets/icons/indicator.svg';
+import { useTranslation } from 'react-i18next';
+import { TFunction } from 'i18next';
 
 const OdysseyContainer = styled.div`
   width: 100vw;
@@ -54,89 +56,77 @@ type TimelineEvent = {
   logo: string;
   shortDesc: string;
 };
-
-const timelineData: TimelineEvent[] = [
-  {
-    year: '2006',
-    description1:
-      'Beishan Industrial (Guangzhou) Co., LTD., the predecessor of Leman, was established. ',
-    description2:
-      'In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2007-OcyU0bx48lXCOzXJJm39PVeeMpc6gg.png',
-    shortDesc:
-      'The predecessor of Liman, Beishan Industrial (Guangzhou) Co., Ltd., was established. ',
-  },
-  {
-    year: '2008',
-    description1: 'Group offline stores exceeded 10',
-    description2:
-      'In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
-    shortDesc: 'Group offline stores exceeded 10',
-  },
-  {
-    year: '2012',
-    description1: 'Group offline stores exceeded 10',
-    description2:
-      'In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
-    shortDesc: 'Group offline stores exceeded 10',
-  },
-  {
-    year: '2014',
-    description1: 'Group offline stores exceeded 10',
-    description2:
-      'In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
-    shortDesc: 'Group offline stores exceeded 10',
-  },
-  {
-    year: '2015',
-    description1: 'Group offline stores exceeded 10',
-    description2:
-      'In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
-    shortDesc: 'Group offline stores exceeded 10',
-  },
-  {
-    year: '2017',
-    description1:
-      'The group became the largest luxury goods operator at Chongqing. Jiangbei International Airport and began representing the Satellite Paris brand in the same year.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2007-OcyU0bx48lXCOzXJJm39PVeeMpc6gg.png',
-    shortDesc:
-      'The group became the largest luxury goods operator at Chongqing.',
-  },
-  {
-    year: '2019',
-    description1:
-      'Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2019-D91KlFeIEIrZcTtD14Q8vIgmsV0bDB.png',
-    shortDesc:
-      'Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area.',
-  },
-  {
-    year: '2023',
-    description1: 'The group re-entered Beijing Capital International Airport.',
-    description2: 'And opened 9 offline stores the following year.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2023-rLjrE94qD9zgw0DS5nIIrgCJWQ5L1p.jpeg',
-    shortDesc: 'The group re-entered Beijing Capital International Airport.',
-  },
-  {
-    year: '2024',
-    description1:
-      'The group is preparing to establish a comprehensive duty-free mall at the Qingmao Port. Marking its entry into the duty-free industry.',
-    description2:
-      'In the same year, the group will also re-enter Shenzhen Baoan International Airport.',
-    logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/fp-2WMg2tmioyR6C0Qn0lPQGgkzZ6wve1.jpg',
-    shortDesc:
-      'The the group is preparing to establish a comprehensive duty-free mall at the Qingmao Port.',
-  },
-  // Add other timeline events...
-];
+const getTimelineData = (t: TFunction): TimelineEvent[] => {
+  return [
+    {
+      year: '2006',
+      description1: t('about_us.odyssey.2006.desc1'),
+      description2: t('about_us.odyssey.2006.desc2'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2007-OcyU0bx48lXCOzXJJm39PVeeMpc6gg.png',
+      shortDesc: t('about_us.odyssey.2006.short_desc'),
+    },
+    {
+      year: '2008',
+      description1: t('about_us.odyssey.2008.desc1'),
+      description2: t('about_us.odyssey.2008.desc2'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
+      shortDesc: t('about_us.odyssey.2008.short_desc'),
+    },
+    {
+      year: '2012',
+      description1: t('about_us.odyssey.2012.desc1'),
+      description2: t('about_us.odyssey.2012.desc2'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
+      shortDesc: t('about_us.odyssey.2012.short_desc'),
+    },
+    {
+      year: '2014',
+      description1: t('about_us.odyssey.2014.desc1'),
+      description2: t('about_us.odyssey.2014.desc2'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
+      shortDesc: t('about_us.odyssey.2014.short_desc'),
+    },
+    {
+      year: '2015',
+      description1: t('about_us.odyssey.2015.desc1'),
+      description2: t('about_us.odyssey.2015.desc2'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
+      shortDesc: t('about_us.odyssey.2015.short_desc'),
+    },
+    {
+      year: '2017',
+      description1: t('about_us.odyssey.2017.desc1'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2007-OcyU0bx48lXCOzXJJm39PVeeMpc6gg.png',
+      shortDesc: t('about_us.odyssey.2017.short_desc'),
+    },
+    {
+      year: '2019',
+      description1: t('about_us.odyssey.2019.desc1'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2019-D91KlFeIEIrZcTtD14Q8vIgmsV0bDB.png',
+      shortDesc: t('about_us.odyssey.2019.short_desc'),
+    },
+    {
+      year: '2023',
+      description1: t('about_us.odyssey.2023.desc1'),
+      description2: t('about_us.odyssey.2023.desc1'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2023-rLjrE94qD9zgw0DS5nIIrgCJWQ5L1p.jpeg',
+      shortDesc: t('about_us.odyssey.2023.short_desc'),
+    },
+    {
+      year: '2024',
+      description1: t('about_us.odyssey.2024.desc1'),
+      description2: t('about_us.odyssey.2024.desc1'),
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/fp-2WMg2tmioyR6C0Qn0lPQGgkzZ6wve1.jpg',
+      shortDesc: t('about_us.odyssey.2024.short_desc'),
+    },
+    // Add other timeline events...
+  ];
+};
 
 export const OdysseySection = () => {
   const [activeYear, setActiveYear] = useState<string>('2006');
-
+  const { t } = useTranslation();
+  const timelineData = getTimelineData(t);
   useEffect(() => {
     const interval = setInterval(() => {
       const currentIndex = timelineData.findIndex(
@@ -158,7 +148,7 @@ export const OdysseySection = () => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [activeYear]);
+  }, [activeYear, timelineData]);
 
   const handleCardClick = ({
     event,
@@ -181,8 +171,8 @@ export const OdysseySection = () => {
   return (
     <OdysseyContainer id="odyssey-section">
       <SectionTitle
-        title="OUR ODYSSEY CHRONICLE"
-        subtitle="Two decades rooted in luxury dominance, now pioneering duty-free frontiers."
+        title={t('about_us.odyssey.title')}
+        subtitle={t('about_us.odyssey.subtitle')}
       />
       <CardsContainer className="cards-container">
         {timelineData.map((event, index) => (

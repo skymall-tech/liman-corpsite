@@ -102,7 +102,7 @@ const NavigationTabs: React.FC = () => {
           <PopupMenu
             items={[
               {
-                label: 'Travel Agent',
+                label: t('common.travel_retail'),
                 isActive: activeTab === PAGE_PATH.businessMap,
                 action: () => {
                   setShowPopup(false);
@@ -110,7 +110,7 @@ const NavigationTabs: React.FC = () => {
                 },
               },
               {
-                label: 'Satellite Paris',
+                label: t('common.satellite_paris'),
                 isActive: activeTab === PAGE_PATH.satellite,
                 action: () => {
                   setShowPopup(false);
@@ -118,7 +118,7 @@ const NavigationTabs: React.FC = () => {
                 },
               },
               {
-                label: 'Culture Estate',
+                label: t('common.culture_estate'),
                 isActive: activeTab === PAGE_PATH.estate,
                 action: () => {
                   setShowPopup(false);
