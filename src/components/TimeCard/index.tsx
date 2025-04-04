@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 const Card = styled.div<{ active: boolean; isLast?: boolean }>`
-  width: 15vw;
-  height: 30vw;
+  aspect-ratio: 1/2;
+  height: 65vh;
   padding: 37px 21px 30px 21px;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -55,7 +55,7 @@ const ShortDesc = styled.div`
 
 const Image = styled.img<{ active: boolean }>`
   width: 100%;
-  height: 94px;
+  aspect-ratio: 1.65/1;
   object-fit: cover;
   border-radius: 8px;
   transition: all 0.3s ease;

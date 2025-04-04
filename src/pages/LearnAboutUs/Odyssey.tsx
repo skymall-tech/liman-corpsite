@@ -68,14 +68,12 @@ const getTimelineData = (t: TFunction): TimelineEvent[] => {
     {
       year: '2008',
       description1: t('about_us.odyssey.2008.desc1'),
-      description2: t('about_us.odyssey.2008.desc2'),
       logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
       shortDesc: t('about_us.odyssey.2008.short_desc'),
     },
     {
       year: '2012',
       description1: t('about_us.odyssey.2012.desc1'),
-      description2: t('about_us.odyssey.2012.desc2'),
       logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
       shortDesc: t('about_us.odyssey.2012.short_desc'),
     },
@@ -89,13 +87,13 @@ const getTimelineData = (t: TFunction): TimelineEvent[] => {
     {
       year: '2015',
       description1: t('about_us.odyssey.2015.desc1'),
-      description2: t('about_us.odyssey.2015.desc2'),
       logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/t1-VmptDCDff2DU87NF91Y7MroQcAx2tY',
       shortDesc: t('about_us.odyssey.2015.short_desc'),
     },
     {
       year: '2017',
       description1: t('about_us.odyssey.2017.desc1'),
+      description2: t('about_us.odyssey.2017.desc2'),
       logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2007-OcyU0bx48lXCOzXJJm39PVeeMpc6gg.png',
       shortDesc: t('about_us.odyssey.2017.short_desc'),
     },
@@ -125,9 +123,33 @@ const getTimelineData = (t: TFunction): TimelineEvent[] => {
 
 export const OdysseySection = () => {
   const [activeYear, setActiveYear] = useState<string>('2006');
+  const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
   const timelineData = getTimelineData(t);
+
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 } // Trigger when at least 10% of the section is visible
+    );
+
+    const section = document.getElementById('odyssey-section');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return; // Don't start interval if section is not visible
+
     const interval = setInterval(() => {
       const currentIndex = timelineData.findIndex(
         (event) => event.year === activeYear
@@ -148,7 +170,7 @@ export const OdysseySection = () => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [activeYear, timelineData]);
+  }, [activeYear, timelineData, isVisible]);
 
   const handleCardClick = ({
     event,

@@ -7,6 +7,7 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 80px;
 `;
 
 const TitleText = styled.h2`

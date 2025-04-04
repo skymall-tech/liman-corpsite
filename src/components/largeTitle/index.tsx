@@ -12,7 +12,7 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 100px;
   font-weight: 900;
   color: var(--color-primary);
   @media screen and (min-width: 2000px) {

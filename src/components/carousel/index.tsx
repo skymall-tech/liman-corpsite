@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface StorySlide {
   title?: string;
@@ -102,8 +102,22 @@ export const Carousel = ({ stories }: { stories: StorySlide[] }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((current) =>
+        current === stories.length - 1 ? 0 : current + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPaused, stories.length]);
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsPaused(true);
     setIsDragging(true);
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     setStartX(clientX);
@@ -120,7 +134,7 @@ export const Carousel = ({ stories }: { stories: StorySlide[] }) => {
   const handleDragEnd = () => {
     if (!isDragging) return;
 
-    const slideThreshold = window.innerWidth * 0.2; // 20% of screen width
+    const slideThreshold = window.innerWidth * 0.2;
     if (Math.abs(dragOffset) > slideThreshold) {
       if (dragOffset > 0 && currentSlide > 0) {
         setCurrentSlide(currentSlide - 1);
@@ -131,6 +145,7 @@ export const Carousel = ({ stories }: { stories: StorySlide[] }) => {
 
     setIsDragging(false);
     setDragOffset(0);
+    setTimeout(() => setIsPaused(false), 2000);
   };
 
   return (
