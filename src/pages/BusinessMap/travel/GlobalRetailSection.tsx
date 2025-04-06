@@ -4,6 +4,7 @@ import { ShopCard } from '../../../components/ShopCard';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { StoreLargeCard } from '../../../components/StoreLargeCard';
+import { BEIJING_STORE, SHENYANG_STORE } from './conts';
 
 const Container = styled.div`
   display: flex;
@@ -17,81 +18,6 @@ const PartnerPortContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
 `;
-
-const BEIJING_STORE = [
-  {
-    id: 'TORYBURCH',
-    name: 'TORYBURCH',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/1-JZEJoR2krlUwG447lTs6E3dg09Joas.png',
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/1_2-Du9RWKr6gHhD6gwHvmv3jNZ3GK3ebq.png',
-    ],
-    address: 'The Address',
-  },
-  {
-    id: 'MARNI',
-    name: 'MARNI',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/2-3axbeOqd0ZnEdm9gpsOWfQY5cKcecc.png',
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/2_2-dcCP1BuU6oAkhTveGQFu9FJW7qfAZP.png',
-    ],
-    address: 'The Address',
-  },
-  {
-    id: 'PAUL&SHARK',
-    name: 'PAUL&SHARK',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/3-qAyqxPhzEAmGgYpqG0xoTxx2iRMiwf.png',
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/3_2-c2ncysDzOpdiE6plDn7VNbQGWa0AFY.png',
-    ],
-    address: 'The Address',
-  },
-  {
-    id: 'PARKER',
-    name: 'PARKER',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/4-Gye4GEhTws94tVzwLrxMq7YdsayhIf.png',
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/4_2png-OzWez1jmtY8Dkm8e9AOdirWHgfCwEP.png',
-    ],
-    address: 'The Address',
-  },
-
-  {
-    id: 'MOSCHINO',
-    name: 'MOSCHINO',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/5-W5pC3SaIVL7v8NLprnQ8KDMOuULWZG.png',
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/5_2-RoezdSUt6Ec7sWvAGDpafYreIlLbBA.png',
-    ],
-    address: 'The Address',
-  },
-  {
-    id: 'ETRO',
-    name: 'ETRO',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/6_2-bf0sApzC4Of4dCVVuXW3lypXVMEd4q.png',
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/6-84lTQTVcrrEIRJVNe22tGn11nQMWAj.png',
-    ],
-    address: 'The Address',
-  },
-  {
-    id: 'TUMI',
-    name: 'TUMI',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/7-EaGf1MNsFKyjcKUd10cMAfPN2N7l9E.png',
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/7_2-Km1fQZKbkYLcBQpajx5mWCNl0XYNRf.png',
-    ],
-    address: 'The Address',
-  },
-  {
-    id: 'EMPORIO ARMANI',
-    name: 'EMPORIO ARMANI',
-    images: [
-      'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/8-jS5yLMDxj5yi6D9QkDM7pVgpeCYHEj.png',
-    ],
-    address: 'The Address',
-  },
-];
 
 export const GlobalRetailSection = () => {
   const { t } = useTranslation();
@@ -122,11 +48,7 @@ export const GlobalRetailSection = () => {
               'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Macau/Screenshot%202025-04-06%20at%2010.44.29%E2%80%AFPM-FZcf5KbIePliyGUObC602iADGcVJTD.png'
             }
             title={'MACAU'}
-            onClick={(e: React.MouseEvent<HTMLDivElement>) => {
-              e.stopPropagation();
-              setCurrentStore(BEIJING_STORE);
-              setShowLarge(true);
-            }}
+            onClick={(e: React.MouseEvent<HTMLDivElement>) => {}}
           ></ShopCard>
           <ShopCard
             image={
@@ -135,13 +57,13 @@ export const GlobalRetailSection = () => {
             title={'SHENYANG'}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(BEIJING_STORE);
+              setCurrentStore(SHENYANG_STORE);
               setShowLarge(true);
             }}
           ></ShopCard>
         </Container>
       ) : (
-        <Container onClick={(e) => e.stopPropagation()}>
+        <Container>
           <StoreLargeCard stores={currentStore} />
         </Container>
       )}
