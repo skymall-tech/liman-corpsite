@@ -8,14 +8,29 @@ const CardContainer = styled.div`
   border-radius: 16px;
   overflow: hidden;
   margin: 0 10px;
-  border: 1px solid #b59152;
+  border: 2px solid #b59152;
   flex-shrink: 0;
   transition: transform 0.3s;
+  .overlay-mask {
+    background: radial-gradient(circle at center, #b5915233, #946a20);
+  }
+  .overlay-mask-2 {
+    background: #fff;
+    opacity: 0.5;
+  }
   &:hover {
     cursor: pointer;
     transform: scale(1.05);
     .overlay-mask {
-      background: #966b20;
+      background: radial-gradient(
+        circle at center,
+        #966b20 0%,
+        #a37b36cc 50%,
+        #b5915266 100%
+      );
+    }
+    .overlay-mask-2 {
+      opacity: 0;
     }
     .card-title {
       color: #fff;
@@ -29,8 +44,6 @@ const OverlayMask = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
-  opacity: 0.5;
 `;
 
 const CardImage = styled.div<{ image: string }>`
@@ -74,10 +87,11 @@ export const ShopCard = ({
 }: {
   image: string;
   title: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }) => (
   <CardContainer onClick={onClick}>
     <CardImage image={image} className="card-image" />
+    <OverlayMask className="overlay-mask-2" />
     <OverlayMask className="overlay-mask" />
     <OverlayTextContainer>
       <CardTitle className="card-title">{title}</CardTitle>
