@@ -6,6 +6,7 @@ interface TeamCardProps {
   description: string;
   image: string;
   transformX?: string;
+  objectPosition?: string;
 }
 
 const Card = styled.div<{ transformX?: string }>`
@@ -26,14 +27,14 @@ const Card = styled.div<{ transformX?: string }>`
   }
 `;
 
-const Image = styled.img`
+const Image = styled.img<{ objectPosition?: string }>`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 18% center;
+  object-position: ${(props) => `${props.objectPosition} center`};
 `;
 
 const Overlay = styled.div`
@@ -91,10 +92,11 @@ export const TeamCard = ({
   description,
   image,
   transformX = '0%',
+  objectPosition = '20%',
 }: TeamCardProps) => {
   return (
     <Card transformX={transformX}>
-      <Image src={image} alt={name} />
+      <Image src={image} alt={name} objectPosition={objectPosition} />
       <Overlay>
         <TextContent>
           <Name>{name}</Name>

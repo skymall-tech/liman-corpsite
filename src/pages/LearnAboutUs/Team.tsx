@@ -38,6 +38,7 @@ export const TeamSection = () => {
       />
       <CardContainer>
         <TeamCard
+          objectPosition="15%"
           transformX="23%"
           name={t('about_us.team.luke.name')}
           title={t('about_us.team.luke.title')}
@@ -45,12 +46,14 @@ export const TeamSection = () => {
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%881%3A7%EF%BC%89-sltaDIUq42rgawbh5hkYxltMh7nqBu.png"
         />
         <TeamCard
+          objectPosition="17%"
           name={t('about_us.team.lizhihua.name')}
           title={t('about_us.team.lizhihua.title')}
           description={t('about_us.team.lizhihua.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%883%3A7%EF%BC%89-Li4TUjjI7FjRBu7h0S8wINBruu6eW3.png"
         />
         <TeamCard
+          objectPosition="15%"
           name={t('about_us.team.chenli.name')}
           title={t('about_us.team.chenli.title')}
           description={t('about_us.team.chenli.description')}
@@ -60,15 +63,18 @@ export const TeamSection = () => {
           name={t('about_us.team.lifenggu.name')}
           title={t('about_us.team.lifenggu.title')}
           description={t('about_us.team.lifenggu.description')}
+          objectPosition="10%"
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%884%3A7%EF%BC%89-rFJ5n6CkkzUR15OYyBde1JuGwF7Ncj.png"
         />
         <TeamCard
+          objectPosition="17%"
           name={t('about_us.team.zhangchi.name')}
           title={t('about_us.team.zhangchi.title')}
           description={t('about_us.team.zhangchi.description')}
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%885%3A7%EF%BC%89-cXpF5gl0OulO3DSh6dXx2F6hpRXst5.png"
         />
         <TeamCard
+          objectPosition="15%"
           name={t('about_us.team.liwan.name')}
           title={t('about_us.team.liwan.title')}
           description={t('about_us.team.liwan.description')}
@@ -76,6 +82,7 @@ export const TeamSection = () => {
         />
         <TeamCard
           transformX="-23%"
+          objectPosition="5%"
           name={t('about_us.team.lushaojuan.name')}
           title={t('about_us.team.lushaojuan.title')}
           description={t('about_us.team.lushaojuan.description')}
