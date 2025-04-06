@@ -4,7 +4,7 @@ import ChevronLeft from '../../assets/icons/left-white.svg';
 import ChevronRight from '../../assets/icons/right-white.svg';
 import ChevronUp from '../../assets/icons/up-white.svg';
 import ChevronDown from '../../assets/icons/down-white.svg';
-
+import PackUp from '../../assets/icons/packup.svg';
 interface Store {
   id: string;
   name: string;
@@ -14,6 +14,7 @@ interface Store {
 
 interface StoreLargeCardProps {
   stores: Store[];
+  onPackUp: () => void;
 }
 
 const MainSection = styled.div`
@@ -116,7 +117,31 @@ const Icon = styled.img<{ position: string }>`
   }
 `;
 
-export const StoreLargeCard: React.FC<StoreLargeCardProps> = ({ stores }) => {
+const PackUpContainer = styled.div`
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  div {
+    font-size: var(--font-size-body);
+    color: #fff;
+  }
+  padding-bottom: 3px;
+  border-bottom: 1px solid #fff;
+`;
+
+const PackUpIcon = styled.img`
+  width: 10px;
+  height: 6px;
+`;
+
+export const StoreLargeCard: React.FC<StoreLargeCardProps> = ({
+  stores,
+  onPackUp,
+}) => {
   const [currentStoreIndex, setCurrentStoreIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -185,11 +210,19 @@ export const StoreLargeCard: React.FC<StoreLargeCardProps> = ({ stores }) => {
             </>
           ))}
         </Sidebar>
+        <PackUpContainer onClick={onPackUp}>
+          <div>Pack Up</div>
+          <PackUpIcon src={PackUp} />
+        </PackUpContainer>
       </SidebarContainer>
+      {stores.length > 1 && (
+        <>
+          <Icon src={ChevronUp} onClick={handlePrevStore} position="top" />
+          <Icon src={ChevronDown} onClick={handleNextStore} position="bottom" />
+        </>
+      )}
       <Icon src={ChevronLeft} onClick={handlePrevImage} position="left" />
       <Icon src={ChevronRight} onClick={handleNextImage} position="right" />
-      <Icon src={ChevronUp} onClick={handlePrevStore} position="top" />
-      <Icon src={ChevronDown} onClick={handleNextStore} position="bottom" />
     </MainSection>
   );
 };

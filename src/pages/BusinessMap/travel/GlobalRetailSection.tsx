@@ -67,7 +67,10 @@ export const GlobalRetailSection = () => {
         </Container>
       ) : (
         <Container>
-          <StoreLargeCard stores={currentStore} />
+          <StoreLargeCard
+            stores={currentStore}
+            onPackUp={() => setShowLarge(false)}
+          />
         </Container>
       )}
     </PartnerPortContainer>
