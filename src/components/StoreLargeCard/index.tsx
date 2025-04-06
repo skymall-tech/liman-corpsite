@@ -24,10 +24,22 @@ const MainSection = styled.div`
   border-radius: 16px;
 `;
 
+const ImageContainer = styled.div`
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease;
+  flex-shrink: 0;
+`;
+
 const StoreImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  flex-shrink: 0;
 `;
 
 const SidebarContainer = styled.div`
@@ -125,10 +137,17 @@ export const StoreLargeCard: React.FC<StoreLargeCardProps> = ({ stores }) => {
 
   return (
     <MainSection>
-      <StoreImage
-        src={currentStore.images[currentImageIndex]}
-        alt={currentStore.name}
-      />
+      <ImageContainer
+        style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+      >
+        {currentStore.images.map((image, index) => (
+          <StoreImage
+            key={`${currentStore.id}-${index}`}
+            src={image}
+            alt={`${currentStore.name} - ${index + 1}`}
+          />
+        ))}
+      </ImageContainer>
       <SidebarContainer>
         <Sidebar>
           {stores.map((store, index) => (
