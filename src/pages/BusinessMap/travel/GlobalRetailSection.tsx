@@ -34,7 +34,7 @@ export const GlobalRetailSection = () => {
         <Container>
           <ShopCard
             image={
-              'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/2_2-HBb4VxcZzRcUjP5TWqFyTLjzcceM68.png'
+              'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/1-JZEJoR2krlUwG447lTs6E3dg09Joas.png'
             }
             title={'BEIJING'}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {

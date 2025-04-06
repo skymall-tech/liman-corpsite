@@ -198,7 +198,10 @@ export const StoreLargeCard: React.FC<StoreLargeCardProps> = ({
           {stores.map((store, index) => (
             <>
               <StoreItem
-                onClick={() => setCurrentStoreIndex(index)}
+                onClick={() => {
+                  setCurrentStoreIndex(index);
+                  setCurrentImageIndex(0);
+                }}
                 key={store.id}
                 isCurrentStore={currentStore.id === store.id}
               >
