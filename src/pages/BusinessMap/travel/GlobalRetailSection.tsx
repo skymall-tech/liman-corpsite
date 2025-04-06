@@ -48,7 +48,10 @@ export const GlobalRetailSection = () => {
               'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Macau/Screenshot%202025-04-06%20at%2010.44.29%E2%80%AFPM-FZcf5KbIePliyGUObC602iADGcVJTD.png'
             }
             title={'MACAU'}
-            onClick={(e: React.MouseEvent<HTMLDivElement>) => {}}
+            notOpen={true}
+            onClick={() => {
+              return;
+            }}
           ></ShopCard>
           <ShopCard
             image={

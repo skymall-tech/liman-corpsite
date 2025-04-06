@@ -35,6 +35,9 @@ const CardContainer = styled.div`
     .card-title {
       color: #fff;
     }
+    .card-title-2 {
+      display: block;
+    }
   }
 `;
 
@@ -66,7 +69,15 @@ const CardTitle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
+`;
+const CardSubTitle = styled.div`
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: var(--font-size-body);
+  display: none;
 `;
 
 const OverlayTextContainer = styled.div`
@@ -83,18 +94,25 @@ const OverlayTextContainer = styled.div`
 export const ShopCard = ({
   image,
   title,
+  notOpen,
   onClick,
 }: {
   image: string;
   title: string;
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+  notOpen?: boolean;
 }) => (
   <CardContainer onClick={onClick}>
     <CardImage image={image} className="card-image" />
     <OverlayMask className="overlay-mask-2" />
     <OverlayMask className="overlay-mask" />
     <OverlayTextContainer>
-      <CardTitle className="card-title">{title}</CardTitle>
+      <CardTitle className="card-title">
+        <>{title}</>
+        {notOpen && (
+          <CardSubTitle className="card-title-2">Opening Soon</CardSubTitle>
+        )}
+      </CardTitle>
     </OverlayTextContainer>
   </CardContainer>
 );
