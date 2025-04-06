@@ -18,7 +18,7 @@ export const EstatePage: React.FC = () => {
         title={t('culture_estate.page_title')}
         desc={t('culture_estate.page_subtitle')}
         image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/4-dlYBTOlIIhNHmyjtJA8SNuW57yRSaG.png'
+          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/4-JcZBa21Bixx97TiQ6tniHQ7Ic23LZU.png'
         }
       />
       <BrandStorySection />

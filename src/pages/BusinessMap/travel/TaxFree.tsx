@@ -17,7 +17,7 @@ export const TaxFreeSection = () => {
         subtitle={t('travel.tax_free.subtitle')}
       />
       <ImgWithSearch
-        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/skymall-XO6fb3cpJORWuM6RIZqILgNrE4DxCx.png"
+        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/%E5%B0%8F%E7%A8%8B%E5%BA%8F-2OHd09XHFbqnpO0LdaBgUcEXHm3Wux.png"
         desc={t('travel.tax_free.search')}
         icon={SearchIcon}
       ></ImgWithSearch>

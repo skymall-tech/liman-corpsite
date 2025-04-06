@@ -40,7 +40,7 @@ export const SocialResponsibility = () => {
         subtitle={t('cooperate_culture.social_responsibility.subtitle')}
       />
       <RotateCardContainer>
-        <RotateCard src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Screenshot%202025-04-02%20at%209.51.45%E2%80%AFPM-09NGvJKFCHG4jOYuHxNgj8czwOXoz4.png"></RotateCard>
+        <RotateCard src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/timeline/culture/1-d7n3fy8CyaLEdbqa5L4dLOgXGftV0o.png"></RotateCard>
         <RotateCardContent
           paragraphs={paragraphs}
           title={t('cooperate_culture.social_responsibility.customer_rights')}

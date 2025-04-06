@@ -27,7 +27,7 @@ export const LearnAboutUsPage: React.FC = () => {
         nextSectionId="business-map-section"
         title={t('about_us.page_title')}
         desc={t('about_us.page_subtitle')}
-        image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/first-Rao41GIGdVpGef4MpWC4hHe4RAXSFL.jpeg"
+        image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/1-geB87GNFo04ZsU7hvKgTE7sXze4y02.png"
       />
       <BusinessMapSection />
       <OdysseySection />

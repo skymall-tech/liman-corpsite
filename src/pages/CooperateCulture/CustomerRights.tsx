@@ -44,7 +44,7 @@ export const CustomerRights = () => {
         <RotateCard
           rightRotate
           src={
-            'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Screenshot%202025-04-02%20at%2010.22.32%E2%80%AFPM-O0yDpyzFGBPBON8vVHFeI1F6HYCybz.png'
+            'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/timeline/culture/2-miSHKMgNmaLQfs3rCBouFugpr0Q1s3.png'
           }
         ></RotateCard>
       </RotateCardContainer>
