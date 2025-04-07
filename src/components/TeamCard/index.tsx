@@ -62,7 +62,12 @@ const TextContent = styled.div`
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 45px;
+  padding-top: 170px;
+  @media (max-width: 1024px) {
+    padding-top: 70px;
+  }
 `;
 
 const Name = styled.p`
