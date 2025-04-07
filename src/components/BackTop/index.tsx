@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import BackTopImg from '../../assets/icons/backtop.svg';
 import { useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
+import { useTranslation } from 'react-i18next';
 
 const BackTopIcon = styled.img<{ show: boolean }>`
   position: fixed;
@@ -19,6 +20,7 @@ const BackTopIcon = styled.img<{ show: boolean }>`
 
 export default function BackTop() {
   const [show, setShow] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,9 +54,10 @@ export default function BackTop() {
           backgroundColor: 'white',
           color: 'var(--color-primary)',
           borderRadius: '10px',
+          display: show ? 'block' : 'none',
         }}
       >
-        Back to Top
+        {t('common.back_to_top')}
       </Tooltip>
     </>
   );
