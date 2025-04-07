@@ -15,6 +15,7 @@ import { PAGE_PATH } from '../../consts/pagePath';
 import PopupMenu from '../PopupMenu';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
+import { LAST_SELECT_LANG } from '../../utils';
 
 const NavigationTabs: React.FC = () => {
   const { t } = useTranslation();
@@ -83,13 +84,27 @@ const NavigationTabs: React.FC = () => {
             items={[
               {
                 label: 'English',
-                action: () => i18n.changeLanguage('en'),
+                action: () => {
+                  i18n.changeLanguage('en');
+                  localStorage.setItem(LAST_SELECT_LANG, 'en');
+                },
                 isActive: i18n.language == 'en',
               },
               {
                 label: '简体中文',
-                action: () => i18n.changeLanguage('zh'),
+                action: () => {
+                  i18n.changeLanguage('zh');
+                  localStorage.setItem(LAST_SELECT_LANG, 'zh');
+                },
                 isActive: i18n.language == 'zh',
+              },
+              {
+                label: '繁体中文',
+                action: () => {
+                  i18n.changeLanguage('zh-MO');
+                  localStorage.setItem(LAST_SELECT_LANG, 'zh-MO');
+                },
+                isActive: i18n.language == 'zh-MO',
               },
             ]}
             referenceElement={langIconRef.current}

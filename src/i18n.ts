@@ -3,6 +3,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import en from './assets/locale/en.json';
 import zh from './assets/locale/zh.json';
+import zhMO from './assets/locale/zh-MO.json';
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -11,6 +12,9 @@ i18n.use(initReactI18next).init({
     },
     zh: {
       translation: zh,
+    },
+    'zh-MO': {
+      translation: zhMO,
     },
   },
   lng: getInitialLanguage(), // 默认语言
