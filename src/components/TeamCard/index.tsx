@@ -57,13 +57,12 @@ const Overlay = styled.div`
 `;
 
 const TextContent = styled.div`
-  margin-top: 180px;
   width: 300px;
   margin-right: 30px;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
 `;
 
 const Name = styled.p`
