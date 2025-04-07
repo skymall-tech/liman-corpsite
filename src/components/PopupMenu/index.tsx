@@ -1,6 +1,6 @@
 import React from 'react';
 import { usePopper } from 'react-popper';
-import { PopupContainer, PopupItem } from './style';
+import { PopupContainer, PopupItem, PopUpItemContainer } from './style';
 
 interface PopUpItem {
   label: string;
@@ -9,11 +9,18 @@ interface PopUpItem {
 }
 
 const PopupMenu: React.FC<{
+  isLarge?: boolean;
   items: PopUpItem[];
   referenceElement: HTMLElement | null;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
-}> = ({ items, referenceElement, onMouseEnter, onMouseLeave }) => {
+}> = ({
+  items,
+  referenceElement,
+  onMouseEnter,
+  onMouseLeave,
+  isLarge = false,
+}) => {
   const [popperElement, setPopperElement] = React.useState<HTMLElement | null>(
     null
   );
@@ -23,18 +30,19 @@ const PopupMenu: React.FC<{
 
   return (
     <PopupContainer
-      isLarge={false}
       ref={setPopperElement}
       style={styles.popper}
       {...attributes.popper}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {items.map((item, index) => (
-        <PopupItem key={index} onClick={item.action} isActive={item.isActive}>
-          {item.label}
-        </PopupItem>
-      ))}
+      <PopUpItemContainer isLarge={isLarge}>
+        {items.map((item, index) => (
+          <PopupItem key={index} onClick={item.action} isActive={item.isActive}>
+            {item.label}
+          </PopupItem>
+        ))}
+      </PopUpItemContainer>
     </PopupContainer>
   );
 };

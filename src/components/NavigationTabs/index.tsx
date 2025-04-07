@@ -115,6 +115,7 @@ const NavigationTabs: React.FC = () => {
 
         {showPopup && (
           <PopupMenu
+            isLarge={true}
             items={[
               {
                 label: t('common.travel_retail'),

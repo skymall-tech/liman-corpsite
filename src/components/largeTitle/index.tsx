@@ -21,7 +21,8 @@ const Title = styled.h1`
 `;
 
 const Desc = styled.p`
-  font-size: var(--font-size-body);
+  margin-top: 44px;
+  font-size: var(--font-size-h3);
   color: var(--color-primary);
   width: max(30vw, 430px);
   text-align: center;

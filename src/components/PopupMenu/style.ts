@@ -1,13 +1,10 @@
 /* src/components/PopupMenu/style.ts */
 import styled from '@emotion/styled';
 
-export const PopupContainer = styled.div<{ isLarge: boolean }>`
+export const PopupContainer = styled.div`
   position: absolute;
-  background-color: #faf9f8;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: ${({ isLarge }) => (isLarge ? '20px 55px' : '20px 27px')};
   z-index: 10;
-  border-radius: 10px;
+  padding-top: 10px;
 `;
 
 export const PopupItem = styled.div<{ isActive: boolean }>`
@@ -17,4 +14,14 @@ export const PopupItem = styled.div<{ isActive: boolean }>`
   &:hover {
     color: var(--color-primary);
   }
+`;
+
+export const PopUpItemContainer = styled.div<{ isLarge: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #faf9f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: ${({ isLarge }) => (isLarge ? '20px 50px' : '20px 27px')};
+  border-radius: 10px;
 `;
