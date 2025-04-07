@@ -10,6 +10,16 @@ const OdysseyContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
 `;
+const FooterDesc = styled.p`
+  color: var(--color-primary);
+  text-align: center;
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  margin-top: 20px;
+  width: calc(max(400px, 50vw));
+  margin: 0 auto;
+  margin-top: 40px;
+`;
 
 const CardsContainer = styled.div`
   margin-top: 70px;
@@ -106,14 +116,14 @@ const getTimelineData = (t: TFunction): TimelineEvent[] => {
     {
       year: '2023',
       description1: t('about_us.odyssey.2023.desc1'),
-      description2: t('about_us.odyssey.2023.desc1'),
+      description2: t('about_us.odyssey.2023.desc2'),
       logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/timeline/2023-d4SgcLkP8kbutxZAlgXEBVPuKz0LTv.png',
       shortDesc: t('about_us.odyssey.2023.short_desc'),
     },
     {
       year: '2024',
       description1: t('about_us.odyssey.2024.desc1'),
-      description2: t('about_us.odyssey.2024.desc1'),
+      description2: t('about_us.odyssey.2024.desc2'),
       logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/timeline/2024-cYxiTizNFHMwtW2pLTvITB8NK18x0w.png',
       shortDesc: t('about_us.odyssey.2024.short_desc'),
     },
@@ -214,6 +224,7 @@ export const OdysseySection = () => {
       <TimelineContainer>
         <Logo src={indicator} />
       </TimelineContainer>
+      <FooterDesc>{t('about_us.odyssey.footer_desc')}</FooterDesc>
     </OdysseyContainer>
   );
 };

@@ -4,7 +4,7 @@ import { ShopCard } from '../../../components/ShopCard';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { StoreLargeCard } from '../../../components/StoreLargeCard';
-import { BEIJING_STORE, SHENYANG_STORE } from './conts';
+import { getBeijingStore, getShenyangStore } from './conts';
 
 const Container = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ const PartnerPortContainer = styled.div`
 
 export const GlobalRetailSection = () => {
   const { t } = useTranslation();
-  const [currentStore, setCurrentStore] = useState(BEIJING_STORE);
+  const [currentStore, setCurrentStore] = useState(getBeijingStore(t));
   const [showLarge, setShowLarge] = useState(false);
 
   return (
@@ -36,10 +36,10 @@ export const GlobalRetailSection = () => {
             image={
               'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/1-JZEJoR2krlUwG447lTs6E3dg09Joas.png'
             }
-            title={'BEIJING'}
+            title={t('common.beijing')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(BEIJING_STORE);
+              setCurrentStore(getBeijingStore(t));
               setShowLarge(true);
             }}
           ></ShopCard>
@@ -47,7 +47,7 @@ export const GlobalRetailSection = () => {
             image={
               'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Macau/Screenshot%202025-04-06%20at%2010.44.29%E2%80%AFPM-FZcf5KbIePliyGUObC602iADGcVJTD.png'
             }
-            title={'MACAU'}
+            title={t('common.macau')}
             notOpen={true}
             onClick={() => {
               return;
@@ -57,10 +57,10 @@ export const GlobalRetailSection = () => {
             image={
               'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/shenyang/1_2-uPQoAZLTpMfhSUy0ImSngAYIbJ4VVC.png'
             }
-            title={'SHENYANG'}
+            title={t('common.shenyang')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(SHENYANG_STORE);
+              setCurrentStore(getShenyangStore(t));
               setShowLarge(true);
             }}
           ></ShopCard>

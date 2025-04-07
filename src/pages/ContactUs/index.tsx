@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { SectionTitle } from '../../components/Title';
 import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 import { Footer } from '../../components/Footer';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
   padding: 0 20px;
@@ -53,17 +54,20 @@ const ContactLink = styled.a`
 
 export const ContactUsPage = () => {
   const navHeight = useNavigationHeight();
+  const { t } = useTranslation();
 
   return (
     <Container>
       <MainPage navHeight={navHeight}>
         <SectionTitle
-          title="CONTACT US"
-          subtitle="We are looking forward to cooperating with you."
+          title={t('contact_us.title')}
+          subtitle={t('contact_us.subtitle')}
         />
         <ContactGrid>
           <ContactSection>
-            <SectionHeading>Business cooperation</SectionHeading>
+            <SectionHeading>
+              {t('contact_us.business_cooperation')}
+            </SectionHeading>
             <ContactLink href="mailto:bc@liman.group">
               Mail-liman：bc@liman.group
             </ContactLink>
@@ -76,14 +80,14 @@ export const ContactUsPage = () => {
           </ContactSection>
 
           <ContactSection>
-            <SectionHeading>Join Liman</SectionHeading>
+            <SectionHeading>{t('contact_us.join_liman')}</SectionHeading>
             <ContactLink href="mailto:hr@liman.group">
               Mail：hr@liman.group
             </ContactLink>
           </ContactSection>
 
           <ContactSection>
-            <SectionHeading>About Duty-Free</SectionHeading>
+            <SectionHeading>{t('contact_us.duty_free')}</SectionHeading>
             <ContactLink href="mailto:chengquan@liman.group">
               Mail：chengquan@liman.group
             </ContactLink>
@@ -93,14 +97,14 @@ export const ContactUsPage = () => {
           </ContactSection>
 
           <ContactSection>
-            <SectionHeading>Market and Marketing</SectionHeading>
+            <SectionHeading>{t('contact_us.market')}</SectionHeading>
             <ContactLink href="mailto:marketing@liman.group">
               Mail：marketing@liman.group
             </ContactLink>
           </ContactSection>
 
           <ContactSection>
-            <SectionHeading>Technology and Systems</SectionHeading>
+            <SectionHeading>{t('contact_us.tech')}</SectionHeading>
             <ContactLink href="mailto:tech@liman.group">
               Mail：tech@liman.group
             </ContactLink>

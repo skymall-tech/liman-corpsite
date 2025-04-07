@@ -1,8 +1,14 @@
 {
   "common":{
     "travel_retail":"旅游零售",
-    "satellite_paris":"Satellite Paris",
-    "culture_estate":"文化地产"
+    "satellite_paris":"星丛",
+    "culture_estate":"文化地产",
+    "shenyang":"沈阳",
+    "beijing":"北京",
+    "shenzhen":"深圳",
+    "guangzhou":"广州",
+    "macau":"澳门",
+    "opening_soon":"即将开业"
   },
   "footer":{
     "search_in_wechat":"小程序中搜索",
@@ -11,66 +17,66 @@
     "join_us":"加入我们"
   },
   "menu": {
-    "learn_about_us": "了解利曼",
+    "learn_about_us": "认识利曼",
     "business_map": "商业版图",
     "cooperate_culture": "企业文化",
     "contact_us": "联系我们"
   },
   "about_us":{
     "page_title":"利曼集团",
-    "page_subtitle":"利曼集团有限公司成立于2009年，总部位于香港，专注于国际高端时尚领域",
+    "page_subtitle":"参与定义更美好的旅程",
     "business_map":{
       "title":"商业版图",
-      "subtitle":"聚焦三大领域"
+      "subtitle":"聚焦三大战略领域"
     },
     "odyssey":{
-      "title":"OUR ODYSSEY CHRONICLE",
-      "subtitle":"Two decades rooted in luxury dominance, now pioneering duty-free frontiers.",
+      "title":"集团历史",
+      "subtitle":"深耕二十载，从奢侈品零售领军者到免税新领域开拓者",
+      "footer_desc":"二十年来，我们以广州白云机场为起点，沿中国空港经济动脉不断开拓疆域，从首个机场精品柜台，发展成为覆盖北上广深澳等核心枢纽的跨境消费综合体",
       "2006":{
-        "desc1":"Beishan Industrial (Guangzhou) Co., LTD., the predecessor of Leman, was established.",
-         "desc2":"In the same year, the Group opened its first offline store at Guangzhou Baiyun Airport: Samsonite Black Label Store.",
-         "short_desc":"The predecessor of Liman, Beishan Industrial (Guangzhou) Co., Ltd., was established."
+        "desc1":"利曼前身北山实业（广州）有限公司成立",
+         "desc2":"同年在广州白云机场开设集团第一家线下门店——新秀丽黑标专卖店",
+         "short_desc":"利曼前身北山实业（广州）有限公司成立"
       },
       "2008":{
-        "desc1":"The group's offline stores have surpassed 10 locations.",
-        "short_desc":"The group's offline stores have surpassed 10 locations."
+        "desc1":"集团线下门店突破10家",
+        "short_desc":"集团线下门店突破10家"
       },
       "2012":{
-        "desc1":"The group became the largest luxury goods operator at Guangzhou Baiyun International Airport.",
-        "short_desc":"The group became the largest luxury goods operator at Guangzhou Baiyun International Airport."
+        "desc1":"集团成为广州白云机场最大的奢侈品运营商",
+        "short_desc":"集团成为广州白云机场最大的奢侈品运营商"
       },
       "2014":{
-        "desc1":"The EMPORIO ARMANI and SALVATORE FERRAGAMO stores at Guangzhou Baiyun International ",
-        "desc2":"Airport achieved the highest sales among all airport locations nationwide.",
-        "short_desc":"The group became the largest luxury goods operator at Guangzhou Baiyun International Airport."
+        "desc1":"EMPORIO ARMANI，SALVATORE FERRAGAMO广州白云机场店成为全国机场销售额第一",
+        "short_desc":"EMPORIO ARMANI，SALVATORE FERRAGAMO广州白云机场店成为全国机场销售额第一"
       },
       "2015":{
-        "desc1":"Sales exceeded RMB150M; 30+ stores nationwide. Top luxury operator at Shenyang Taoxian Airport; awarded EMPORIO ARMANI & FERRAGAMO’s \"Best China Airport Partner\".",
-        "short_desc":"Sales exceeded RMB150M; 30+ stores nationwide. "
+        "desc1":"集团销售额突破1.5亿人民币，线下门店累计突破30家",
+        "short_desc":"集团销售额突破1.5亿人民币，线下门店累计突破30家"
       },
       "2017":{
-        "desc1":"The group became the largest luxury goods operator at Chongqing",
-        "desc2": "Jiangbei International Airport and began representing the Satellite Paris brand in the same year.",
-        "short_desc":"The group became the largest luxury goods operator at Chongqing.."
+        "desc1":"集团成为重庆机场最大奢侈品运营商",
+        "desc2": "同年开始代理Satellite Paris品牌",
+        "short_desc":"集团成为重庆机场最大奢侈品运营商，同年开始代理Satellite Paris品牌"
       },
       "2019":{
-        "desc1":"Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area.",
-        "short_desc":"Authorized by Armani Casa for urban apartment developments in the Guangdong-Hong Kong-Macao Greater Bay Area."
+        "desc1":"集团获得Armani Casa （公寓）品牌 在粤港澳大湾区城市公寓项目开发的合作授权",
+        "short_desc":"集团获得Armani Casa （公寓）品牌 在粤港澳大湾区城市公寓项目开发的合作授权"
       },
       "2023":{
-        "desc1":"The group re-entered Beijing Capital International Airport.",
-        "desc2":"And opened 9 offline stores the following year.",
-        "short_desc":"The group re-entered Beijing Capital International Airport."
+        "desc1":"集团重新入驻北京首都机场，并于次年开业9家线下门店",
+        "desc2":"",
+        "short_desc":"集团重新入驻北京首都机场"
       },
       "2024":{
-        "desc1":"The group is preparing to establish a comprehensive duty-free mall at the Qingmao Port. Marking its entry into the duty-free industry.",
-        "desc2":"In the same year, the group will also re-enter Shenzhen Baoan International Airport.",
-        "short_desc":"The the group is preparing to establish a comprehensive duty-free mall at the Qingmao Port."
+        "desc1":"集团在青茂口岸筹备设立综合免税商城",
+        "desc2":"同时重新入驻深圳宝安机场，完成全国一线航空枢纽的战略布局",
+        "short_desc":"集团在青茂口岸筹备设立综合免税商城"
       }
     },
     "team": {
-      "title":"OUR VISIONARY HELM",
-      "subtitle":"Gather experts from around the world",
+      "title":"核心管理团队",
+      "subtitle":"汇聚全球专家",
       "luke": { 
         "name": "杨光",
         "title": "副总经理",
@@ -84,12 +90,12 @@
       "chenli":{
         "name": "陈立",
         "title": "执行董事",
-        "description": "负责国际商业拓展与统筹，开发全球品牌供应链，与全球各地区商业伙伴的合作策略制定、重点合作事项的落实，探索新兴经营业态、全面保持集团在全球旅游零售行业的领先身位。"
+        "description": "负责国际商业拓展与统筹，与全球各地区商业伙伴的合作策略制定、重点合作事项的落实，探索新兴经营业态、全面保持集团在全球旅游零售行业的领先身位。"
       },
       "lizhihua":{
         "name": "李治华",
         "title": "副总经理",
-        "description": "负责集团全球商业项目的投资、经营战略的制定和人才培养。"
+        "description": "负责品牌供应链管理与商业运营，与诸多海外知名品牌保持深度合作关系，依托独到的时尚趋势研判体系，确保商品组合与市场需求精准匹配；同时，与国内主流旅游渠道达成稳定合作框架，具备高超的客流分析、门店选址能力，为门店零售业务筑牢坚实根基。"
       },
       "zhangchi":{
         "name": "张驰",
@@ -109,90 +115,109 @@
     }
   },
   "travel":{
-    "page_title":"Travel Retail",
-    "page_subtitle":"Global Essence Local Elegance",
+    "page_title":"旅游零售",
+    "page_subtitle":"世界至臻，生活至悦",
     "global_retail_lounge":{
-      "title":"GLOBAL RETAIL LOUNGE",
-      "subtitle":"A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques."
+      "title":"全球旅购驿站",
+      "subtitle":"30+实体门店网络已为您铺就探索之路——从免税购物天堂到机场有税精品馆。"
     },
     "partner_brands":{
-      "title":"OUR PARTNER BRANDS",
-      "subtitle":"A network of 30+ physical stores paves your path to discovery — from duty-free shopping havens to airport-based tax-inclusive boutiques."
+      "title":"我们的合作伙伴",
+      "subtitle":"我们与全球知名品牌缔造品质联盟——从奢侈精品到在地匠心"
     },
     "tax_free":{
-      "title":"OUR E-TAX FREE HARBOR",
-      "subtitle":"Unlock global tax-exclusive treasures in the cloud",
-      "search":"Search in Wechat Mini Program"
+      "title":"云端免税港",
+      "subtitle":"云端解锁全球免税优品",
+      "search":"微信小程序"
+    },
+    "store_list": {
+      "beijing": {
+        "moschino": "首都机场T2航站楼GC220",
+        "armani": "首都机场T3航站楼A3W3-2",
+        "marni": "首都机场T3航站楼A3E7-2",
+        "tory_burch": "首都机场T3航站楼A3E7-1",
+        "parker": "首都机场T3航站楼A3E7-4",
+        "tumi": "首都机场T3航站楼A3E7-5",
+        "etro": "首都机场T2航站楼GC230"
+      },
+      "shenyang": {
+        "bally": "桃仙机场T3航站楼T3F2-JC-LS-03",
+        "ck": "桃仙机场T3航站楼T3F2-JC-LS-03",
+        "coach": "桃仙机场T3航站楼T3F2-JC-LS-03",
+        "cosmos": "桃仙机场T3航站楼T3F2-D1-LS-45",
+        "armarni": "桃仙机场T3航站楼T3F2-JC-LS-03",
+        "paul_shark": "桃仙机场T3航站楼T3F2-JC-LS-03",
+        "sf": "桃仙机场T3航站楼T3F2-JC-LS-03",
+        "tumi": "桃仙机场T3航站楼T3F2-JC-LS-03"
+      }
     }
   },
   "satellite_paris":{
-    "page_title":"Satellite Paris",
-    "page_subtitle":"Wander with a Compass of Conviction",
+    "page_title":"星丛",
+    "page_subtitle":"有主张的去流浪",
     "brand_story":{
-      "title":"BRAND STORY",
-      "subtitle":"A global luxury brand with a unique French style"
+      "title":"品牌故事",
+      "subtitle":"全球人文，激活女性自我灵感"
     },
     "art":{
-      "title":"L'ATELIER DES ARTS",
-      "subtitle":"World Artisan Heritage Gallery"
+      "title":"艺术工坊",
+      "subtitle":"全球人文博物馆"
     },
     "jewelry":{
-      "title":"OUR JEWELRY CONSTELLATION",
-      "subtitle":"Navigate the cloud to unlock humanity's living chronicles across civilizations.",
-      "search":"Click to go to the official Taobao store"
+      "title":"云端珍品殿堂",
+      "subtitle":"云端解锁全球人文历史",
+      "search":"天猫旗舰店"
     }
   },
   "culture_estate":{
-    "page_title":"CULTURAL ESTATE",
-    "page_subtitle":"Liman & TopEast",
+    "page_title":"文化地产",
+    "page_subtitle":"利曼&尚东",
     "brand_story":{
-      "title":"BRAND STORY",
-      "subtitle":"Global souls, crafted light — one spark ignites her world.",
+      "title":"品牌故事",
+      "subtitle":"阿玛尼公寓",
       "stories":{
         "1":{
-          "title":"Disruption: When Residences Become Art",
-          "p1":"In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
-          "p2":"Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
-          "p3":"“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
+          "title":"时光淬炼的优雅史诗",
+          "p1":"当世界追逐浮华时，Giorgio Armani用一根线条定义了永恒。",
+          "p2":"2000年，这位以“权力套装”颠覆时尚界的意大利大师，决定将他的美学帝国延伸至生活深处——Armani Casa由此诞生。",
+          "p3":"这不是一场简单的跨界，而是一位设计哲人对“家”的重新诠释：剥离喧嚣，让空间成为灵魂的栖息地。"
         },
         "2":{
-          "title":"Origins: From Fabric Folds to Spatial Poetry",
-          "p1":"Under the spotlights of fashion runways, Armani’s scissors carved fluid silhouettes. Yet in his Milan studio, he pondered: What if the drape of silk became curtains? What if the texture of suiting fabrics enveloped a sofa? What if the gleam of jewelry illuminated a lamp?",
-          "p2":"Thus, Armani Casa’s first furniture piece emerged—no ornate carvings, only restrained curves and neutral tones, as if crystallizing the essence of haute couture into spatial language.",
-          "p3":"“True luxury,” he declared, “lies in the dialogue between objects and space.”"
+          "title":"起源：从布料褶皱到空间呼吸",
+          "p1":"时装秀台的聚光灯下，Armani的剪刀裁剪出流畅的廓形；而在米兰的工作室中，他开始思考：如果丝绸的垂坠感化作窗帘，如果西装面料的肌理蔓延至沙发，如果珠宝的金属光泽点亮一盏灯……",
+          "p2":"于是，Armani Casa的第一件家具诞生了。没有繁复雕花，只有克制的曲线与中性色调，仿佛将高级定制的精髓凝固成空间语言。",
+          "p3":"他坚信：“真正的奢侈，是让物品与空间对话。”"
         },
         "3":{
-          "title":"Disruption: When Residences Become Art",
-          "p1":"In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
-          "p2":"Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
-          "p3":"“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
+          "title":"颠覆：当住宅成为艺术品",
+          "p1":"21世纪初的豪宅市场充斥着巴洛克式的炫富，Armani Casa却以“寂静的奢华”破局。",
+          "p2":"迪拜的沙漠与迈阿密的海岸线上，清水混凝土与镜面水景交织，Armani Casa公寓用极简的几何形态对抗浮躁。每一扇门把手的角度、每一块大理石的纹路，都由Armani亲自审定。",
+          "p3":"他说：“我不设计房子，我设计一种生活方式——让居住者成为空间的主角。”"
         },
         "4":{
-          "title":"An Epic of Timeless Elegance",
-          "p1":"While the world chased extravagance, Giorgio Armani defined eternity with a single line. ",
-          "p2":"In 2000, the Italian maestro who revolutionized fashion with his power suits extended his aesthetic empire into the realm of living—thus Armani Casa was born. ",
-          "p3":"This was not merely a cross-border venture, but a design philosopher reinterpretation of home: a sanctuary stripped of noise, where space becomes a refuge for the soul"
+          "title":"永恒哲学：少即是多的神性",
+          "p1":"Armani Casa的每一件作品都在诉说着同一句话：“剥离一切非必需，让材质本身歌唱。”",
+          "p2":"丝绸壁纸的触感、黄铜台灯的光晕、定制沙发的弧度……这些细节构筑了一个信仰：奢华不是物质的堆砌，而是对日常的升华。 ",
+          "p3":"正如Giorgio Armani所言：“我追求的，是让空间拥有呼吸的权利。”"
         },
         "5":{
-          "p1":"Today, Armani Casa residences stand as global icons of refined living. ",
-          "p2":"Silent as poetry, they whisper a secret to those who enter: true elegance needs no proclamation. It transcends time."
+          "p1":"如今，Armani Casa的公寓散落于世界坐标之上，成为顶级生活方式的图腾。",
+          "p2":"它们沉默如诗，却让每一个踏入其中的人听见了时光的密语：真正的优雅，无需呐喊，自会穿越世纪。"
         }
       }
     },
     "armani_casa":{
-      "title":"OUR ARMANI CASA",
-      "subtitle":"East Meet West",
+      "title":"南沙阿玛尼公寓",
+      "subtitle":"东方邂逅",
       "stories":{
         "1":{
-          "title":"Disruption: When Residences Become Art",
-          "p1":"In 2019, Liman Company obtained the Greater Bay Area development authorization of ARMANI Armani apartment brand with good reputation.",
-          "p2":"Thus opening the deep cooperation with Armani brand real estate and customized high-end home."
+          "p1":"2019年，利曼公司以良好的信誉取得了ARMANI阿玛尼公寓品牌的大湾区开发授权从而开启了与阿玛尼品牌的房地产及定制高端家居版块深度合作。",
+          "p2":""
         },
         "2":{
-          "title":"Origins: From Fabric Folds to Spatial Poetry",
-          "p1":"The project is located in Lingshan Island, one of the international financial Islands of Mingzhu Bay, Nansha District, Guangzhou, and has a commercial and apartment complex with a sea view.",
-          "p2":"The project consists of two plots. Two 40-meter-high commercial buildings are planned to be built on the western plot, covering an area of 9,900 square meters. ",
-          "p3":"Eastern plot construction one a 184-meter-high apartment building and a 46-meter-high apartment building with an area of 7,200 square meters"
+          "p1":"该项目位于广州市南沙区明珠湾国际金融岛之一的灵山岛， 拥有一线海景的集商业和公寓于一体的综合体。",
+          "p2":"本项目包含两个地块， 规划在西区地块上建设两栋40米高的商业建筑， 占地面积9900平方米； 东区地块建设一栋184米高的公寓楼和一栋46米高的公寓楼， 占地面积7200平方米。 ",
+          "p3":""
         }
       }
     }
@@ -200,40 +225,51 @@
   "cooperate_culture":{
     "mvv":{
       "mission":{
-        "title":"Mission",
-        "short_desc":"To carve excellence with a pioneering spirit and safeguard growth with an integrity-driven heritage.",
-        "p1":"Guided by integrity as our compass and craftsmanship as our foundation.",
-        "p2":"we transform challenges into stepping stones for progress and temptations into touchstones of resilience.",
-        "p3":"Through relentless refinement of our expertise, we create sustainable value for customers and partners alike."
+        "title":"企业使命",
+        "short_desc":"以勇者姿态雕刻卓越，用正直基因守护发展",
+        "p1":"以诚信为刃，以匠心为锤",
+        "p2":"将困难视为精进阶梯，把诱惑当作试金石",
+        "p3":"磨砺自身专业能力，为顾客与合作伙伴创造可持续价值"
       },
       "value":{
-        "title":"Value",
-        "short_desc":"Diligence with Compound Impact",
-        "p1":"We believe persistent dedication yields exponential rewards. By honing unparalleled service capabilities, we deliver exceptional returns that transcend expectations.",
-        "h1":"Leadership by Example",
-        "p2":"Managers are the first ambassadors of excellence. Through rigorous self-discipline and elevated standards, we inspire teams to rise and thrive.",
-        "h2":"Purpose-Driven Altruism",
-        "p3":"\"Empower stakeholders with tangible benefits.\" We resist short-term allure, prioritize collective growth, and co-create enduring value with integrity."
+        "title":"企业价值观",
+        "short_desc":"功不唐捐",
+        "p1":"笃信付出终将产生复利，磨炼过硬的服务获得超额的回报",
+        "h1":"身教为范",
+        "p2":"管理者是标准的第一践行者，用高度的自我要求带领团队前进",
+        "h2":"知行利他",
+        "p3":"\"让执行者真正受益\"，警惕短期甜蜜陷阱、与他人共创可靠价值"
       },
       "vision":{
-        "title":"Vision",
-        "short_desc":"To co-define the journey to a better future"
+        "title":"企业愿景",
+        "short_desc":"参与定义更美好的旅程"
       }
     },
     "social_responsibility":{
-      "title":"Social Responsibility",
-      "subtitle":"Commitment in Action, Building Futures",
-      "customer_rights":"Customer Rights & Experience",
-      "p1":"We uphold the highest standards of customer service and satisfaction. Our dedicated team ensures that every interaction is seamless, from initial inquiry to post-purchase support",
-      "p2":"Recognized by Aviation Administration in 2010 with Premium Service Merchant and \"Best Staff Image Award\"",
-      "p3":"In 2011, ten stores under Ruijie received the \"2009 Trusted Consumer Store\" designation from Guangzhou Consumer Council, making the company the most awarded merchant at Baiyun Airport with this honor.",
-      "p4":"Honored by Aviation Administration in 2011 with \"Outstanding Asian Games Contribution Merchant Award\"."
+      "title":"社会责任",
+      "subtitle":"履责于行，善建未来",
+      "customer_rights":"客户权益与体验",
+      "p1":"2010年广州消委会对睿杰（利曼前身北山实业曾用名）旗下9间商店颁发“2009年度放心消费商店”奖项",
+      "p2":"2010年获得航管部颁发：优质服务商户、最佳员工形象奖",
+      "p3":"2011年广州消委会又对睿杰（利曼前身北山实业曾用名）旗下10间商店颁发“2009年度放心消费商店”奖项，睿杰（利曼前身北山实业曾用名）为白云机场获得此项奖章最多的商户",
+      "p4":"2011年获得航管部颁发：亚运杰出贡献商户奖",
+      "p5":"2011年亚组委“优质服务突出贡献奖”"
     },
     "customer_rights":{
-      "p1":"Honored with the \"Public Welfare Supporter Enterprise\" award by Huadu District, Guangzhou City from 2010 to 2011",
-      "p2":"Awarded the \"Community Ambassador Award\" by Huadong Town, Huadu District, Guangzhou City in 2014",
-      "p3":"Received the \"Outstanding Philanthropy Award\" from Huadu District, Guangzhou City between 2014 and 2015.",
-      "p4":"Recognized as a \"Caring Enterprise\" for the Jiusan-New Social Stratum Association – Love & Peace Philanthropy Initiative in 2015."
+      "p1":"2011年亚组委颁发在特许商范围里唯一最高荣誉“特许销售诚信经营杰出典范奖”",
+      "p2":"2012-2015年连续被广州市工商行政管理局评为广东省守合同重信用企业",
+      "p3":"2017年度厦门高崎机场“年度最优质伙伴”",
+      "p4":"2017-2020年获得“AAA级信用企业",
+      "p5":"沈阳桃仙机场“U悦服务示范岗”"
     }
+  },
+  "contact_us":{
+    "title":"联系我们",
+    "subtitle":"我们期待与您合作",
+    "business_cooperation":"商务合作",
+    "join_liman":"加入利曼",
+    "duty_free":"关于免税",
+    "market":"市场和营销",
+    "tech":"科技和系统"
   }
 }

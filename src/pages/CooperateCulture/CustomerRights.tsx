@@ -27,6 +27,7 @@ const getParagraphs = (t: TFunction) => {
     t('cooperate_culture.customer_rights.p2'),
     t('cooperate_culture.customer_rights.p3'),
     t('cooperate_culture.customer_rights.p4'),
+    t('cooperate_culture.customer_rights.p5'),
   ];
 };
 

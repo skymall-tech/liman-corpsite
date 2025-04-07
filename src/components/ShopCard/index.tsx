@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { useTranslation } from 'react-i18next';
 
 const CardContainer = styled.div`
   position: relative;
@@ -101,18 +102,23 @@ export const ShopCard = ({
   title: string;
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   notOpen?: boolean;
-}) => (
-  <CardContainer onClick={onClick}>
-    <CardImage image={image} className="card-image" />
-    <OverlayMask className="overlay-mask-2" />
-    <OverlayMask className="overlay-mask" />
-    <OverlayTextContainer>
-      <CardTitle className="card-title">
-        <>{title}</>
-        {notOpen && (
-          <CardSubTitle className="card-title-2">Opening Soon</CardSubTitle>
-        )}
-      </CardTitle>
-    </OverlayTextContainer>
-  </CardContainer>
-);
+}) => {
+  const { t } = useTranslation();
+  return (
+    <CardContainer onClick={onClick}>
+      <CardImage image={image} className="card-image" />
+      <OverlayMask className="overlay-mask-2" />
+      <OverlayMask className="overlay-mask" />
+      <OverlayTextContainer>
+        <CardTitle className="card-title">
+          <>{title}</>
+          {notOpen && (
+            <CardSubTitle className="card-title-2">
+              {t('common.opening_soon')}
+            </CardSubTitle>
+          )}
+        </CardTitle>
+      </OverlayTextContainer>
+    </CardContainer>
+  );
+};

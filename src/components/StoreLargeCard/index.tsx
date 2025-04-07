@@ -68,15 +68,16 @@ const Sidebar = styled.div`
   right: 105px;
   top: 88px;
   bottom: 88px;
-  width: 200px;
+  width: 250px;
   scrollbar-width: 3px;
   scrollbar-color: #000 #fff;
   overflow-y: scroll;
+  text-align: right;
 `;
 
 const StoreItem = styled.div<{ isCurrentStore: boolean }>`
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: ${({ isCurrentStore }) => (isCurrentStore ? '8px' : '16px')};
   font-size: var(--font-size-h3);
   font-weight: 800;
   color: white;
@@ -90,7 +91,7 @@ const StoreAddress = styled.div`
   font-size: var(--font-size-body);
   font-weight: 400;
   color: #fff;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 `;
 
 const Icon = styled.img<{ position: string }>`

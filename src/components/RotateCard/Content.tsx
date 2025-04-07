@@ -5,6 +5,7 @@ const Container = styled.div<{ textAlign: string }>`
   flex-direction: column;
   width: max(25vw, 400px);
   align-items: ${({ textAlign }) => textAlign === 'right' && 'flex-end'};
+  aspect-ratio: 1/1.27;
 `;
 
 const Divider = styled.div`
@@ -26,6 +27,13 @@ const Paragraph = styled.p<{ textAlign: string }>`
   color: var(--color-primary);
 `;
 
+const ParagraphContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+`;
+
 export const RotateCardContent = ({
   paragraphs,
   title,
@@ -37,11 +45,13 @@ export const RotateCardContent = ({
 }) => {
   return (
     <Container textAlign={textAlign}>
-      {paragraphs.map((item, index) => (
-        <Paragraph textAlign={textAlign} key={index}>
-          {item}
-        </Paragraph>
-      ))}
+      <ParagraphContainer>
+        {paragraphs.map((item, index) => (
+          <Paragraph textAlign={textAlign} key={index}>
+            {item}
+          </Paragraph>
+        ))}
+      </ParagraphContainer>
       <Divider></Divider>
       <Title>{title}</Title>
     </Container>

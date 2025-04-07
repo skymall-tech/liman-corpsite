@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const Card = styled.div<{ active: boolean; isLast?: boolean }>`
   aspect-ratio: 1/2;
-  height: 65vh;
+  height: 55vh;
   padding: 37px 21px 30px 21px;
   border-radius: 12px;
   transition: all 0.3s ease;
