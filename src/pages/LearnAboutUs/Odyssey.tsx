@@ -2,9 +2,10 @@ import styled from '@emotion/styled';
 import { SectionTitle } from '../../components/Title';
 import { TimeCard } from '../../components/TimeCard';
 import { useState, useEffect } from 'react';
-import indicator from '../../assets/icons/indicator.svg';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
+import arrowLeft from '../../assets/icons/left-primary.svg';
+import arrowRight from '../../assets/icons/right-primary.svg';
 
 const OdysseyContainer = styled.div`
   width: 100vw;
@@ -21,9 +22,16 @@ const FooterDesc = styled.p`
   margin-top: 40px;
 `;
 
-const CardsContainer = styled.div`
+const MiddleContainer = styled.div`
+  width: 100vw;
+  position: relative;
   margin-top: 70px;
   margin-bottom: 40px;
+  padding: 0 50px;
+`;
+
+const CardsContainer = styled.div`
+  position: relative;
   display: flex;
   overflow-x: auto;
   gap: 20px;
@@ -34,7 +42,7 @@ const CardsContainer = styled.div`
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-
+  transition: all 0.3s ease;
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
     display: none;
@@ -46,17 +54,43 @@ const CardsContainer = styled.div`
   }
 `;
 
-const TimelineContainer = styled.div`
-  margin: 0 76px;
-  border-bottom: 4px solid var(--color-primary);
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 5vw;
-  margin-top: -45px;
+const ArrowLeft = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  &:hover {
+    scale: 1.1;
+  }
 `;
-const Logo = styled.img`
-  width: 28px;
-  height: 41px;
+
+const ArrowRight = styled.img`
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  &:hover {
+    scale: 1.1;
+  }
+`;
+
+const LeftMask = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to left, #f3f0ec00, #f3f0ec);
+`;
+const RightMask = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, #f3f0ec00, #f3f0ec);
 `;
 
 type TimelineEvent = {
@@ -200,30 +234,71 @@ export const OdysseySection = () => {
     setActiveYear(year);
   };
 
+  const handlePrevYear = () => {
+    const currentIndex = timelineData.findIndex(
+      (event) => event.year === activeYear
+    );
+    const prevIndex =
+      (currentIndex - 1 + timelineData.length) % timelineData.length;
+    const prevYear = timelineData[prevIndex].year;
+
+    setActiveYear(prevYear);
+
+    const container = document.querySelector('.cards-container');
+    const prevCard = container?.children[prevIndex] as HTMLElement;
+    if (container && prevCard) {
+      container.scrollTo({
+        left: prevCard.offsetLeft - 30,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handleNextYear = () => {
+    const currentIndex = timelineData.findIndex(
+      (event) => event.year === activeYear
+    );
+    const nextIndex = (currentIndex + 1) % timelineData.length;
+    const nextYear = timelineData[nextIndex].year;
+
+    setActiveYear(nextYear);
+
+    const container = document.querySelector('.cards-container');
+    const nextCard = container?.children[nextIndex] as HTMLElement;
+    if (container && nextCard) {
+      container.scrollTo({
+        left: nextCard.offsetLeft - 30,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <OdysseyContainer id="odyssey-section">
       <SectionTitle
         title={t('about_us.odyssey.title')}
         subtitle={t('about_us.odyssey.subtitle')}
       />
-      <CardsContainer className="cards-container">
-        {timelineData.map((event, index) => (
-          <TimeCard
-            key={event.year}
-            year={event.year}
-            description1={event.description1}
-            description2={event.description2}
-            logo={event.logo}
-            active={activeYear === event.year}
-            shortDesc={event.shortDesc}
-            onClick={handleCardClick}
-            isLast={index === timelineData.length - 1}
-          />
-        ))}
-      </CardsContainer>
-      <TimelineContainer>
-        <Logo src={indicator} />
-      </TimelineContainer>
+      <MiddleContainer>
+        <CardsContainer className="cards-container">
+          {timelineData.map((event) => (
+            <TimeCard
+              key={event.year}
+              year={event.year}
+              description1={event.description1}
+              description2={event.description2}
+              logo={event.logo}
+              active={activeYear === event.year}
+              shortDesc={event.shortDesc}
+              onClick={handleCardClick}
+            />
+          ))}
+        </CardsContainer>
+        <LeftMask />
+        <RightMask />
+        <ArrowLeft src={arrowLeft} onClick={handlePrevYear} />
+        <ArrowRight src={arrowRight} onClick={handleNextYear} />
+      </MiddleContainer>
       <FooterDesc>{t('about_us.odyssey.footer_desc')}</FooterDesc>
     </OdysseyContainer>
   );

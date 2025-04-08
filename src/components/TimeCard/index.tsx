@@ -1,4 +1,12 @@
 import styled from '@emotion/styled';
+import indicator from '../../assets/icons/indicator.svg';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+`;
 
 const Card = styled.div<{ active: boolean; isLast?: boolean }>`
   aspect-ratio: 1/2;
@@ -14,6 +22,7 @@ const Card = styled.div<{ active: boolean; isLast?: boolean }>`
   align-items: center;
   justify-content: space-between;
   margin-right: ${({ isLast }) => (isLast ? '100vw' : '0')};
+  position: relative;
 `;
 
 const Year = styled.h2<{ active: boolean }>`
@@ -64,6 +73,12 @@ const Image = styled.img<{ active: boolean }>`
     active ? 'none' : '2px solid var(--color-primary)'};
 `;
 
+const Logo = styled.img<{ active: boolean }>`
+  width: 28px;
+  height: 41px;
+  opacity: ${({ active }) => (active ? 1 : 0)};
+`;
+
 export interface TimeCardProps {
   year: string;
   description1: string;
@@ -71,7 +86,6 @@ export interface TimeCardProps {
   logo: string;
   active: boolean;
   shortDesc?: string;
-  isLast?: boolean;
   onClick?: ({
     event,
     year,
@@ -88,31 +102,34 @@ export const TimeCard = ({
   logo,
   active,
   shortDesc,
-  isLast,
   onClick,
 }: TimeCardProps) => {
   return (
-    <Card
-      active={active}
-      isLast={isLast}
-      onClick={(event) => {
-        onClick?.({
-          event,
-          year,
-        });
-      }}
-    >
-      <Year active={active}>{year}</Year>
-      {!active && <TopDivider />}
-      {active && (
-        <Description>
-          <p>{description1}</p>
-          {description2 && <p style={{ marginTop: '20px' }}>{description2}</p>}
-        </Description>
-      )}
-      {!active && <ShortDesc>{shortDesc}</ShortDesc>}
-      {!active && <BottomDivider />}
-      <Image src={logo} active={active} />
-    </Card>
+    <Container>
+      <Logo src={indicator} active={active} />
+      <Card
+        active={active}
+        onClick={(event) => {
+          onClick?.({
+            event,
+            year,
+          });
+        }}
+      >
+        <Year active={active}>{year}</Year>
+        {!active && <TopDivider />}
+        {active && (
+          <Description>
+            <p>{description1}</p>
+            {description2 && (
+              <p style={{ marginTop: '20px' }}>{description2}</p>
+            )}
+          </Description>
+        )}
+        {!active && <ShortDesc>{shortDesc}</ShortDesc>}
+        {!active && <BottomDivider />}
+        <Image src={logo} active={active} />
+      </Card>
+    </Container>
   );
 };
