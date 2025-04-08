@@ -16,21 +16,24 @@ export const MainPage = styled.div<{ navHeight: number }>`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: max(30vh, 100px);
+  padding-top: max(20vh, 100px);
 `;
 
 const ContactGrid = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 64px;
-  width: max(800px, 40vw);
+  width: max(880px, 40vw);
   margin: 64px auto;
 `;
 
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
+  min-width: 220px;
 `;
 
 const SectionHeading = styled.h3`
