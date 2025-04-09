@@ -153,74 +153,74 @@
         "sf": "Terminal 3, Shenyang Taoxian International Airport, T3F2-JC-LS-03",
         "tumi": "Terminal 3, Shenyang Taoxian International Airport, T3F2-JC-LS-03"
       }
+    }
+  },
+  "satellite_paris": {
+    "page_title": "Satellite Paris",
+    "page_subtitle": "Wander with a Compass of Conviction",
+    "brand_story": {
+      "title": "BRAND STORY",
+      "subtitle": "Global souls, crafted light — one spark ignites her world."
     },
-    "satellite_paris": {
-      "page_title": "Satellite Paris",
-      "page_subtitle": "Wander with a Compass of Conviction",
-      "brand_story": {
-        "title": "BRAND STORY",
-        "subtitle": "Global souls, crafted light — one spark ignites her world."
-      },
-      "art": {
-        "title": "L'ATELIER DES ARTS",
-        "subtitle": "World Artisan Heritage Gallery"
-      },
-      "jewelry": {
-        "title": "OUR JEWELRY CONSTELLATION",
-        "subtitle": "Navigate the cloud to unlock humanity's living chronicles across civilizations.",
-        "search": "Click to go to the official Taobao store"
+    "art": {
+      "title": "L'ATELIER DES ARTS",
+      "subtitle": "World Artisan Heritage Gallery"
+    },
+    "jewelry": {
+      "title": "OUR JEWELRY CONSTELLATION",
+      "subtitle": "Navigate the cloud to unlock humanity's living chronicles across civilizations.",
+      "search": "Click to go to the official Taobao store"
+    }
+  },
+  "culture_estate": {
+    "page_title": "CULTURAL ESTATE",
+    "page_subtitle": "Liman & TopEast",
+    "brand_story": {
+      "title": "BRAND STORY",
+      "subtitle": "Armani Casa",
+      "stories": {
+        "1": {
+          "title": "An Epic of Timeless Elegance",
+          "p1": "While the world chased extravagance, Giorgio Armani defined eternity with a single line.",
+          "p2": "In 2000, the Italian maestro who revolutionized fashion with his \"power suits\" extended his aesthetic empire into the realm of living—thus Armani Casa was born.",
+          "p3": " This was not merely an venture, but a design philosopher’s reinterpretation of \"home\": a sanctuary stripped of noise, where space becomes a refuge for the soul."
+        },
+        "2": {
+          "title": "Origins: From Fabric Folds to Spatial Poetry",
+          "p1": "Under the spotlights of fashion runways, Armani’s scissors carved fluid silhouettes. Yet in his Milan studio, he pondered: What if the drape of silk became curtains? What if the texture of suiting fabrics enveloped a sofa? What if the gleam of jewelry illuminated a lamp?",
+          "p2": "Thus, Armani Casa’s first furniture piece emerged—no ornate carvings, only restrained curves and neutral tones, as if crystallizing the essence of haute couture into spatial language.",
+          "p3": "“True luxury,” he declared, “lies in the dialogue between objects and space.”"
+        },
+        "3": {
+          "title": "Disruption: When Residences Become Art",
+          "p1": "In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
+          "p2": "Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
+          "p3": "“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
+        },
+        "4": {
+          "title": "Timeless Philosophy: The Divinity of Less",
+          "p1": "Every Armani Casa creation whispers the same truth: Strip away the unnecessary, let materials sing.  ",
+          "p2": "The caress of silk wallpaper, the glow of brass lamps, the arc of a bespoke sofa—these details forge a creed: luxury is not accumulation, but the elevation of the everyday. ",
+          "p3": "As Giorgio Armani reflects, “I seek to grant spaces the right to breathe.”"
+        },
+        "5": {
+          "p1": "Today, Armani Casa residences stand as global icons of refined living. ",
+          "p2": "Silent as poetry, they whisper a secret to those who enter: true elegance needs no proclamation. It transcends time."
+        }
       }
     },
-    "culture_estate": {
-      "page_title": "CULTURAL ESTATE",
-      "page_subtitle": "Liman & TopEast",
-      "brand_story": {
-        "title": "BRAND STORY",
-        "subtitle": "Armani Casa",
-        "stories": {
-          "1": {
-            "title": "An Epic of Timeless Elegance",
-            "p1": "While the world chased extravagance, Giorgio Armani defined eternity with a single line.",
-            "p2": "In 2000, the Italian maestro who revolutionized fashion with his \"power suits\" extended his aesthetic empire into the realm of living—thus Armani Casa was born.",
-            "p3": " This was not merely an venture, but a design philosopher’s reinterpretation of \"home\": a sanctuary stripped of noise, where space becomes a refuge for the soul."
-          },
-          "2": {
-            "title": "Origins: From Fabric Folds to Spatial Poetry",
-            "p1": "Under the spotlights of fashion runways, Armani’s scissors carved fluid silhouettes. Yet in his Milan studio, he pondered: What if the drape of silk became curtains? What if the texture of suiting fabrics enveloped a sofa? What if the gleam of jewelry illuminated a lamp?",
-            "p2": "Thus, Armani Casa’s first furniture piece emerged—no ornate carvings, only restrained curves and neutral tones, as if crystallizing the essence of haute couture into spatial language.",
-            "p3": "“True luxury,” he declared, “lies in the dialogue between objects and space.”"
-          },
-          "3": {
-            "title": "Disruption: When Residences Become Art",
-            "p1": "In the early 2000s, the luxury real estate market overflowed with Baroque opulence. Armani Casa countered with silent luxury.",
-            "p2": "Amid Dubai’s dunes and Miami’s coastlines, raw concrete and reflective water features intertwined. Armani Casa apartments defied excess through minimalist geometry. Every door handle’s angle, every vein in marble, bore Armani’s personal approval.",
-            "p3": "“I don’t design houses,” he asserted. “I design lifestyles—where the dweller becomes the protagonist.”"
-          },
-          "4": {
-            "title": "Timeless Philosophy: The Divinity of Less",
-            "p1": "Every Armani Casa creation whispers the same truth: Strip away the unnecessary, let materials sing.  ",
-            "p2": "The caress of silk wallpaper, the glow of brass lamps, the arc of a bespoke sofa—these details forge a creed: luxury is not accumulation, but the elevation of the everyday. ",
-            "p3": "As Giorgio Armani reflects, “I seek to grant spaces the right to breathe.”"
-          },
-          "5": {
-            "p1": "Today, Armani Casa residences stand as global icons of refined living. ",
-            "p2": "Silent as poetry, they whisper a secret to those who enter: true elegance needs no proclamation. It transcends time."
-          }
-        }
-      },
-      "armani_casa": {
-        "title": "OUR ARMANI CASA",
-        "subtitle": "East Meet West",
-        "stories": {
-          "1": {
-            "p1": "In 2019, Liman Company obtained the Greater Bay Area development authorization of ARMANI Armani apartment brand with good reputation.",
-            "p2": "Thus opening the deep cooperation with Armani brand real estate and customized high-end home."
-          },
-          "2": {
-            "p1": "The project is located in Lingshan Island, one of the international financial Islands of Mingzhu Bay, Nansha District, Guangzhou, and has a commercial and apartment complex with a sea view.",
-            "p2": "The project consists of two plots. Two 40-meter-high commercial buildings are planned to be built on the western plot, covering an area of 9,900 square meters. ",
-            "p3": "Eastern plot construction one a 184-meter-high apartment building and a 46-meter-high apartment building with an area of 7,200 square meters"
-          }
+    "armani_casa": {
+      "title": "OUR ARMANI CASA",
+      "subtitle": "East Meet West",
+      "stories": {
+        "1": {
+          "p1": "In 2019, Liman Company obtained the Greater Bay Area development authorization of ARMANI Armani apartment brand with good reputation.",
+          "p2": "Thus opening the deep cooperation with Armani brand real estate and customized high-end home."
+        },
+        "2": {
+          "p1": "The project is located in Lingshan Island, one of the international financial Islands of Mingzhu Bay, Nansha District, Guangzhou, and has a commercial and apartment complex with a sea view.",
+          "p2": "The project consists of two plots. Two 40-meter-high commercial buildings are planned to be built on the western plot, covering an area of 9,900 square meters. ",
+          "p3": "Eastern plot construction one a 184-meter-high apartment building and a 46-meter-high apartment building with an area of 7,200 square meters"
         }
       }
     }
