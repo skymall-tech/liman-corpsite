@@ -26,18 +26,18 @@ const LogoImage = styled.img`
   height: 58px;
 `;
 
-const QRCodeImage = styled.img`
-  width: 60px;
-  height: 60px;
-`;
+// const QRCodeImage = styled.img`
+//   width: 60px;
+//   height: 60px;
+// `;
 
-const QRCodeText = styled.p`
-  font-size: var(--font-size-body);
-  color: var(--color-primary);
-  margin-top: 12px;
-  font-weight: 700;
-  text-align: center;
-`;
+// const QRCodeText = styled.p`
+//   font-size: var(--font-size-body);
+//   color: var(--color-primary);
+//   margin-top: 12px;
+//   font-weight: 700;
+//   text-align: center;
+// `;
 
 const Divider = styled.div`
   width: 2px;
@@ -45,12 +45,12 @@ const Divider = styled.div`
   background-color: var(--color-primary);
 `;
 
-const QRSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: max(10vw, 200px);
-`;
+// const QRSection = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: max(10vw, 200px);
+// `;
 
 const LinkSection = styled.div`
   h3 {
@@ -93,13 +93,13 @@ export const Footer = () => {
       <FooterContent>
         <LogoImage src={Logo} alt="Liman Logo" />
         <Divider />
-        <QRSection>
+        {/* <QRSection>
           <QRCodeImage
             src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/qr-temp-9yoMRi4mzKUH1pxEPhKESYyaAEZ50m"
             alt="WeChat QR Code"
           />
           <QRCodeText>{t('footer.search_in_wechat')}</QRCodeText>
-        </QRSection>
+        </QRSection> */}
 
         <LinkSection style={{ marginLeft: '30px' }}>
           <h3>{t('footer.business_map')}</h3>
