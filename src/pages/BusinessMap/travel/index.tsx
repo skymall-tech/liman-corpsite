@@ -5,12 +5,12 @@ import { PageContainer } from '../../../components/PageConatiner';
 import { useScrollSections } from '../../../hooks/useScrollSections';
 import { BrandSection } from './BrandSection';
 import { GlobalRetailSection } from './GlobalRetailSection';
-import { TaxFreeSection } from './TaxFree';
+// import { TaxFreeSection } from './TaxFree';
 
 export const TravelPage: React.FC = () => {
   const { t } = useTranslation();
   useScrollSections({
-    sections: ['first-screen', 'partner-port', 'brand', 'tax-free'],
+    sections: ['first-screen', 'partner-port', 'brand'],
   });
   return (
     <PageContainer>
@@ -24,7 +24,7 @@ export const TravelPage: React.FC = () => {
       />
       <GlobalRetailSection />
       <BrandSection />
-      <TaxFreeSection />
+      {/* <TaxFreeSection /> */}
       <Footer />
     </PageContainer>
   );

@@ -30,11 +30,13 @@ const Divider = styled.div`
 export const SectionTitle = ({
   title,
   subtitle,
+  marginTop = '40px',
 }: {
   title: string;
   subtitle: string;
+  marginTop?: string;
 }) => (
-  <TitleContainer>
+  <TitleContainer style={{ marginTop }}>
     <TitleText>{title}</TitleText>
     <Divider />
     <SubtitleText>{subtitle}</SubtitleText>

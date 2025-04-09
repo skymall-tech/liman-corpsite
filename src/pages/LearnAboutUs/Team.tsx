@@ -7,6 +7,7 @@ const TeamContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   overflow-y: visible;
   overflow-x: hidden;
@@ -15,8 +16,8 @@ const TeamContainer = styled.div`
 const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 90px;
-  height: 400px;
+  margin-top: 30px;
+  height: 30vw;
   width: 100%;
   overflow: visible;
 `;
@@ -35,6 +36,7 @@ export const TeamSection = () => {
       <SectionTitle
         title={t('about_us.team.title')}
         subtitle={t('about_us.team.subtitle')}
+        marginTop="40px"
       />
       <CardContainer>
         <TeamCard
@@ -89,12 +91,7 @@ export const TeamSection = () => {
           image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/team/%EF%BC%887%3A7%EF%BC%89-dHqGkJXpl5nc4ttcclNMyyim3yDg5E.png"
         />
       </CardContainer>
-      <DescSection>
-        Architects from luxury retail, duty-free logistics and digital
-        innovation coalesce to redefine premium service paradigms. Through
-        predictive analytics and experiential engineering, we craft tomorrow's
-        retail DNA while delivering today's client success.{' '}
-      </DescSection>
+      <DescSection>{t('about_us.team.footer_desc')}</DescSection>
     </TeamContainer>
   );
 };
