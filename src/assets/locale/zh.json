@@ -180,43 +180,43 @@
       "store_list": {
         "Beijing":{
           "1": {
-            "name": "首都机场T2 SATELLITE PARIS",
+            "name": "首都机场一店",
             "address": "首都机场T2航站楼GC230"
           },
           "2": {
-            "name": "首都机场T3 SATELLITE PARIS",
+            "name": "首都机场二店",
             "address": "首都机场T3航站楼A3E7-3"
           }
         },
         "macau":{
           "1": {
-            "name": "澳门威尼斯人SATELLITE PARIS",
+            "name": "澳门威尼斯人店",
               "address": "澳门氹仔路威尼斯人商物中心K47铺"
             },
             "2":{
-              "name": "澳门大三巴SATELLITE PARIS",
+              "name": "澳门大三巴店",
               "address": "澳门大三巴街34-E号成德阁地下A座"
             }
         },
         "guangzhou":{
           "1": {
-            "name": "广州正佳SATELLITE PARIS",
+            "name": "广州正佳店",
             "address": "广东省广州市正佳商场一楼1G030+1G022号"
           }
         },
         "shenzhen":{
           "1": {
-            "name": "深圳宝安机场SATELLITE PARIS",
+            "name": "深圳宝安机场店",
             "address": "广东省深圳宝安国际机场T3航站楼四层出发厅D岛岛尾4H-05-01"
           }
         },
         "shenyang":{
           "1":{
-            "name": "沈阳桃仙机场SATELLITE PARIS第一店铺",
+            "name": "沈阳桃仙机场一店",
             "address": "桃仙机场T3航站楼T3F2-JC-LS-03"
           },
           "2":{
-            "name": "沈阳桃仙机场SATELLITE PARIS第二店铺",
+            "name": "沈阳桃仙机场二店",
             "address": "桃仙机场T3航站楼T3F2-D1-LS-44"
           }
         }

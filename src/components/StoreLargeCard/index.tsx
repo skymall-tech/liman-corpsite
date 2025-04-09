@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import ChevronLeft from '../../assets/icons/left-white.svg';
 import ChevronRight from '../../assets/icons/right-white.svg';
 import PackUp from '../../assets/icons/packup.svg';
+import LocationIcon from '../../assets/icons/location.svg';
+
 interface Store {
   id: string;
   name: string;
@@ -90,6 +92,28 @@ const StoreAddress = styled.div`
   font-weight: 400;
   color: #fff;
   margin-bottom: 40px;
+`;
+
+const AddressLine = styled.div`
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  align-items: baseline;
+
+  img {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    margin-top: 0;
+    display: inline;
+    vertical-align: baseline;
+  }
+
+  span {
+    text-align: right;
+    line-height: 1.2;
+  }
 `;
 
 const Icon = styled.img<{ position: string }>`
@@ -209,7 +233,10 @@ export const StoreLargeCard: React.FC<StoreLargeCardProps> = ({
               {currentStore.id === store.id && (
                 <StoreAddress>
                   {store.address.map((address, index) => (
-                    <div key={index}>{address}</div>
+                    <AddressLine key={index}>
+                      <img src={LocationIcon} alt="location" />
+                      <span>{address}</span>
+                    </AddressLine>
                   ))}
                 </StoreAddress>
               )}

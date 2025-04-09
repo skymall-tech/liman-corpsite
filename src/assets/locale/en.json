@@ -182,43 +182,43 @@
       "store_list": {
         "Beijing":{
           "1": {
-            "name": "Capital Airport T2 Satellite Paris",
+            "name": "Beijing Capital Airport Shop 1",
             "address": "Terminal 2, Beijing Capital International Airport, GC230"
           },
           "2": {
-            "name": "Capital Airport T3 Satellite Paris",
+            "name": "Beijing Capital Airport Shop 2",
             "address": "Terminal 3, Beijing Capital International Airport, A3E7-3"
           }
         },
         "macau":{
           "1": {
-            "name": "Macau Venetian Satellite Paris",
+            "name": "Macau Venetian",
               "address": "Shop K47, The Venetian Shopping Centre, Estrada da Baía de N. Senhora da Esperança, Taipa"
             },
             "2":{
-              "name": "Macau Ruins of St. Paul's Satellite Paris",
+              "name": "Macau Ruins of St. Paul's ",
               "address": "Unit A, Ground Floor, Chengde Court, 34-E Rua de São Paulo, Macau"
             }
         },
         "guangzhou":{
           "1": {
-            "name": "Guangzhou Grandview Mall Satellite Paris",
+            "name": "Guangzhou Grandview Mall ",
             "address": "Units 1G030 + 1G022, 1st Floor, Grandview Mall, Tianhe District, Guangzhou, Guangdong Province"
           }
         },
         "shenzhen":{
           "1": {
-            "name": "Shenzhen Bao'an Airport Satellite Paris",
+            "name": "Shenzhen Bao'an Airport",
             "address": "4H-05-01, 4th Floor Departure Hall (End of Island D), Terminal 3, Shenzhen Bao'an International Airport, Guangdong Province"
           }
         },
         "shenyang":{
           "1":{
-            "name": "Shenyang Taoxian Airport Satellite Paris Store 1",
+            "name": "Shenyang Airport  Store 1",
             "address": "Terminal 3, Shenyang Taoxian International Airport, T3F2-JC-LS-03"
           },
           "2":{
-            "name": "Shenyang Taoxian Airport Satellite Paris Store 2",
+            "name": "Shenyang Airport Store 2",
             "address": "Terminal 3, Shenyang Taoxian International Airport, T3F2-D1-LS-44"
           }
         }
