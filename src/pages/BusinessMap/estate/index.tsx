@@ -14,7 +14,7 @@ export const EstatePage: React.FC = () => {
   return (
     <PageContainer>
       <FirstScreen
-        nextSectionId="business-map-section"
+        nextSectionId="brand-story"
         title={t('culture_estate.page_title')}
         desc={t('culture_estate.page_subtitle')}
         image={

@@ -42,16 +42,15 @@ const Image = styled.img`
   object-position: center;
 `;
 
-const Gradient = styled.div`
+const Gradient = styled.div<{ hideMask?: boolean }>`
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(148, 106, 32, 0.7) 5%,
-    transparent
-  );
+  background: ${(props) =>
+    props.hideMask
+      ? 'linear-gradient(to right, rgba(148, 106, 32, 0.2) 5%, transparent)'
+      : 'linear-gradient(to right, rgba(148, 106, 32, 0.7) 5%, transparent)'};
 `;
 
 const DescContainer = styled.div`
@@ -78,7 +77,7 @@ const Paragraph = styled.p`
   font-size: var(--font-size-body);
   font-weight: 400;
   margin-top: 30px;
-  line-height: 1.3;
+  line-height: 2;
 `;
 
 const NavigationDots = styled.div`
@@ -97,7 +96,13 @@ const Dot = styled.button<{ active: boolean }>`
   transition: background-color 0.3s ease;
 `;
 
-export const Carousel = ({ stories }: { stories: StorySlide[] }) => {
+export const Carousel = ({
+  stories,
+  hideMask = false,
+}: {
+  stories: StorySlide[];
+  hideMask?: boolean;
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -164,7 +169,7 @@ export const Carousel = ({ stories }: { stories: StorySlide[] }) => {
         {stories.map((story, index) => (
           <Slide key={index}>
             <Image src={story.src}></Image>
-            <Gradient></Gradient>
+            <Gradient hideMask={hideMask}></Gradient>
             <DescContainer>
               {story.title && <Title>{story.title}</Title>}
               <ParagraphContainer>

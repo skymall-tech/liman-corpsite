@@ -139,6 +139,7 @@
         "tory_burch": "首都机场T3航站楼A3E7-1",
         "parker": "首都机场T3航站楼A3E7-4",
         "tumi": "首都机场T3航站楼A3E7-5",
+        "tumi2": "首都机场T2航站楼GC222",
         "etro": "首都机场T2航站楼GC230"
       },
       "shenyang": {
@@ -158,11 +159,67 @@
     "page_subtitle":"有主张的去流浪",
     "brand_story":{
       "title":"品牌故事",
-      "subtitle":"全球人文，激活女性自我灵感"
+      "subtitle":"全球人文，激活女性自我灵感",
+      "stories": {
+        "1": {
+          "p1": "1987年，法国人类学家Sandrine与她的丈夫创立SATELLITE品牌，凭借首套作品一炮而红荣登ELLE杂志封面。SATELLITE跨越人类文明光谱，在巴黎左岸的艺术氛围中淬炼出独特的设计哲学。",
+          "p2": " "
+        },
+        "2":{
+          "p1": "在我们的法国工坊里，设计师与匠人们以针为笔，以织物为画布，将人类文明的结晶化作女性自我表达的媒介。"
+        },
+        "3":{
+          "p1": "我们不仅是创造者，更是文明的转译者 —— 当巴洛克的璀璨邂逅东方哲思，当手工刺绣的温度对话现代剪裁，我们以织物为经纬，编织出跨越地域的女性精神图谱。 "
+        }
+      }
     },
     "art":{
       "title":"艺术工坊",
-      "subtitle":"全球人文博物馆"
+      "subtitle":"全球人文博物馆",
+      "store_list": {
+        "Beijing":{
+          "1": {
+            "name": "首都机场T2 SATELLITE PARIS",
+            "address": "首都机场T2航站楼GC230"
+          },
+          "2": {
+            "name": "首都机场T3 SATELLITE PARIS",
+            "address": "首都机场T3航站楼A3E7-3"
+          }
+        },
+        "macau":{
+          "1": {
+            "name": "澳门威尼斯人SATELLITE PARIS",
+              "address": "澳门氹仔路威尼斯人商物中心K47铺"
+            },
+            "2":{
+              "name": "澳门大三巴SATELLITE PARIS",
+              "address": "澳门大三巴街34-E号成德阁地下A座"
+            }
+        },
+        "guangzhou":{
+          "1": {
+            "name": "广州正佳SATELLITE PARIS",
+            "address": "广东省广州市正佳商场一楼1G030+1G022号"
+          }
+        },
+        "shenzhen":{
+          "1": {
+            "name": "深圳宝安机场SATELLITE PARIS",
+            "address": "广东省深圳宝安国际机场T3航站楼四层出发厅D岛岛尾4H-05-01"
+          }
+        },
+        "shenyang":{
+          "1":{
+            "name": "沈阳桃仙机场SATELLITE PARIS第一店铺",
+            "address": "桃仙机场T3航站楼T3F2-JC-LS-03"
+          },
+          "2":{
+            "name": "沈阳桃仙机场SATELLITE PARIS第二店铺",
+            "address": "桃仙机场T3航站楼T3F2-D1-LS-44"
+          }
+        }
+      }
     },
     "jewelry":{
       "title":"云端珍品殿堂",
@@ -208,7 +265,7 @@
       }
     },
     "armani_casa":{
-      "title":"南沙阿玛尼公寓",
+      "title":"南中国阿玛尼公寓",
       "subtitle":"东方邂逅",
       "stories":{
         "1":{
@@ -243,7 +300,8 @@
       },
       "vision":{
         "title":"企业愿景",
-        "short_desc":"参与定义更美好的旅程"
+        "short_desc":"参与定义更美好的旅程",
+        "p1":"聚焦旅游零售场景革新、轻奢时尚潮流重塑、文化地产价值深耕，用领先的服务和科技构筑新世代体验式消费矩阵"
       }
     },
     "social_responsibility":{

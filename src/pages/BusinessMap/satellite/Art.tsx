@@ -3,14 +3,15 @@ import { SectionTitle } from '../../../components/Title';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { ShopCard } from '../../../components/ShopCard';
-import {
-  BEIJING_STORE,
-  MACAU_STORE,
-  GUANGZHOU_STORE,
-  SHENYANG_STORE,
-  SHENZHEN_STORE,
-} from './const';
+
 import { StoreLargeCard } from '../../../components/StoreLargeCard';
+import {
+  getBeijingStore,
+  getGuangzhouStore,
+  getMacauStore,
+  getShenyangStore,
+  getShenzhenStore,
+} from './const';
 
 const ArtContainer = styled.div`
   width: 100vw;
@@ -27,7 +28,7 @@ const Container = styled.div`
 
 export const ArtSection = () => {
   const { t } = useTranslation();
-  const [currentStore, setCurrentStore] = useState(BEIJING_STORE);
+  const [currentStore, setCurrentStore] = useState(getBeijingStore(t));
   const [showLarge, setShowLarge] = useState(false);
   return (
     <ArtContainer id="art-section" onClick={() => setShowLarge(false)}>
@@ -42,7 +43,7 @@ export const ArtSection = () => {
             title={t('common.beijing')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(BEIJING_STORE);
+              setCurrentStore(getBeijingStore(t));
               setShowLarge(true);
             }}
           ></ShopCard>
@@ -51,7 +52,7 @@ export const ArtSection = () => {
             title={t('common.macau')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(MACAU_STORE);
+              setCurrentStore(getMacauStore(t));
               setShowLarge(true);
             }}
           ></ShopCard>
@@ -60,7 +61,7 @@ export const ArtSection = () => {
             title={t('common.guangzhou')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(GUANGZHOU_STORE);
+              setCurrentStore(getGuangzhouStore(t));
               setShowLarge(true);
             }}
           ></ShopCard>
@@ -69,7 +70,7 @@ export const ArtSection = () => {
             title={t('common.shenyang')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(SHENYANG_STORE);
+              setCurrentStore(getShenyangStore(t));
               setShowLarge(true);
             }}
           ></ShopCard>
@@ -78,7 +79,7 @@ export const ArtSection = () => {
             title={t('common.shenzhen')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
-              setCurrentStore(SHENZHEN_STORE);
+              setCurrentStore(getShenzhenStore(t));
               setShowLarge(true);
             }}
           ></ShopCard>

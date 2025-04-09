@@ -125,7 +125,7 @@ const getTimelineData = (t: TFunction): TimelineEvent[] => {
       year: '2014',
       description1: t('about_us.odyssey.2014.desc1'),
       description2: t('about_us.odyssey.2014.desc2'),
-      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/timeline/2014-Ut5Xd68AgTjjPi4YLwKOLC7l2EEsgj.png',
+      logo: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/timeline/20231228_221915_142148-ilPPDI6kr4u0Whirdhj81LeyoU5pDY.jpg',
       shortDesc: t('about_us.odyssey.2014.short_desc'),
     },
     {

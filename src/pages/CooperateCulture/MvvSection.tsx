@@ -20,6 +20,7 @@ export const MVVSection = () => {
   return (
     <MVVContainer id="mvv-section" navHeight={navHeight}>
       <CultureCard
+        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/MVV/1-y5cAz7tOEsRlWg1h4cCaRok9ggB0MA.png"
         title={t('cooperate_culture.mvv.mission.title')}
         shortDescription={t('cooperate_culture.mvv.mission.short_desc')}
       >
@@ -28,6 +29,7 @@ export const MVVSection = () => {
         <p>{t('cooperate_culture.mvv.mission.p3')}</p>
       </CultureCard>
       <CultureCard
+        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/MVV/2-2MyDeYqvofRda5UOcG5jEMZcBuymBu.png"
         title={t('cooperate_culture.mvv.value.title')}
         shortDescription={t('cooperate_culture.mvv.value.short_desc')}
       >
@@ -38,10 +40,12 @@ export const MVVSection = () => {
         <p>{t('cooperate_culture.mvv.value.p3')}</p>
       </CultureCard>
       <CultureCard
+        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/MVV/3-owZfX3pSScpbMQypv2lKHR8UZxgUv6.png"
         title={t('cooperate_culture.mvv.vision.title')}
         shortDescription={t('cooperate_culture.mvv.vision.short_desc')}
-        showExpandIcon={false}
-      ></CultureCard>
+      >
+        <p>{t('cooperate_culture.mvv.vision.p1')}</p>
+      </CultureCard>
     </MVVContainer>
   );
 };

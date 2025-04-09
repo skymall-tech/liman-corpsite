@@ -141,6 +141,7 @@
         "tory_burch": "Terminal 3, Beijing Capital International Airport, A3E7-1",
         "parker": "Terminal 3, Beijing Capital International Airport, A3E7-4",
         "tumi": "Terminal 3, Beijing Capital International Airport, A3E7-5",
+        "tumi2": "Terminal 2, Beijing Capital International Airport, GC222",
         "etro": "Terminal 2, Beijing Capital International Airport, GC230"
       },
       "shenyang": {
@@ -160,11 +161,67 @@
     "page_subtitle": "Wander with a Compass of Conviction",
     "brand_story": {
       "title": "BRAND STORY",
-      "subtitle": "Global souls, crafted light — one spark ignites her world."
+      "subtitle": "Global souls, crafted light — one spark ignites her world.",
+      "stories": {
+        "1": {
+          "p1": "In 1987, French anthropologist Sandrine and her photographer husband founded Satellite after their global travels ignited a creative spark. Their inaugural collection catapulted to fame by securing the coveted cover of ELLE magazine.",
+          "p2": "Rooted in the artistic ethos of Paris' Left Bank, Satellite traverses the spectrum of human civilizations. "
+        },
+        "2":{
+          "p1": "Within our French workshops, designers and artisans wield needles as pens and fabrics as canvases, transforming cultural legacies into mediums for women's self-expression."
+        },
+        "3":{
+          "p1": "We are not merely creators, but interpreters of civilization. When Baroque brilliance meets Eastern philosophy, when hand-embroidered textures converse with modern tailoring, Satellite crafts a cross-cultural tapestry of femininity through the warp and weft of textiles. "
+        }
+      }
     },
     "art": {
       "title": "L'ATELIER DES ARTS",
-      "subtitle": "World Artisan Heritage Gallery"
+      "subtitle": "World Artisan Heritage Gallery",
+      "store_list": {
+        "Beijing":{
+          "1": {
+            "name": "Capital Airport T2 Satellite Paris",
+            "address": "Terminal 2, Beijing Capital International Airport, GC230"
+          },
+          "2": {
+            "name": "Capital Airport T3 Satellite Paris",
+            "address": "Terminal 3, Beijing Capital International Airport, A3E7-3"
+          }
+        },
+        "macau":{
+          "1": {
+            "name": "Macau Venetian Satellite Paris",
+              "address": "Shop K47, The Venetian Shopping Centre, Estrada da Baía de N. Senhora da Esperança, Taipa"
+            },
+            "2":{
+              "name": "Macau Ruins of St. Paul's Satellite Paris",
+              "address": "Unit A, Ground Floor, Chengde Court, 34-E Rua de São Paulo, Macau"
+            }
+        },
+        "guangzhou":{
+          "1": {
+            "name": "Guangzhou Grandview Mall Satellite Paris",
+            "address": "Units 1G030 + 1G022, 1st Floor, Grandview Mall, Tianhe District, Guangzhou, Guangdong Province"
+          }
+        },
+        "shenzhen":{
+          "1": {
+            "name": "Shenzhen Bao'an Airport Satellite Paris",
+            "address": "4H-05-01, 4th Floor Departure Hall (End of Island D), Terminal 3, Shenzhen Bao'an International Airport, Guangdong Province"
+          }
+        },
+        "shenyang":{
+          "1":{
+            "name": "Shenyang Taoxian Airport Satellite Paris Store 1",
+            "address": "Terminal 3, Shenyang Taoxian International Airport, T3F2-JC-LS-03"
+          },
+          "2":{
+            "name": "Shenyang Taoxian Airport Satellite Paris Store 2",
+            "address": "Terminal 3, Shenyang Taoxian International Airport, T3F2-D1-LS-44"
+          }
+        }
+      }
     },
     "jewelry": {
       "title": "OUR JEWELRY CONSTELLATION",
@@ -245,7 +302,8 @@
       },
       "vision": {
         "title": "Vision",
-        "short_desc": "To co-define the journey to a better future"
+        "short_desc": "To co-define the journey to a better future",
+        "p1":"Pioneering Travel Retail Innovation, Redefining Accessible Luxury, Cultivating Cultural Real Estate Value — Crafting Next-Gen Experiential Ecosystems with Technology-Driven Excellence"
       }
     },
     "social_responsibility": {

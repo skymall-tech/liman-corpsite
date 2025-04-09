@@ -54,13 +54,15 @@ export const ImgWithSearch = ({
   src,
   desc,
   icon,
+  onClick,
 }: {
   src: string;
   desc: string;
   icon: string;
+  onClick?: () => void;
 }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={onClick}>
       <ImageContainer src={src} />
       <SearchContainer>
         <SearchBar>

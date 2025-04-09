@@ -16,7 +16,7 @@ export const MainPage = styled.div<{ navHeight: number }>`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: max(20vh, 100px);
+  padding-top: 60px;
 `;
 
 const ContactGrid = styled.div`
@@ -27,7 +27,8 @@ const ContactGrid = styled.div`
   flex-wrap: wrap;
   gap: 64px;
   width: max(880px, 40vw);
-  margin: 64px auto;
+  margin: 126px auto;
+  margin-bottom: 0px;
 `;
 
 const ContactSection = styled.div`

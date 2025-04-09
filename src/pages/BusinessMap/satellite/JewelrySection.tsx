@@ -17,9 +17,15 @@ export const JewelrySection = () => {
         subtitle={t('satellite_paris.jewelry.subtitle')}
       />
       <ImgWithSearch
-        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/last-sitelite-O3ZyuDcTzJrKipcUTQlnJzkxKTOuew.png"
+        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/taobao-kSzVGtzdfAkb6v51UtYQy55m8ngOHN.webp"
         desc={t('satellite_paris.jewelry.search')}
         icon={RightArrow}
+        onClick={() => {
+          window.open(
+            'https://shop209745502.taobao.com/shop/view_shop.htm?appUid=RAzN8HWYRETtHuWL5Gh6VPjz5sNuzrvCVr3G9AwYg9bsxRjLS75&spm=a21n57.1.hoverItem.3',
+            '_blank'
+          );
+        }}
       ></ImgWithSearch>
     </JewelryContainer>
   );

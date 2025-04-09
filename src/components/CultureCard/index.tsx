@@ -9,6 +9,7 @@ interface CultureCardProps {
   shortDescription: string;
   children?: React.ReactNode;
   showExpandIcon?: boolean;
+  src: string;
 }
 const bounce = keyframes`
   0%, 100% {
@@ -22,7 +23,7 @@ const bounce = keyframes`
 const Card = styled.div<{ isExpanded: boolean }>`
   box-sizing: border-box;
   width: 18vw;
-  height: ${({ isExpanded }) => (isExpanded ? '38vw' : '26vw')};
+  height: ${({ isExpanded }) => (isExpanded ? 'calc(100vh - 200px)' : '50vh')};
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 2px 10px #946a20;
@@ -35,7 +36,7 @@ const Card = styled.div<{ isExpanded: boolean }>`
   justify-content: space-between;
 `;
 
-const Title = styled.div`
+const Title = styled.div<{ src: string }>`
   background: #946a20;
   width: 100%;
   height: 9vw;
@@ -48,6 +49,10 @@ const Title = styled.div`
   font-weight: 700;
   flex-shrink: 0;
   margin-bottom: 2vw;
+  background-image: url(${({ src }) => src});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 const Description = styled.div`
@@ -89,6 +94,7 @@ export const CultureCard: React.FC<CultureCardProps> = ({
   shortDescription,
   children,
   showExpandIcon = true,
+  src,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -101,7 +107,7 @@ export const CultureCard: React.FC<CultureCardProps> = ({
       }}
       isExpanded={isExpanded}
     >
-      <Title>{title}</Title>
+      <Title src={src}>{title}</Title>
       {!isExpanded ? (
         <Description> {shortDescription} </Description>
       ) : (
