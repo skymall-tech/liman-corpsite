@@ -30,7 +30,7 @@ export const BusinessMapSection = () => {
       />
       <Container>
         <BusinessCard
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/travel-retail-DGuirmz9sNjx8zs6CV1sSZpK2qWkJW.png"
+          image="https://cdn.liman.group/business_map/travel.webp"
           title={t('common.travel_retail')}
           onClick={() => {
             navigate(PAGE_PATH.businessMap);
@@ -38,7 +38,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/satelite-paris-8SCgh4vG8QhCz7Nmj7iWURb1gRcgxe.png"
+          image="https://cdn.liman.group/business_map/satellite.webp"
           title={t('common.satellite_paris')}
           onClick={() => {
             navigate(PAGE_PATH.satellite);
@@ -46,7 +46,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/estate-lJzxq0ylNYB0yha4kGuTDXt6tRKwko.png"
+          image="https://cdn.liman.group/business_map/estate.webp"
           title={t('common.culture_estate')}
           onClick={() => {
             navigate(PAGE_PATH.estate);

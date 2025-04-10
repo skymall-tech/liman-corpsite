@@ -17,7 +17,7 @@ export const JewelrySection = () => {
         subtitle={t('satellite_paris.jewelry.subtitle')}
       />
       <ImgWithSearch
-        src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/taobao-kSzVGtzdfAkb6v51UtYQy55m8ngOHN.webp"
+        src="https://cdn.liman.group/taobao/taobao.webp"
         desc={t('satellite_paris.jewelry.search')}
         icon={RightArrow}
         onClick={() => {

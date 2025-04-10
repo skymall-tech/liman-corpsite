@@ -12,14 +12,14 @@ const Container = styled.div`
 const getStories = (t: TFunction) => {
   return [
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/p1-oF4h3R908VYJ5ihJpIqW7tvfkE6lc3.jpg',
+      src: 'https://cdn.liman.group/culture_estate/armani_nansha/p1.webp',
       paragraph: [
         t('culture_estate.armani_casa.stories.1.p1'),
         t('culture_estate.armani_casa.stories.1.p2'),
       ],
     },
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/p2-3760X97rvTII6LCDL11978mXcs7vB4.jpg',
+      src: 'https://cdn.liman.group/culture_estate/armani_nansha/p2.webp',
       paragraph: [
         t('culture_estate.armani_casa.stories.2.p1'),
         t('culture_estate.armani_casa.stories.2.p2'),

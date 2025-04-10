@@ -12,18 +12,18 @@ const BrandContainer = styled.div`
 const getStories = (t: TFunction) => {
   return [
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/satellite-story/P1-QsnI86SL4OT21aDug6swE4v1giaVhp.webp',
+      src: 'https://cdn.liman.group/satellite_story/P1.webp',
       paragraph: [
         t('satellite_paris.brand_story.stories.1.p1'),
         t('satellite_paris.brand_story.stories.1.p2'),
       ],
     },
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/satellite-story/P2-hud16xtwQatInu0qbrXenm8VQXnejq.webp',
+      src: 'https://cdn.liman.group/satellite_story/P2.webp',
       paragraph: [t('satellite_paris.brand_story.stories.2.p1')],
     },
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/satellite-story/P3-i03wWe55YAnHHrBT8H6PgPaFrRY3tb.webp',
+      src: 'https://cdn.liman.group/satellite_story/P3.webp',
       paragraph: [t('satellite_paris.brand_story.stories.3.p1')],
     },
   ];

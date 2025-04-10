@@ -26,7 +26,7 @@ export const StyledImage = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: center;
-  background-color: #412c07;
+  background-color: #412c07f5;
 `;
 
 export const ImageOverlay = styled.div`

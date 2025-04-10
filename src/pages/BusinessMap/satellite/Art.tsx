@@ -39,7 +39,7 @@ export const ArtSection = () => {
       {!showLarge ? (
         <Container>
           <ShopCard
-            image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Satellite-store/%E5%8C%97%E4%BA%AC1-nu74GDrZ4QPnZzt5GJQhDLYN1IFiM7.png"
+            image="https://cdn.liman.group/stores/SATELLITE/beijing1.webp"
             title={t('common.beijing')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -48,7 +48,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Satellite-store/%E5%A4%A7%E4%B8%89%E5%B7%B41-vLSISVnMzvng7p1cWIe9BbqrFr63BV.png"
+            image="https://cdn.liman.group/stores/SATELLITE/sanba1.webp"
             title={t('common.macau')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -57,7 +57,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Satellite-store/%E5%A8%81%E5%B0%BC%E6%96%AF%E4%BA%BA1-vuWox52iIIH0wuwro6fMatp6sATJi2.png"
+            image="https://cdn.liman.group/stores/SATELLITE/gaungzhou1.webp"
             title={t('common.guangzhou')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -66,7 +66,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Satellite-store/%E6%B2%88%E9%98%B31-cPFyfGIvZf85qIGrarbqw8jUHo6v66.png"
+            image="https://cdn.liman.group/stores/SATELLITE/shenyang1.webp"
             title={t('common.shenyang')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -75,7 +75,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Satellite-store/%E6%B7%B1%E5%9C%B31-YDsirA7Jf4Igri5vjo5qI06AbijXU8.png"
+            image="https://cdn.liman.group/stores/SATELLITE/shenzhen1.webp"
             title={t('common.shenzhen')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();

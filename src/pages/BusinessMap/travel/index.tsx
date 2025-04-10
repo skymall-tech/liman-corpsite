@@ -18,9 +18,7 @@ export const TravelPage: React.FC = () => {
         nextSectionId="partner-port"
         title={t('travel.page_title')}
         desc={t('travel.page_subtitle')}
-        image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/3-xnqCK3LeLXGbMZzlbkmAQ26C05vnGA.png'
-        }
+        image={'https://cdn.liman.group/first_pic/3.webp'}
       />
       <GlobalRetailSection />
       <BrandSection />

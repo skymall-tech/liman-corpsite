@@ -18,9 +18,7 @@ export const SatellitePage: React.FC = () => {
         nextSectionId="brand-story"
         title={t('satellite_paris.page_title')}
         desc={t('satellite_paris.page_subtitle')}
-        image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/2-ZPXJPfCJtLftzO5J8oEoSELPR3DjBF.png'
-        }
+        image={'https://cdn.liman.group/first_pic/2.webp'}
       />
       <BrandStorySection />
       <ArtSection></ArtSection>

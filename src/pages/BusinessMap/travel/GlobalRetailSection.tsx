@@ -33,9 +33,7 @@ export const GlobalRetailSection = () => {
       {!showLarge ? (
         <Container>
           <ShopCard
-            image={
-              'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Beijing/1-JZEJoR2krlUwG447lTs6E3dg09Joas.png'
-            }
+            image={'https://cdn.liman.group/stores/travel/beijing/1.webp'}
             title={t('common.beijing')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -44,9 +42,7 @@ export const GlobalRetailSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image={
-              'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/Macau/Screenshot%202025-04-06%20at%2010.44.29%E2%80%AFPM-FZcf5KbIePliyGUObC602iADGcVJTD.png'
-            }
+            image={'https://cdn.liman.group/stores/travel/macau/skymall.webp'}
             title={t('common.macau')}
             notOpen={true}
             onClick={() => {
@@ -54,9 +50,7 @@ export const GlobalRetailSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image={
-              'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/Travel_store/shenyang/1_2-uPQoAZLTpMfhSUy0ImSngAYIbJ4VVC.png'
-            }
+            image={'https://cdn.liman.group/stores/travel/shenyang/1_2.webp'}
             title={t('common.shenyang')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();

@@ -12,7 +12,7 @@ const BrandContainer = styled.div`
 const getStories = (t: TFunction) => {
   return [
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/p1-nfcamnu8KrxmouZwJepp3zhDB4jBpM.jpg',
+      src: 'https://cdn.liman.group/culture_estate/armani_brand/p1.webp',
       title: t('culture_estate.brand_story.stories.1.title'),
       paragraph: [
         t('culture_estate.brand_story.stories.1.p1'),
@@ -21,7 +21,7 @@ const getStories = (t: TFunction) => {
       ],
     },
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/p2-9IPyvhyydOUSnENYsZnXydpQs2x1hP.jpg',
+      src: 'https://cdn.liman.group/culture_estate/armani_brand/p2.webp',
       title: t('culture_estate.brand_story.stories.2.title'),
       paragraph: [
         t('culture_estate.brand_story.stories.2.p1'),
@@ -30,7 +30,7 @@ const getStories = (t: TFunction) => {
       ],
     },
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/p3-1vmcLdmK9Rfpei5uEc0ECQWR20Hljl.jpg',
+      src: 'https://cdn.liman.group/culture_estate/armani_brand/p3.webp',
       title: t('culture_estate.brand_story.stories.3.title'),
       paragraph: [
         t('culture_estate.brand_story.stories.3.p1'),
@@ -39,7 +39,7 @@ const getStories = (t: TFunction) => {
       ],
     },
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/p4-j1yWiL1zxu1SeD45pBvuKXBH206hlA.jpg',
+      src: 'https://cdn.liman.group/culture_estate/armani_brand/p4.webp',
       title: t('culture_estate.brand_story.stories.4.title'),
       paragraph: [
         t('culture_estate.brand_story.stories.4.p1'),
@@ -48,7 +48,7 @@ const getStories = (t: TFunction) => {
       ],
     },
     {
-      src: 'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/p5-ZoAGDWO5QhKz7zSMKPfRZFQY16s9lG.jpg',
+      src: 'https://cdn.liman.group/culture_estate/armani_brand/p5.webp',
       paragraph: [
         t('culture_estate.brand_story.stories.5.p1'),
         t('culture_estate.brand_story.stories.5.p2'),

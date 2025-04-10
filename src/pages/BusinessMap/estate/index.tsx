@@ -17,9 +17,7 @@ export const EstatePage: React.FC = () => {
         nextSectionId="brand-story"
         title={t('culture_estate.page_title')}
         desc={t('culture_estate.page_subtitle')}
-        image={
-          'https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/4-JcZBa21Bixx97TiQ6tniHQ7Ic23LZU.png'
-        }
+        image={'https://cdn.liman.group/first_pic/4.webp'}
       />
       <BrandStorySection />
       <ArmaniCasa></ArmaniCasa>
