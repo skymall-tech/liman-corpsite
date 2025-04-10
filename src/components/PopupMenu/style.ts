@@ -5,6 +5,7 @@ export const PopupContainer = styled.div`
   position: absolute;
   z-index: 10;
   padding-top: 10px;
+  padding-right: 10px;
 `;
 
 export const PopupItem = styled.div<{ isActive: boolean }>`

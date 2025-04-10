@@ -17,8 +17,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   overflow-y: auto; /* Changed from scroll to auto */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS/Safari */
 }
@@ -27,11 +27,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  --color-primary: #B59152;
-  --color-secondary: #204D88;
-  --color-background-primary: #F2F0EC;
-  --color-background-secondary: #D2B583;
-  --color-text-disabled: #D9D9D9;
+  --color-primary: #b59152;
+  --color-secondary: #204d88;
+  --color-background-primary: #f2f0ec;
+  --color-background-secondary: #d2b583;
+  --color-background-tertiary: rgba(246, 237, 220, 0.64);
+  --color-text-disabled: #d9d9d9;
   --font-size-h1: 36px;
   --font-size-h2: 26px;
   --font-size-h3: 16px;
@@ -49,7 +50,6 @@ body {
   background-color: var(--color-background-primary);
 }
 
-
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -62,7 +62,6 @@ h2 {
   font-size: var(--font-size-h2);
 }
 
-
 @media screen and (min-width: 1800px) {
   :root {
     --font-size-h1: 38px;
@@ -70,7 +69,6 @@ h2 {
     --font-size-h3: 18px;
     --font-size-body: 14px;
   }
-
 }
 
 @media screen and (min-width: 2200px) {
@@ -80,6 +78,4 @@ h2 {
     --font-size-h3: 22px;
     --font-size-body: 18px;
   }
-
 }
-
