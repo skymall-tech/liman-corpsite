@@ -38,6 +38,31 @@ const OverlayMask = styled.div`
   background: linear-gradient(to bottom, #b38c48 0%, #71511a 100%);
   opacity: 0;
   mix-blend-mode: overlay;
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(179, 140, 72, 0.4) 40%,
+      rgba(113, 81, 26, 0.4) 60%,
+      transparent 100%
+    );
+    opacity: 1;
+    mix-blend-mode: multiply;
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 50%,
+      rgba(113, 81, 26, 0.7) 100%
+    );
+    opacity: 1;
+    mix-blend-mode: multiply;
+  }
 `;
 
 const CardImage = styled.div<{ image: string }>`
@@ -54,6 +79,11 @@ const CardImage = styled.div<{ image: string }>`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  // Mobile & Tablet
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    filter: sepia(0.6);
+  }
 `;
 
 const CardTitle = styled.div`
