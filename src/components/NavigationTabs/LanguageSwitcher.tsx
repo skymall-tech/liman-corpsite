@@ -18,7 +18,7 @@ export const LanguageSwitcher = (
   const [showLangPopup, setShowLangPopup] = useState(false);
 
   return (
-    <>
+    <div>
       <LangIcon
         ref={langIconRef}
         src={langIcon}
@@ -41,6 +41,6 @@ export const LanguageSwitcher = (
           onMouseLeave={() => setShowLangPopup(false)}
         />
       )}
-    </>
+    </div>
   );
 };

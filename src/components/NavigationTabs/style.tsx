@@ -17,8 +17,10 @@ export const Logo = styled.img`
 `;
 
 export const LangIcon = styled.img`
+  position: relative;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 `;
 
 export const DesktopNav = styled.div`
@@ -35,9 +37,9 @@ export const MobileNav = styled.div<{ isOpen?: boolean }>`
   width: calc(100% - 64px);
   display: flex;
   align-items: center;
-  position: relative;
+  position: ${({ isOpen }) => (isOpen ? 'relative' : undefined)};
   background: var(--color-background-primary);
-  z-index: 1000;
+  z-index: 100;
 
   /* Logo 容器 */
   & > :nth-child(2) {
@@ -133,7 +135,7 @@ export const MobileMenuContainer = styled.div<{ isOpen: boolean }>`
   transform: translateY(${(props) => (props.isOpen ? '0' : '-100%')});
   opacity: ${(props) => (props.isOpen ? '1' : '0')};
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 99;
 `;
 
 export const TabButton = styled.button<{ isActive: boolean }>`
