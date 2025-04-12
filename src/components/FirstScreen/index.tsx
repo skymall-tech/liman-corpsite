@@ -57,6 +57,18 @@ export const IconContainer = styled.div`
   }
 `;
 
+const MoreIcon = styled.img`
+  width: 45px;
+  height: 45px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+`;
+
 export const FirstScreen = ({
   title,
   desc,
@@ -80,12 +92,12 @@ export const FirstScreen = ({
   };
 
   return (
-    <ImageContainer navHeight={navHeight} id="first-screen">
-      <StyledImage src={image} alt="Main background" />
+    <ImageContainer navHeight={navHeight} id='first-screen'>
+      <StyledImage src={image} alt='Main background' />
       {showOverlay && <ImageOverlay />}
       <LargeTitle title={title} desc={desc} />
       <IconContainer onClick={handleIconClick}>
-        <img src={moreIcon} alt="More" width={45} height={45} />
+        <MoreIcon src={moreIcon} alt='More' />
       </IconContainer>
     </ImageContainer>
   );

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const CardContainer = styled.div`
   position: relative;
@@ -18,6 +19,13 @@ const CardContainer = styled.div`
     .card-image {
       filter: sepia(0);
     }
+  }
+
+  // Mobile & Tablet
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    width: 80vw;
+    height: 120vw;
+    margin: 0;
   }
 `;
 
@@ -48,17 +56,31 @@ const CardImage = styled.div<{ image: string }>`
   align-items: center;
 `;
 
-const CardTitle = styled.div<{ titleOnCenter: boolean }>`
-  margin-top: ${(props) => (props.titleOnCenter ? '0' : '38px')};
+const CardTitle = styled.div`
+  margin-top: 38;
+  margin-bottom: 0;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   font-size: var(--font-size-h2);
   display: flex;
   flex-direction: column;
-  justify-content: ${(props) =>
-    props.titleOnCenter ? 'center' : 'flex-start'};
+  justify-content: 'flex-start';
   height: 100%;
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    font-size: var(--font-size-h3);
+  }
 `;
 
 const OverlayTextContainer = styled.div`
@@ -75,19 +97,17 @@ const OverlayTextContainer = styled.div`
 const BusinessCard = ({
   image,
   title,
-  titleOnCenter = false,
   onClick,
 }: {
   image: string;
   title: string;
-  titleOnCenter?: boolean;
   onClick?: () => void;
 }) => (
   <CardContainer onClick={onClick}>
-    <CardImage image={image} className="card-image" />
-    <OverlayMask className="overlay-mask" />
+    <CardImage image={image} className='card-image' />
+    <OverlayMask className='overlay-mask' />
     <OverlayTextContainer>
-      <CardTitle titleOnCenter={titleOnCenter}>{title}</CardTitle>
+      <CardTitle>{title}</CardTitle>
     </OverlayTextContainer>
   </CardContainer>
 );
