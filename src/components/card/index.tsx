@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const CardContainer = styled.div`
   position: relative;
@@ -19,6 +20,13 @@ const CardContainer = styled.div`
       filter: sepia(0);
     }
   }
+
+  // Mobile & Tablet
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    width: 80vw;
+    height: 120vw;
+    margin: 0;
+  }
 `;
 
 const OverlayMask = styled.div`
@@ -30,6 +38,31 @@ const OverlayMask = styled.div`
   background: linear-gradient(to bottom, #b38c48 0%, #71511a 100%);
   opacity: 0;
   mix-blend-mode: overlay;
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(179, 140, 72, 0.4) 40%,
+      rgba(113, 81, 26, 0.4) 60%,
+      transparent 100%
+    );
+    opacity: 1;
+    mix-blend-mode: multiply;
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 50%,
+      rgba(113, 81, 26, 0.7) 100%
+    );
+    opacity: 1;
+    mix-blend-mode: multiply;
+  }
 `;
 
 const CardImage = styled.div<{ image: string }>`
@@ -46,19 +79,38 @@ const CardImage = styled.div<{ image: string }>`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  // Mobile & Tablet
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    filter: sepia(0.6);
+  }
 `;
 
-const CardTitle = styled.div<{ titleOnCenter: boolean }>`
-  margin-top: ${(props) => (props.titleOnCenter ? '0' : '38px')};
+const CardTitle = styled.div`
+  margin-top: 38px;
+  margin-bottom: 0;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   font-size: var(--font-size-h2);
   display: flex;
   flex-direction: column;
-  justify-content: ${(props) =>
-    props.titleOnCenter ? 'center' : 'flex-start'};
+  justify-content: 'flex-start';
   height: 100%;
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    font-size: var(--font-size-h3);
+  }
 `;
 
 const OverlayTextContainer = styled.div`
@@ -75,19 +127,17 @@ const OverlayTextContainer = styled.div`
 const BusinessCard = ({
   image,
   title,
-  titleOnCenter = false,
   onClick,
 }: {
   image: string;
   title: string;
-  titleOnCenter?: boolean;
   onClick?: () => void;
 }) => (
   <CardContainer onClick={onClick}>
-    <CardImage image={image} className="card-image" />
-    <OverlayMask className="overlay-mask" />
+    <CardImage image={image} className='card-image' />
+    <OverlayMask className='overlay-mask' />
     <OverlayTextContainer>
-      <CardTitle titleOnCenter={titleOnCenter}>{title}</CardTitle>
+      <CardTitle>{title}</CardTitle>
     </OverlayTextContainer>
   </CardContainer>
 );
