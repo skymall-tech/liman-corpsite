@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import langIcon from '../../assets/icons/langIcon.svg';
 import { LangIcon } from './style';
 import PopupMenu from '../PopupMenu';
@@ -16,9 +16,24 @@ export const LanguageSwitcher = (
 ) => {
   const langIconRef = useRef<HTMLImageElement | null>(null);
   const [showLangPopup, setShowLangPopup] = useState(false);
+  const [forceUpdate, setForceUpdate] = useState(0);
+
+  // Force PopupMenu to recalculate position when language changes
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setTimeout(() => {
+        setForceUpdate((prev) => prev + 1);
+      }, 0);
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, []);
 
   return (
-    <>
+    <div>
       <LangIcon
         ref={langIconRef}
         src={langIcon}
@@ -28,19 +43,20 @@ export const LanguageSwitcher = (
       />
       {showLangPopup && (
         <PopupMenu
+          key={forceUpdate}
           items={languageList.map((lang) => ({
             label: lang.label,
             action: () => {
               i18n.changeLanguage(lang.value);
               localStorage.setItem(LAST_SELECT_LANG, lang.value);
             },
-            isActive: i18n.language == lang.value,
+            isActive: i18n.language === lang.value,
           }))}
           referenceElement={langIconRef.current}
           onMouseEnter={() => setShowLangPopup(true)}
           onMouseLeave={() => setShowLangPopup(false)}
         />
       )}
-    </>
+    </div>
   );
 };
