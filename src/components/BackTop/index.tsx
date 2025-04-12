@@ -3,6 +3,7 @@ import BackTopImg from '../../assets/icons/backtop.svg';
 import { useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { useTranslation } from 'react-i18next';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const BackTopIcon = styled.img<{ show: boolean }>`
   position: fixed;
@@ -15,6 +16,16 @@ const BackTopIcon = styled.img<{ show: boolean }>`
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.1);
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    right: 24px;
+    bottom: 20px;
+    transform: scale(0.7);
+    &:hover {
+      transform: scale(0.8);
+    }
   }
 `;
 
@@ -38,7 +49,7 @@ export default function BackTop() {
   return (
     <>
       <BackTopIcon
-        className="backtop"
+        className='backtop'
         src={BackTopImg}
         show={show}
         onClick={() => {
@@ -48,8 +59,8 @@ export default function BackTop() {
         }}
       />
       <Tooltip
-        anchorSelect=".backtop"
-        place="top"
+        anchorSelect='.backtop'
+        place='top'
         style={{
           backgroundColor: 'white',
           color: 'var(--color-primary)',

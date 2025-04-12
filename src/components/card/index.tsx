@@ -57,7 +57,7 @@ const CardImage = styled.div<{ image: string }>`
 `;
 
 const CardTitle = styled.div`
-  margin-top: 38;
+  margin-top: 38px;
   margin-bottom: 0;
   color: white;
   font-weight: bold;

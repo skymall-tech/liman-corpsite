@@ -37,6 +37,7 @@ const Container = styled.div`
 
   // Mobile & Tablet
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    margin-top: 0;
     flex-direction: column;
     gap: 20px;
   }
