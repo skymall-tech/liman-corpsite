@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const TitleContainer = styled.div`
   position: absolute;
@@ -9,14 +10,36 @@ const TitleContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    padding-top: 30vh;
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    padding-top: 40vh;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 100px;
   font-weight: 900;
   color: var(--color-primary);
+
+  // Large screen
   @media screen and (min-width: 2000px) {
     font-size: 90px;
+  }
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    font-size: 80px;
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    font-size: 40px;
   }
 `;
 
@@ -26,10 +49,30 @@ const Desc = styled.p`
   color: var(--color-primary);
   width: max(30vw, 430px);
   text-align: center;
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    margin-top: 24px;
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    margin-top: 16px;
+  }
 `;
 
 const Logo = styled.img`
   width: 580px;
+
+  // Tablet
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
+    transform: scale(0.8);
+  }
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    transform: scale(0.6);
+  }
 `;
 
 export const LargeTitle = ({
@@ -42,7 +85,7 @@ export const LargeTitle = ({
   return (
     <>
       <TitleContainer>
-        <Logo src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/LM-52Sc6NnIIH12Warrw1g78NJgemY0wb.png" />
+        <Logo src='https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/LM-52Sc6NnIIH12Warrw1g78NJgemY0wb.png' />
       </TitleContainer>
       <TitleContainer>
         <Title>{title}</Title>
