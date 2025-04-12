@@ -20,7 +20,6 @@ export const LangIcon = styled.img`
   position: relative;
   width: 24px;
   height: 24px;
-  cursor: pointer;
 `;
 
 export const DesktopNav = styled.div`
