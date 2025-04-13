@@ -14,11 +14,13 @@ const TitleContainer = styled.div`
   // Tablet
   @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
     padding-top: 30vh;
+    overflow: hidden;
   }
 
   // Mobile
   @media screen and (max-width: ${BREAKPOINTS.medium}px) {
     padding-top: 40vh;
+    overflow: hidden;
   }
 `;
 

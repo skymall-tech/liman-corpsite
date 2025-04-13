@@ -15,9 +15,10 @@ const OdysseyContainer = styled.div<{ backgroundImage: string }>`
   width: 100vw;
   min-height: 100vh;
 
-  // Mobile
-  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+  // Mobile & Tablet
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
     position: relative;
+    overflow: hidden;
     &::before {
       content: '';
       position: absolute;
@@ -277,7 +278,7 @@ export const OdysseySection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
   const timelineData = getTimelineData(t);
-  const { isMobile } = useResponsive();
+  const { isMobile, isTablet } = useResponsive();
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
 
   useEffect(() => {
@@ -391,12 +392,12 @@ export const OdysseySection = () => {
       }
     >
       <SectionTitle
-        isDarkBackground={isMobile}
+        isDarkBackground={isMobile || isTablet}
         title={t('about_us.odyssey.title')}
         subtitle={t('about_us.odyssey.subtitle')}
       />
       <MiddleContainer>
-        {isMobile ? (
+        {isMobile || isTablet ? (
           <CardsContainerMobile>
             {timelineData.map((event) => (
               <MobileCard

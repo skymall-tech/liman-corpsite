@@ -10,6 +10,9 @@ const BusinessMapContainer = styled.div`
   width: 100vw;
   height: 100vh;
   position: relative;
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    overflow: hidden;
+  }
 `;
 
 const Container = styled.div`
