@@ -29,28 +29,16 @@ const Container = styled.div`
   }
 `;
 
-const TitleWrapper = styled.div`
-  position: relative;
-  z-index: 2;
-
-  // Mobile & Tablet
-  @media screen and (max-width: ${BREAKPOINTS.large}px) {
-    margin-top: 60px;
-  }
-`;
-
 export const BusinessMapSection = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   return (
     <BusinessMapContainer id='business-map-section'>
-      <TitleWrapper>
-        <SectionTitle
-          title={t('about_us.business_map.title')}
-          subtitle={t('about_us.business_map.subtitle')}
-        />
-      </TitleWrapper>
+      <SectionTitle
+        title={t('about_us.business_map.title')}
+        subtitle={t('about_us.business_map.subtitle')}
+      />
       <Container>
         <BusinessCard
           image='https://cdn.liman.group/business_map/travel.webp'
