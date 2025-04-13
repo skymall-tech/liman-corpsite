@@ -7,6 +7,7 @@ import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const BackTopIcon = styled.img<{ show: boolean }>`
   position: fixed;
+  z-index: 50;
   right: 66px;
   bottom: 66px;
   width: 72px;

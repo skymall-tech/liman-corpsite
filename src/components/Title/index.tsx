@@ -1,44 +1,74 @@
 import styled from '@emotion/styled';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
-const TitleContainer = styled.div`
-  margin-top: 40px;
+const TitleContainer = styled.div<{ marginTop?: string }>`
+  margin-top: ${({ marginTop }) => marginTop || '40px'};
   text-align: center;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 80px;
+  position: relative;
+  z-index: 2;
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    margin: 60px 60px 40px 60px;
+  }
 `;
 
-const TitleText = styled.h2`
-  color: var(--color-secondary);
+const TitleText = styled.h2<{ isDarkBackground: boolean }>`
+  color: ${({ isDarkBackground }) =>
+    isDarkBackground
+      ? 'var(--color-secondary-mobile)'
+      : 'var(--color-secondary)'};
   text-transform: uppercase;
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    font-size: var(--font-size-title-mobile);
+  }
 `;
 
-const SubtitleText = styled.p`
-  color: var(--color-primary);
+const SubtitleText = styled.p<{ isDarkBackground: boolean }>`
+  color: ${({ isDarkBackground }) =>
+    isDarkBackground ? 'var(--color-primary-mobile)' : 'var(--color-primary)'};
   width: max(30vw, 400px);
   font-size: var(--font-size-body);
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    width: auto;
+  }
 `;
-const Divider = styled.div`
+const Divider = styled.div<{ isDarkBackground: boolean }>`
   width: 430px;
   height: 2px;
   margin: 8px 0 16px 0;
-  background-color: var(--color-primary);
+  background-color: ${({ isDarkBackground }) =>
+    isDarkBackground ? 'var(--color-primary-mobile)' : 'var(--color-primary)'};
+
+  // Mobile
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    height: 1px;
+  }
 `;
 
 export const SectionTitle = ({
   title,
   subtitle,
   marginTop = '40px',
+  isDarkBackground = false,
 }: {
   title: string;
   subtitle: string;
   marginTop?: string;
+  isDarkBackground?: boolean;
 }) => (
-  <TitleContainer style={{ marginTop }}>
-    <TitleText>{title}</TitleText>
-    <Divider />
-    <SubtitleText>{subtitle}</SubtitleText>
+  <TitleContainer marginTop={marginTop}>
+    <TitleText isDarkBackground={isDarkBackground}>{title}</TitleText>
+    <Divider isDarkBackground={isDarkBackground} />
+    <SubtitleText isDarkBackground={isDarkBackground}>{subtitle}</SubtitleText>
   </TitleContainer>
 );

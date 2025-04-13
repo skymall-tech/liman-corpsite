@@ -28,7 +28,9 @@
   margin: 0;
   box-sizing: border-box;
   --color-primary: #b59152;
+  --color-primary-mobile: #fed48b;
   --color-secondary: #204d88;
+  --color-secondary-mobile: #2a86ff;
   --color-background-primary: #f2f0ec;
   --color-background-secondary: #d2b583;
   --color-background-tertiary: rgba(246, 237, 220, 0.64);
@@ -37,6 +39,7 @@
   --font-size-h2: 26px;
   --font-size-h3: 16px;
   --font-size-body: 12px;
+  --font-size-title-mobile: 18px;
   background-color: var(--color-background-primary);
 }
 * {
