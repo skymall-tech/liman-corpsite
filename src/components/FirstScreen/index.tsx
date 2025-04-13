@@ -16,7 +16,7 @@ const bounce = keyframes`
 
 export const ImageContainer = styled.div<{ navHeight: number }>`
   width: 100vw;
-  height: ${({ navHeight }) => `calc(100vh - ${navHeight}px)`};
+  height: ${({ navHeight }) => `calc(100dvh - ${navHeight}px)`};
   overflow: hidden;
   position: relative;
 `;
@@ -42,7 +42,7 @@ export const ImageOverlay = styled.div`
 
 export const IconContainer = styled.div`
   position: absolute;
-  bottom: 62px;
+  bottom: min(62px, 8vh);
   left: 50%;
   transform: translateX(-50%);
   width: 45px;

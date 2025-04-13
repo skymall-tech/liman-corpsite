@@ -13,13 +13,17 @@ const TitleContainer = styled.div`
 
   // Tablet
   @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
-    padding-top: 30vh;
+    padding-top: 0;
+    justify-content: flex-end;
+    padding-bottom: min(140px, 20vh);
     overflow: hidden;
   }
 
   // Mobile
   @media screen and (max-width: ${BREAKPOINTS.medium}px) {
-    padding-top: 40vh;
+    padding-top: 0;
+    justify-content: flex-end;
+    padding-bottom: min(140px, 20vh);
     overflow: hidden;
   }
 `;
