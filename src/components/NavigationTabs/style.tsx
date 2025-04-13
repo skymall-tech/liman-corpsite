@@ -36,16 +36,18 @@ export const MobileNav = styled.div<{ isOpen?: boolean }>`
   width: calc(100% - 64px);
   display: flex;
   align-items: center;
-  position: ${({ isOpen }) => (isOpen ? 'relative' : undefined)};
+  position: ${({ isOpen }) => (isOpen ? 'fixed' : undefined)};
+  top: ${({ isOpen }) => (isOpen ? '0' : undefined)};
   background: var(--color-background-primary);
-  z-index: 100;
+  z-index: 1000;
+  padding: ${({ isOpen }) => (isOpen ? '25px 0' : '0')};
 
-  /* Logo 容器 */
+  /* Logo container */
   & > :nth-child(2) {
     margin: 0 auto;
   }
 
-  /* MenuIcon 和 LanguageSwitcher */
+  /* MenuIcon and LanguageSwitcher */
   & > :first-child,
   & > :last-child {
     flex: 0 0 auto;
@@ -124,17 +126,16 @@ export const MobileMenuContainer = styled.div<{ isOpen: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  height: 100vh;
-  background: var(--color-background-primary);
-  padding-top: 100px;
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--color-background-primary);
+  z-index: 999;
+  transform: translateY(${({ isOpen }) => (isOpen ? '0' : '-100%')});
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transform: translateY(${(props) => (props.isOpen ? '0' : '-100%')});
-  opacity: ${(props) => (props.isOpen ? '1' : '0')};
-  transition: all 0.3s ease;
-  z-index: 99;
+  padding-top: 80px;
+  overflow-y: auto;
 `;
 
 export const TabButton = styled.button<{ isActive: boolean }>`
