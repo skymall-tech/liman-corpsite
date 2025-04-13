@@ -10,20 +10,6 @@ const BusinessMapContainer = styled.div`
   width: 100vw;
   height: 100vh;
   position: relative;
-
-  // Mobile & Tablet
-  @media screen and (max-width: ${BREAKPOINTS.large}px) {
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 200px;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
-      z-index: 1;
-    }
-  }
 `;
 
 const Container = styled.div`
