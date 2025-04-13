@@ -14,7 +14,8 @@ const TitleContainer = styled.div<{ marginTop?: string }>`
 
   // Mobile
   @media screen and (max-width: ${BREAKPOINTS.medium}px) {
-    margin: 60px 60px 40px 60px;
+    margin: 60px 60px 20px 60px;
+    overflow: hidden;
   }
 `;
 
@@ -43,7 +44,7 @@ const SubtitleText = styled.p<{ isDarkBackground: boolean }>`
   }
 `;
 const Divider = styled.div<{ isDarkBackground: boolean }>`
-  width: 430px;
+  width: 60vw;
   height: 2px;
   margin: 8px 0 16px 0;
   background-color: ${({ isDarkBackground }) =>
