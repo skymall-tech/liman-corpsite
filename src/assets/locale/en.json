@@ -136,14 +136,14 @@
     },
     "store_list": {
       "beijing": {
-        "moschino": "Terminal 2, Beijing Capital International Airport, GC220",
-        "armani": "Terminal 3, Beijing Capital International Airport, A3W3-2",
-        "marni": "Terminal 3, Beijing Capital International Airport, A3E7-2",
-        "tory_burch": "Terminal 3, Beijing Capital International Airport, A3E7-1",
-        "parker": "Terminal 3, Beijing Capital International Airport, A3E7-4",
-        "tumi": "Terminal 3, Beijing Capital International Airport, A3E7-5",
-        "tumi2": "Terminal 2, Beijing Capital International Airport, GC222",
-        "etro": "Terminal 2, Beijing Capital International Airport, GC230"
+        "moschino": "PEK-T2 / GC220",
+        "armani": "PEK-T2 / A3W3-2",
+        "marni": "PEK-T3 / A3E7-2",
+        "tory_burch": "PEK-T3 / A3E7-1",
+        "parker": "PEK-T3 / A3E7-4",
+        "tumi": "PEK-T3 / A3E7-5",
+        "tumi2": "PEK-T2 / GC222",
+        "etro": "PEK-T2 / GC230"
       },
       "shenyang": {
         "bally": "Terminal 3, Shenyang Taoxian International Airport, T3F2-JC-LS-03",
@@ -183,43 +183,43 @@
         "Beijing":{
           "1": {
             "name": "Beijing Capital Airport Shop 1",
-            "address": "Terminal 2, Beijing Capital International Airport, GC230"
+            "address": "PEK-T2 / GC230"
           },
           "2": {
             "name": "Beijing Capital Airport Shop 2",
-            "address": "Terminal 3, Beijing Capital International Airport, A3E7-3"
+            "address": "PEK-T2 / A3E7-3"
           }
         },
         "macau":{
           "1": {
             "name": "Macau Venetian",
-              "address": "Shop K47, The Venetian Shopping Centre, Estrada da Baía de N. Senhora da Esperança, Taipa"
+              "address": "Shop K47, The Venetian, Taipa"
             },
             "2":{
               "name": "Macau Ruins of St. Paul's ",
-              "address": "Unit A, Ground Floor, Chengde Court, 34-E Rua de São Paulo, Macau"
+              "address": "A, G/F, Chengde Court, R. de S. Paulo, Macau"
             }
         },
         "guangzhou":{
           "1": {
             "name": "Guangzhou Grandview Mall ",
-            "address": "Units 1G030 + 1G022, 1st Floor, Grandview Mall, Tianhe District, Guangzhou, Guangdong Province"
+            "address": "1G030 & 1G022, 1/F, Grandview Mall, Tianhe, Guangzhou, GD"
           }
         },
         "shenzhen":{
           "1": {
             "name": "Shenzhen Bao'an Airport",
-            "address": "4H-05-01, 4th Floor Departure Hall (End of Island D), Terminal 3, Shenzhen Bao'an International Airport, Guangdong Province"
+            "address": "SZX-T3 / 4H-05-01, 4/F Departure, End of Island D, GD"
           }
         },
         "shenyang":{
           "1":{
             "name": "Shenyang Airport  Store 1",
-            "address": "Terminal 3, Shenyang Taoxian International Airport, T3F2-JC-LS-03"
+            "address": "SHE-T3 / T3F2-JC-LS-03"
           },
           "2":{
             "name": "Shenyang Airport Store 2",
-            "address": "Terminal 3, Shenyang Taoxian International Airport, T3F2-D1-LS-44"
+            "address": "SHE-T3 / T3F2-D1-LS-44"
           }
         }
       }

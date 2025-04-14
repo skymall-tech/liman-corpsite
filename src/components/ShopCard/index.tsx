@@ -27,8 +27,11 @@ const CardContainer = styled.div`
     .overlay-mask-active {
       opacity: 1;
     }
-    .card-title {
+    .card-title-text {
       color: #fff;
+    }
+    .line {
+      background-color: #fff;
     }
     .card-title-2 {
       display: block;
@@ -69,16 +72,14 @@ const CardImage = styled.div<{ image: string }>`
 `;
 
 const CardTitle = styled.div`
-  color: #946a20;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 `;
+
 const CardSubTitle = styled.div`
   margin-top: 10px;
   color: #fff;
@@ -98,6 +99,29 @@ const OverlayTextContainer = styled.div`
   align-items: center;
 `;
 
+const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #946a20;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+`;
+
+const Line = styled.div`
+  width: 20px;
+  height: 1px;
+  background-color: #7a520b;
+`;
+const Title = styled.p`
+  font-size: var(--font-size-title);
+  font-weight: bold;
+  color: #7a520b;
+  margin: 0 20px;
+`;
+
 export const ShopCard = ({
   image,
   title,
@@ -112,14 +136,18 @@ export const ShopCard = ({
   const { t } = useTranslation();
   return (
     <CardContainer onClick={onClick}>
-      <CardImage image={image} className="card-image" />
-      <OverlayNormal className="overlay-normal"></OverlayNormal>
-      <OverlayMaskActive className="overlay-mask-active"></OverlayMaskActive>
+      <CardImage image={image} className='card-image' />
+      <OverlayNormal className='overlay-normal'></OverlayNormal>
+      <OverlayMaskActive className='overlay-mask-active'></OverlayMaskActive>
       <OverlayTextContainer>
-        <CardTitle className="card-title">
-          <>{title}</>
+        <CardTitle className='card-title'>
+          <TitleContainer>
+            <Line className='line'></Line>
+            <Title className='card-title-text'>{title}</Title>
+            <Line className='line'></Line>
+          </TitleContainer>
           {notOpen && (
-            <CardSubTitle className="card-title-2">
+            <CardSubTitle className='card-title-2'>
               {t('common.opening_soon')}
             </CardSubTitle>
           )}
