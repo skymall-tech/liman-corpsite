@@ -17,6 +17,7 @@ const Container = styled.div`
 const PartnerPortContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
 `;
 
 export const GlobalRetailSection = () => {
@@ -25,7 +26,7 @@ export const GlobalRetailSection = () => {
   const [showLarge, setShowLarge] = useState(false);
 
   return (
-    <PartnerPortContainer id="partner-port" onClick={() => setShowLarge(false)}>
+    <PartnerPortContainer id='partner-port' onClick={() => setShowLarge(false)}>
       <SectionTitle
         title={t('travel.global_retail_lounge.title')}
         subtitle={t('travel.global_retail_lounge.subtitle')}

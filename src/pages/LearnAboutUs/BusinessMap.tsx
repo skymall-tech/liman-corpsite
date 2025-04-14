@@ -9,6 +9,7 @@ import { BREAKPOINTS } from '../../hooks/useResponsive';
 const BusinessMapContainer = styled.div`
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   position: relative;
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     overflow: hidden;
@@ -23,6 +24,7 @@ const Container = styled.div`
   overflow: visible;
   margin-top: 30px;
   height: 70vh;
+  height: 70dvh;
 
   // Mobile & Tablet
   @media screen and (max-width: ${BREAKPOINTS.large}px) {

@@ -7,6 +7,7 @@ import { TFunction } from 'i18next';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +15,7 @@ const Container = styled.div`
 
 const RotateCardContainer = styled.div`
   margin-top: 4vh;
+  margin-top: 4dvh;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -35,13 +37,13 @@ export const SocialResponsibility = () => {
   const { t } = useTranslation();
   const paragraphs = getParagraphs(t);
   return (
-    <Container id="social-responsibility">
+    <Container id='social-responsibility'>
       <SectionTitle
         title={t('cooperate_culture.social_responsibility.title')}
         subtitle={t('cooperate_culture.social_responsibility.subtitle')}
       />
       <RotateCardContainer>
-        <RotateCard src="https://cdn.liman.group/culture_rewards/1.webp"></RotateCard>
+        <RotateCard src='https://cdn.liman.group/culture_rewards/1.webp'></RotateCard>
         <RotateCardContent
           paragraphs={paragraphs}
           title={t('cooperate_culture.social_responsibility.customer_rights')}

@@ -6,14 +6,17 @@ import { TFunction } from 'i18next';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 9vh;
+  margin-top: 9dvh;
 `;
 
 const RotateCardContainer = styled.div`
   margin-top: 4vh;
+  margin-top: 4dvh;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -35,12 +38,12 @@ export const CustomerRights = () => {
   const { t } = useTranslation();
   const paragraphs = getParagraphs(t);
   return (
-    <Container id="customer-rights">
+    <Container id='customer-rights'>
       <RotateCardContainer>
         <RotateCardContent
           paragraphs={paragraphs}
           title={t('cooperate_culture.social_responsibility.customer_rights')}
-          textAlign="right"
+          textAlign='right'
         ></RotateCardContent>
         <RotateCard
           rightRotate

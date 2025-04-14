@@ -6,18 +6,19 @@ import { useTranslation } from 'react-i18next';
 const JewelryContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
 `;
 
 export const JewelrySection = () => {
   const { t } = useTranslation();
   return (
-    <JewelryContainer id="jewelry">
+    <JewelryContainer id='jewelry'>
       <SectionTitle
         title={t('satellite_paris.jewelry.title')}
         subtitle={t('satellite_paris.jewelry.subtitle')}
       />
       <ImgWithSearch
-        src="https://cdn.liman.group/taobao/taobao.webp"
+        src='https://cdn.liman.group/taobao/taobao.webp'
         desc={t('satellite_paris.jewelry.search')}
         icon={RightArrow}
         onClick={() => {

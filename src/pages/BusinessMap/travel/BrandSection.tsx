@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 const BrandContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +49,7 @@ const LogoList = [
 export const BrandSection = () => {
   const { t } = useTranslation();
   return (
-    <BrandContainer id="brand">
+    <BrandContainer id='brand'>
       <SectionTitle
         title={t('travel.partner_brands.title')}
         subtitle={t('travel.partner_brands.subtitle')}

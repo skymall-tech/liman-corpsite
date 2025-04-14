@@ -8,6 +8,7 @@ import { DesktopView } from './DesktopView';
 
 const TeamContainer = styled.div`
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

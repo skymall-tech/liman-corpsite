@@ -7,6 +7,7 @@ import { TFunction } from 'i18next';
 const BrandContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
 `;
 
 const getStories = (t: TFunction) => {
@@ -32,7 +33,7 @@ const getStories = (t: TFunction) => {
 export const BrandStorySection = () => {
   const { t } = useTranslation();
   return (
-    <BrandContainer id="brand-story">
+    <BrandContainer id='brand-story'>
       <SectionTitle
         title={t('satellite_paris.brand_story.title')}
         subtitle={t('satellite_paris.brand_story.subtitle')}

@@ -7,6 +7,7 @@ import { TFunction } from 'i18next';
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
 `;
 
 const getStories = (t: TFunction) => {
@@ -33,7 +34,7 @@ export const ArmaniCasa = () => {
   const { t } = useTranslation();
   const stories = getStories(t);
   return (
-    <Container id="armani-casa">
+    <Container id='armani-casa'>
       <SectionTitle
         title={t('culture_estate.armani_casa.title')}
         subtitle={t('culture_estate.armani_casa.subtitle')}
