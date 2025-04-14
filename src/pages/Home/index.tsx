@@ -5,7 +5,7 @@ import BackTop from '../../components/BackTop';
 
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       <NavigationTabs />
       <Outlet />
       <BackTop />

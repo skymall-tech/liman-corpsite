@@ -43,7 +43,7 @@ export const GlobalRetailSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image={'https://cdn.liman.group/stores/travel/macau/skymall.webp'}
+            image={'https://cdn.liman.group/stores/travel/macau/skymall2.webp'}
             title={t('common.macau')}
             notOpen={true}
             onClick={() => {

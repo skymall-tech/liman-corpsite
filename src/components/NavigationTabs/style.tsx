@@ -123,20 +123,19 @@ export const SubMenuItem = styled(MobileMenuItem)`
 `;
 
 export const MobileMenuContainer = styled.div<{ isOpen: boolean }>`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   height: 100dvh;
   background-color: var(--color-background-primary);
-  z-index: 9999;
   transform: translateY(${({ isOpen }) => (isOpen ? '0' : '-100%')});
+  z-index: 9999;
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
-  overflow-y: auto;
 `;
 
 export const TabButton = styled.button<{ isActive: boolean }>`
