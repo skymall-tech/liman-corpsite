@@ -26,7 +26,7 @@ const Card = styled.div<{ isExpanded: boolean }>`
   height: ${({ isExpanded }) => (isExpanded ? 'calc(100vh - 200px)' : '50vh')};
   padding: 24px;
   border-radius: 16px;
-  box-shadow: 0 2px 10px #946a20;
+  border: 3px solid #b59152;
   transition: all 0.3s ease;
   cursor: pointer;
   padding: 35px 28px 30px;

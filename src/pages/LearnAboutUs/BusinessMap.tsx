@@ -22,7 +22,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: visible;
-  margin-top: 30px;
+  margin-top: 50px;
   height: 70vh;
   height: 70dvh;
 
@@ -39,14 +39,14 @@ export const BusinessMapSection = () => {
   const { t } = useTranslation();
 
   return (
-    <BusinessMapContainer id='business-map-section'>
+    <BusinessMapContainer id="business-map-section">
       <SectionTitle
         title={t('about_us.business_map.title')}
         subtitle={t('about_us.business_map.subtitle')}
       />
       <Container>
         <BusinessCard
-          image='https://cdn.liman.group/business_map/travel.webp'
+          image="https://cdn.liman.group/business_map/travel.webp"
           title={t('common.travel_retail')}
           onClick={() => {
             navigate(PAGE_PATH.businessMap);
@@ -54,7 +54,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image='https://cdn.liman.group/business_map/satellite.webp'
+          image="https://cdn.liman.group/business_map/satellite.webp"
           title={t('common.satellite_paris')}
           onClick={() => {
             navigate(PAGE_PATH.satellite);
@@ -62,7 +62,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image='https://cdn.liman.group/business_map/estate.webp'
+          image="https://cdn.liman.group/business_map/estate.webp"
           title={t('common.culture_estate')}
           onClick={() => {
             navigate(PAGE_PATH.estate);

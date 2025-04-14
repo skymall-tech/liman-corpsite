@@ -71,7 +71,7 @@ export const DesktopFooter = () => {
   return (
     <FooterWrapper>
       <FooterContent>
-        <LogoImage src={Logo} alt='Liman Logo' />
+        <LogoImage src={Logo} alt="Liman Logo" />
         <Divider />
         <LinkSection style={{ marginLeft: '30px' }}>
           <h3>{t('footer.business_map')}</h3>
@@ -113,13 +113,13 @@ export const DesktopFooter = () => {
           <h3>{t('footer.business_cooperation')}</h3>
           <ul>
             <li>
-              <a href='mailto:bc@sky-mall.com'>bc@sky-mall.com</a>
+              <a href="mailto:bc@liman.group">bc@liman.group</a>
             </li>
           </ul>
           <h3>{t('footer.join_us')}</h3>
           <ul>
             <li>
-              <a href='mailto:hr@liman.group'>hr@liman.group</a>
+              <a href="mailto:hr@liman.group">hr@liman.group</a>
             </li>
           </ul>
         </LinkSection>

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import indicator from '../../assets/icons/indicator.svg';
+import indicator from '../../assets/icons/logo_small.svg';
 
 const Container = styled.div`
   display: flex;
@@ -75,9 +75,11 @@ const Image = styled.img<{ active: boolean }>`
 `;
 
 const Logo = styled.img<{ active: boolean }>`
-  width: 28px;
-  height: 41px;
+  width: 33px;
+  height: 40px;
   opacity: ${({ active }) => (active ? 1 : 0)};
+  transform: translateY(25%);
+  z-index: 10;
 `;
 
 export interface TimeCardProps {

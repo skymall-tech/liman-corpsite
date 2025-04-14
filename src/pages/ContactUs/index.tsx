@@ -75,8 +75,8 @@ export const ContactUsPage = () => {
             <ContactLink href="mailto:bc@liman.group">
               Mail-liman：bc@liman.group
             </ContactLink>
-            <ContactLink href="mailto:bc@sky-mall.com">
-              Mail-skymall：bc@sky-mall.com
+            <ContactLink href="mailto:bc@skymall.com">
+              Mail-skymall：bc@skymall.com
             </ContactLink>
             <ContactLink href="tel:+86 20-37737063">
               Tel：+86 20-37737063
