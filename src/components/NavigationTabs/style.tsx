@@ -39,7 +39,7 @@ export const MobileNav = styled.div<{ isOpen?: boolean }>`
   position: ${({ isOpen }) => (isOpen ? 'fixed' : undefined)};
   top: ${({ isOpen }) => (isOpen ? '0' : undefined)};
   background: var(--color-background-primary);
-  z-index: 1000;
+  z-index: 10000;
   padding: ${({ isOpen }) => (isOpen ? '25px 0' : '0')};
 
   /* Logo container */
@@ -130,7 +130,7 @@ export const MobileMenuContainer = styled.div<{ isOpen: boolean }>`
   height: 100vh;
   height: 100dvh;
   background-color: var(--color-background-primary);
-  z-index: 999;
+  z-index: 9999;
   transform: translateY(${({ isOpen }) => (isOpen ? '0' : '-100%')});
   transition: transform 0.3s ease-in-out;
   display: flex;
