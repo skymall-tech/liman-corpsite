@@ -12,26 +12,20 @@ const CardContainer = styled.div`
   border: 2px solid #b59152;
   flex-shrink: 0;
   transition: transform 0.3s;
-  .overlay-mask {
-    background: radial-gradient(circle at center, #b5915233, #946a20);
+  .overlay-normal {
+    opacity: 1;
   }
-  .overlay-mask-2 {
-    background: #fff;
-    opacity: 0.5;
+  .overlay-mask-active {
+    opacity: 0;
   }
   &:hover {
     cursor: pointer;
     transform: scale(1.05);
-    .overlay-mask {
-      background: radial-gradient(
-        circle at center,
-        #966b20 0%,
-        #a37b36cc 50%,
-        #b5915266 100%
-      );
-    }
-    .overlay-mask-2 {
+    .overlay-normal {
       opacity: 0;
+    }
+    .overlay-mask-active {
+      opacity: 1;
     }
     .card-title {
       color: #fff;
@@ -42,12 +36,24 @@ const CardContainer = styled.div`
   }
 `;
 
-const OverlayMask = styled.div`
+const OverlayNormal = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: #c8ab77;
+  mix-blend-mode: screen;
+`;
+
+const OverlayMaskActive = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #958363;
+  mix-blend-mode: multiply;
 `;
 
 const CardImage = styled.div<{ image: string }>`
@@ -107,8 +113,8 @@ export const ShopCard = ({
   return (
     <CardContainer onClick={onClick}>
       <CardImage image={image} className="card-image" />
-      <OverlayMask className="overlay-mask-2" />
-      <OverlayMask className="overlay-mask" />
+      <OverlayNormal className="overlay-normal"></OverlayNormal>
+      <OverlayMaskActive className="overlay-mask-active"></OverlayMaskActive>
       <OverlayTextContainer>
         <CardTitle className="card-title">
           <>{title}</>
