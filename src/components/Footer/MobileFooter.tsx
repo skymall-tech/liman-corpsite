@@ -58,8 +58,6 @@ const ContentInner = styled(motion.div)`
 const ArrowIcon = styled(motion.img)`
   width: 20px;
   height: 10px;
-  filter: brightness(0) saturate(100%) invert(19%) sepia(8%) saturate(2930%)
-    hue-rotate(357deg) brightness(94%) contrast(82%);
 `;
 
 const QRCodeImage = styled.img`
