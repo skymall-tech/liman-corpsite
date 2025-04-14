@@ -3,10 +3,14 @@ import { SectionTitle } from '../../components/Title';
 import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 import { Footer } from '../../components/Footer';
 import { useTranslation } from 'react-i18next';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const Container = styled.div`
   padding: 0 20px;
   border-bottom: 1px solid var(--color-primary);
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    padding: 0;
+  }
 `;
 
 export const MainPage = styled.div<{ navHeight: number }>`
@@ -17,6 +21,9 @@ export const MainPage = styled.div<{ navHeight: number }>`
   align-items: center;
   justify-content: flex-start;
   padding-top: 60px;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    padding-top: 0;
+  }
 `;
 
 const ContactGrid = styled.div`
@@ -29,12 +36,25 @@ const ContactGrid = styled.div`
   width: max(880px, 40vw);
   margin: 126px auto;
   margin-bottom: 0px;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    margin: 24px auto;
+  }
 `;
 
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 220px;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    min-width: none;
+  }
 `;
 
 const SectionHeading = styled.h3`
@@ -72,44 +92,44 @@ export const ContactUsPage = () => {
             <SectionHeading>
               {t('contact_us.business_cooperation')}
             </SectionHeading>
-            <ContactLink href="mailto:bc@liman.group">
+            <ContactLink href='mailto:bc@liman.group'>
               Mail-liman：bc@liman.group
             </ContactLink>
-            <ContactLink href="mailto:bc@skymall.com">
+            <ContactLink href='mailto:bc@skymall.com'>
               Mail-skymall：bc@skymall.com
             </ContactLink>
-            <ContactLink href="tel:+86 20-37737063">
+            <ContactLink href='tel:+86 20-37737063'>
               Tel：+86 20-37737063
             </ContactLink>
           </ContactSection>
 
           <ContactSection>
             <SectionHeading>{t('contact_us.join_liman')}</SectionHeading>
-            <ContactLink href="mailto:hr@liman.group">
+            <ContactLink href='mailto:hr@liman.group'>
               Mail：hr@liman.group
             </ContactLink>
           </ContactSection>
 
           <ContactSection>
             <SectionHeading>{t('contact_us.duty_free')}</SectionHeading>
-            <ContactLink href="mailto:chengquan@liman.group">
+            <ContactLink href='mailto:chengquan@liman.group'>
               Mail：chengquan@liman.group
             </ContactLink>
-            <ContactLink href="tel:+853 2881 1159">
+            <ContactLink href='tel:+853 2881 1159'>
               Tel：+853 2881 1159
             </ContactLink>
           </ContactSection>
 
           <ContactSection>
             <SectionHeading>{t('contact_us.market')}</SectionHeading>
-            <ContactLink href="mailto:marketing@liman.group">
+            <ContactLink href='mailto:marketing@liman.group'>
               Mail：marketing@liman.group
             </ContactLink>
           </ContactSection>
 
           <ContactSection>
             <SectionHeading>{t('contact_us.tech')}</SectionHeading>
-            <ContactLink href="mailto:tech@liman.group">
+            <ContactLink href='mailto:tech@liman.group'>
               Mail：tech@liman.group
             </ContactLink>
           </ContactSection>
