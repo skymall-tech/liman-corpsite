@@ -1,6 +1,7 @@
 import React from 'react';
 import { usePopper } from 'react-popper';
 import { PopupContainer, PopupItem, PopUpItemContainer } from './style';
+import { createPortal } from 'react-dom';
 
 interface PopUpItem {
   label: string;
@@ -26,9 +27,10 @@ const PopupMenu: React.FC<{
   );
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: 'bottom',
+    strategy: 'fixed',
   });
 
-  return (
+  return createPortal(
     <PopupContainer
       ref={setPopperElement}
       style={styles.popper}
@@ -43,7 +45,8 @@ const PopupMenu: React.FC<{
           </PopupItem>
         ))}
       </PopUpItemContainer>
-    </PopupContainer>
+    </PopupContainer>,
+    document.body
   );
 };
 
