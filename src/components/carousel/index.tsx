@@ -1,6 +1,10 @@
 import styled from '@emotion/styled';
 import { useState, useEffect } from 'react';
 import { BREAKPOINTS, useResponsive } from '../../hooks/useResponsive';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 interface StorySlide {
   title?: string;
@@ -64,7 +68,7 @@ const Gradient = styled.div<{ hideMask?: boolean }>`
       ? 'linear-gradient(to right, rgba(148, 106, 32, 0.2) 5%, transparent)'
       : 'linear-gradient(to right, rgba(148, 106, 32, 0.7) 5%, transparent)'};
   @media screen and (max-width: ${BREAKPOINTS.medium}px) {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 60%, transparent);
   }
 `;
 
@@ -118,17 +122,6 @@ const NavigationDots = styled.div`
   margin-top: 20px;
 `;
 
-const MobileNavigationDots = styled.div`
-  position: absolute;
-  bottom: 35px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-`;
-
 const Dot = styled.button<{ active: boolean }>`
   width: 40px;
   height: 4px;
@@ -136,15 +129,6 @@ const Dot = styled.button<{ active: boolean }>`
   background-color: ${(props) => (props.active ? '#1E4785' : '#D9D9D9')};
   cursor: pointer;
   transition: background-color 0.3s ease;
-`;
-
-const MobileDot = styled.button<{ active: boolean }>`
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: none;
-  background-color: ${(props) => (props.active ? '#1E4785' : '#D9D9D9')};
-  cursor: pointer;
 `;
 
 export const Carousel = ({
@@ -162,7 +146,7 @@ export const Carousel = ({
   const { isMobile } = useResponsive();
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || isMobile) return;
 
     const interval = setInterval(() => {
       setCurrentSlide((current) =>
@@ -171,7 +155,7 @@ export const Carousel = ({
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isPaused, stories.length]);
+  }, [isPaused, stories.length, isMobile]);
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     setIsPaused(true);
@@ -207,6 +191,42 @@ export const Carousel = ({
     setTimeout(() => setIsPaused(false), 2000);
   };
 
+  if (isMobile) {
+    return (
+      <Container>
+        <Swiper
+          modules={[Pagination]}
+          pagination={{
+            clickable: true,
+          }}
+          cssMode={true}
+          spaceBetween={0}
+          slidesPerView={1}
+          centeredSlides={true}
+          initialSlide={0}
+          onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
+        >
+          {stories.map((story, index) => (
+            <SwiperSlide key={index}>
+              <Slide>
+                <Image src={story.src} alt={story.title || 'Slide image'} />
+                <Gradient hideMask={hideMask}></Gradient>
+                <DescContainer>
+                  {story.title && <Title>{story.title}</Title>}
+                  <ParagraphContainer>
+                    {story.paragraph.map((para, i) => (
+                      <Paragraph key={i}>{para}</Paragraph>
+                    ))}
+                  </ParagraphContainer>
+                </DescContainer>
+              </Slide>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <SlideContainer
@@ -225,7 +245,7 @@ export const Carousel = ({
       >
         {stories.map((story, index) => (
           <Slide key={index}>
-            <Image src={story.src}></Image>
+            <Image src={story.src} alt={story.title || 'Slide image'} />
             <Gradient hideMask={hideMask}></Gradient>
             <DescContainer>
               {story.title && <Title>{story.title}</Title>}
@@ -238,27 +258,15 @@ export const Carousel = ({
           </Slide>
         ))}
       </SlideContainer>
-      {isMobile ? (
-        <MobileNavigationDots>
-          {stories.map((_, index) => (
-            <MobileDot
-              key={index}
-              active={currentSlide === index}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
-        </MobileNavigationDots>
-      ) : (
-        <NavigationDots>
-          {stories.map((_, index) => (
-            <Dot
-              key={index}
-              active={currentSlide === index}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
-        </NavigationDots>
-      )}
+      <NavigationDots>
+        {stories.map((_, index) => (
+          <Dot
+            key={index}
+            active={currentSlide === index}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </NavigationDots>
     </Container>
   );
 };
