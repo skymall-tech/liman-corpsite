@@ -7,7 +7,7 @@ import { useResponsive } from '../../../hooks/useResponsive';
 const JewelryContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-  min-height: 100dvh;
+  // min-height: 100dvh;
 `;
 
 export const JewelrySection = () => {

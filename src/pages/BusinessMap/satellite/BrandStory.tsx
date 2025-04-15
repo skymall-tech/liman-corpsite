@@ -7,7 +7,7 @@ import { TFunction } from 'i18next';
 const BrandContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-  min-height: 100dvh;
+  // min-height: 100dvh;
 `;
 
 const getStories = (t: TFunction) => {

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import moreIcon from '../../assets/icons/more.svg';
 import { keyframes } from '@emotion/react';
 import { LargeTitle } from '../../components/largeTitle';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const bounce = keyframes`
   0%, 100% {
@@ -15,9 +16,12 @@ const bounce = keyframes`
 
 export const ImageContainer = styled.div<{ navHeight: number }>`
   width: 100vw;
-  height: ${({ navHeight }) => `calc(100dvh - ${navHeight}px)`};
+  height: ${({ navHeight }) => `calc(100vh - ${navHeight}px)`};
   overflow: hidden;
   position: relative;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    height: ${({ navHeight }) => `calc(100vh - ${navHeight}px - 80px)`};
+  }
 `;
 
 export const StyledImage = styled.img`

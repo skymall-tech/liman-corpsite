@@ -16,7 +16,7 @@ import {
 const ArtContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-  min-height: 100dvh;
+  // min-height: 100dvh;
 `;
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ export const ArtSection = () => {
   const [currentStore, setCurrentStore] = useState(getBeijingStore(t));
   const [showLarge, setShowLarge] = useState(false);
   return (
-    <ArtContainer id="art-section" onClick={() => setShowLarge(false)}>
+    <ArtContainer id='art-section' onClick={() => setShowLarge(false)}>
       <SectionTitle
         title={t('satellite_paris.art.title')}
         subtitle={t('satellite_paris.art.subtitle')}
@@ -40,7 +40,7 @@ export const ArtSection = () => {
       {!showLarge ? (
         <Container>
           <ShopCard
-            image="https://cdn.liman.group/stores/SATELLITE/beijing1.webp"
+            image='https://cdn.liman.group/stores/SATELLITE/beijing1.webp'
             title={t('common.beijing')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -49,7 +49,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://cdn.liman.group/stores/SATELLITE/sanba1.webp"
+            image='https://cdn.liman.group/stores/SATELLITE/sanba1.webp'
             title={t('common.macau')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -58,7 +58,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://cdn.liman.group/stores/SATELLITE/gaungzhou1.webp"
+            image='https://cdn.liman.group/stores/SATELLITE/gaungzhou1.webp'
             title={t('common.guangzhou')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -67,7 +67,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://cdn.liman.group/stores/SATELLITE/shenzhen1.webp"
+            image='https://cdn.liman.group/stores/SATELLITE/shenzhen1.webp'
             title={t('common.shenzhen')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -76,7 +76,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image="https://cdn.liman.group/stores/SATELLITE/shenyang1.webp"
+            image='https://cdn.liman.group/stores/SATELLITE/shenyang1.webp'
             title={t('common.shenyang')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();

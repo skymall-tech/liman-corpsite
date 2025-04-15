@@ -11,7 +11,7 @@ import {
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
-  min-height: 100dvh;
+  // min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const RotateCardContainer = styled.div`
   margin-top: 4vh;
-  margin-top: 4dvh;
+  // margin-top: 4dvh;
   display: flex;
   flex-direction: row;
   align-items: flex-end;

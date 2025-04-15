@@ -123,7 +123,7 @@ export const MobileMenuContainer = styled(motion.div)`
   left: 0;
   width: 100vw;
   height: calc(100vh - 91px);
-  height: calc(100dvh - 91px);
+  // height: calc(100dvh - 91px);
   background-color: var(--color-background-primary);
   z-index: 99;
   display: flex;

@@ -9,7 +9,7 @@ import { BREAKPOINTS } from '../../hooks/useResponsive';
 const BusinessMapContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  height: 100dvh;
+  // height: 100dvh;
   position: relative;
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     overflow: hidden;
@@ -24,7 +24,7 @@ const Container = styled.div`
   overflow: visible;
   margin-top: 50px;
   height: 70vh;
-  height: 70dvh;
+  // height: 70dvh;
 
   // Mobile & Tablet
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
@@ -39,14 +39,14 @@ export const BusinessMapSection = () => {
   const { t } = useTranslation();
 
   return (
-    <BusinessMapContainer id="business-map-section">
+    <BusinessMapContainer id='business-map-section'>
       <SectionTitle
         title={t('about_us.business_map.title')}
         subtitle={t('about_us.business_map.subtitle')}
       />
       <Container>
         <BusinessCard
-          image="https://cdn.liman.group/business_map/travel.webp"
+          image='https://cdn.liman.group/business_map/travel.webp'
           title={t('common.travel_retail')}
           onClick={() => {
             navigate(PAGE_PATH.businessMap);
@@ -54,7 +54,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image="https://cdn.liman.group/business_map/satellite.webp"
+          image='https://cdn.liman.group/business_map/satellite.webp'
           title={t('common.satellite_paris')}
           onClick={() => {
             navigate(PAGE_PATH.satellite);
@@ -62,7 +62,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image="https://cdn.liman.group/business_map/estate.webp"
+          image='https://cdn.liman.group/business_map/estate.webp'
           title={t('common.culture_estate')}
           onClick={() => {
             navigate(PAGE_PATH.estate);

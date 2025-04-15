@@ -7,7 +7,7 @@ import { TFunction } from 'i18next';
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  height: 100dvh;
+  // height: 100dvh;
 `;
 
 const getStories = (t: TFunction) => {

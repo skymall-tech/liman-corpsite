@@ -8,7 +8,7 @@ import { DesktopView } from './DesktopView';
 
 const TeamContainer = styled.div`
   height: 100vh;
-  height: 100dvh;
+  // height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -20,7 +20,7 @@ const TeamContainer = styled.div`
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     width: 100%;
     min-height: 100vh;
-    min-height: 100dvh;
+    // min-height: 100dvh;
     height: auto;
     display: flex;
     flex-direction: column;

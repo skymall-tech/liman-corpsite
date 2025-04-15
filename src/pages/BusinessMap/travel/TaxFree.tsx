@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const TaxFreeContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-  min-height: 100dvh;
+  // min-height: 100dvh;
 `;
 
 export const TaxFreeSection = () => {

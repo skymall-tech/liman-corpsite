@@ -14,7 +14,7 @@ import { BREAKPOINTS, useResponsive } from '../../hooks/useResponsive';
 const OdysseyContainer = styled.div<{ backgroundImage: string }>`
   width: 100vw;
   min-height: 100vh;
-  min-height: 100dvh;
+  // min-height: 100dvh;
 
   // Mobile & Tablet
   @media screen and (max-width: ${BREAKPOINTS.large}px) {

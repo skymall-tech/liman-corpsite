@@ -7,17 +7,17 @@ import { getCustomerRightsParagraphs } from './consts';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
-  min-height: 100dvh;
+  // min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 9vh;
-  margin-top: 9dvh;
+  // margin-top: 9dvh;
 `;
 
 const RotateCardContainer = styled.div`
   margin-top: 4vh;
-  margin-top: 4dvh;
+  // margin-top: 4dvh;
   display: flex;
   flex-direction: row;
   align-items: flex-end;

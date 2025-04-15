@@ -11,7 +11,7 @@ const Container = styled.div`
 const Card = styled.div<{ active: boolean; isLast?: boolean }>`
   aspect-ratio: 1/2;
   height: 55vh;
-  height: 55dvh;
+  // height: 55dvh;
   padding: 37px 21px 30px 21px;
   border-radius: 12px;
   transition: all 0.3s ease;
