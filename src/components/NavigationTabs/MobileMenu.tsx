@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { AnimatePresence } from 'framer-motion';
+
 import {
   MobileNav,
   MenuIcon,
@@ -39,7 +41,7 @@ export const MobileMenu: React.FC<{
 
   return (
     <>
-      <MobileNav isOpen={isMobileMenuOpen}>
+      <MobileNav id='mobile-navigation-container' isOpen={isMobileMenuOpen}>
         <MenuIcon
           src={menuIcon}
           isOpen={isMobileMenuOpen}
@@ -55,51 +57,61 @@ export const MobileMenu: React.FC<{
           <LanguageSwitcher />
         )}
       </MobileNav>
-      <MobileMenuContainer isOpen={isMobileMenuOpen}>
-        {navItems.map((item) => (
-          <React.Fragment key={item.path}>
-            <MobileMenuItem
-              isActive={item.activeFn()}
-              hasSubMenu={!!item.subMenu}
-              isExpanded={expandedItem === item.path}
-              onClick={() => {
-                if (item.subMenu) {
-                  setExpandedItem(
-                    expandedItem === item.path ? null : item.path
-                  );
-                } else {
-                  navigate(item.path);
-                  setIsMobileMenuOpen(false);
-                }
-              }}
-            >
-              {item.label}
-              {item.subMenu && (
-                <ExpandIcon
-                  src={expandDownIcon}
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <MobileMenuContainer
+            initial={{ y: '-100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '-100%' }}
+            transition={{ type: 'tween', duration: 0.3, ease: 'easeInOut' }}
+          >
+            {navItems.map((item) => (
+              <React.Fragment key={item.path}>
+                <MobileMenuItem
+                  isActive={item.activeFn()}
+                  hasSubMenu={!!item.subMenu}
                   isExpanded={expandedItem === item.path}
-                />
-              )}
-            </MobileMenuItem>
-            {item.subMenu && expandedItem === item.path && (
-              <>
-                {item.subMenu.map((subItem) => (
-                  <SubMenuItem
-                    key={subItem.path}
-                    isActive={subItem.activeFn()}
-                    onClick={() => {
-                      navigate(subItem.path);
+                  onClick={() => {
+                    if (item.subMenu) {
+                      setExpandedItem(
+                        expandedItem === item.path ? null : item.path
+                      );
+                    } else {
+                      navigate(item.path);
                       setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    {subItem.label}
-                  </SubMenuItem>
-                ))}
-              </>
-            )}
-          </React.Fragment>
-        ))}
-      </MobileMenuContainer>
+                    }
+                  }}
+                >
+                  {item.label}
+                  {item.subMenu && (
+                    <ExpandIcon
+                      src={expandDownIcon}
+                      isExpanded={expandedItem === item.path}
+                    />
+                  )}
+                </MobileMenuItem>
+                {item.subMenu && expandedItem === item.path && (
+                  <>
+                    {item.subMenu.map((subItem) => (
+                      <SubMenuItem
+                        key={subItem.path}
+                        isActive={subItem.activeFn()}
+                        onClick={() => {
+                          navigate(subItem.path);
+                          setIsMobileMenuOpen(false);
+                        }}
+                      >
+                        {subItem.label}
+                      </SubMenuItem>
+                    ))}
+                  </>
+                )}
+              </React.Fragment>
+            ))}
+          </MobileMenuContainer>
+        )}
+      </AnimatePresence>
     </>
   );
 };

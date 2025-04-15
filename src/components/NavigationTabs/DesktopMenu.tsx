@@ -23,7 +23,7 @@ export const DesktopMenu: React.FC<{
     subMenuItemIndex !== -1 ? itemRefs[subMenuItemIndex] : null;
 
   return (
-    <DesktopNav>
+    <DesktopNav id='desktop-navigation-container'>
       <Logo
         src={logo}
         style={{ marginRight: '60px' }}

@@ -1,14 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import styled from '@emotion/styled';
-
-export const Container = styled.div`
-  width: 100%;
-  padding: 25px 0;
-  background-color: var(--color-background-primary);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-`;
+import { motion } from 'framer-motion';
 
 export const Logo = styled.img`
   width: 93x;
@@ -23,24 +16,25 @@ export const LangIcon = styled.img`
 `;
 
 export const DesktopNav = styled.div`
-  width: 100vw;
+  width: 100%;
+  background-color: var(--color-background-primary);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 25px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   gap: 20px;
 `;
 
 export const MobileNav = styled.div<{ isOpen?: boolean }>`
-  margin-left: 32px;
-  margin-right: 32px;
-  width: calc(100% - 64px);
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
-  position: ${({ isOpen }) => (isOpen ? 'fixed' : undefined)};
   top: ${({ isOpen }) => (isOpen ? '0' : undefined)};
   background: var(--color-background-primary);
-  z-index: 10000;
-  padding: ${({ isOpen }) => (isOpen ? '25px 0' : '0')};
+  z-index: 100;
+  padding: 25px 32px;
 
   /* Logo container */
   & > :nth-child(2) {
@@ -122,20 +116,18 @@ export const SubMenuItem = styled(MobileMenuItem)`
   }
 `;
 
-export const MobileMenuContainer = styled.div<{ isOpen: boolean }>`
-  position: absolute;
-  top: 0;
+export const MobileMenuContainer = styled(motion.div)`
+  position: fixed;
+  top: 91px;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
+  width: 100vw;
+  height: calc(100vh - 91px);
+  height: calc(100dvh - 91px);
   background-color: var(--color-background-primary);
-  transform: translateY(${({ isOpen }) => (isOpen ? '0' : '-100%')});
-  z-index: 9999;
-  transition: transform 0.3s ease-in-out;
+  z-index: 99;
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
+  overflow-y: auto;
 `;
 
 export const TabButton = styled.button<{ isActive: boolean }>`

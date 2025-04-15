@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { useResponsive } from '../../hooks/useResponsive';
-import { Container } from './style';
 import { MobileMenu } from './MobileMenu';
 import { DesktopMenu } from './DesktopMenu';
 import { PAGE_PATH } from '../../consts/pagePath';
@@ -84,14 +83,10 @@ const NavigationTabs: React.FC = () => {
     setActiveTab(location.pathname);
   }, [location.pathname]);
 
-  return (
-    <Container id='navigation-container'>
-      {isMobile || isTablet ? (
-        <MobileMenu navItems={navItems} />
-      ) : (
-        <DesktopMenu navItems={navItems} />
-      )}
-    </Container>
+  return isMobile || isTablet ? (
+    <MobileMenu navItems={navItems} />
+  ) : (
+    <DesktopMenu navItems={navItems} />
   );
 };
 
