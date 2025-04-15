@@ -3,7 +3,11 @@ import { SectionTitle } from '../../components/Title';
 import { RotateCard } from '../../components/RotateCard';
 import { RotateCardContent } from '../../components/RotateCard/Content';
 import { useTranslation } from 'react-i18next';
-import { TFunction } from 'i18next';
+import RewardsMobile from './RewardsMobile';
+import {
+  getCustomerRightsParagraphs,
+  getSocialResponsibilityParagraphs,
+} from './consts';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
@@ -23,19 +27,9 @@ const RotateCardContainer = styled.div`
   overflow: visible;
 `;
 
-const getParagraphs = (t: TFunction) => {
-  return [
-    t('cooperate_culture.social_responsibility.p1'),
-    t('cooperate_culture.social_responsibility.p2'),
-    t('cooperate_culture.social_responsibility.p3'),
-    t('cooperate_culture.social_responsibility.p4'),
-    t('cooperate_culture.social_responsibility.p5'),
-  ];
-};
-
 export const SocialResponsibility = () => {
   const { t } = useTranslation();
-  const paragraphs = getParagraphs(t);
+  const paragraphs = getSocialResponsibilityParagraphs(t);
   return (
     <Container id='social-responsibility'>
       <SectionTitle
@@ -50,5 +44,26 @@ export const SocialResponsibility = () => {
         ></RotateCardContent>
       </RotateCardContainer>
     </Container>
+  );
+};
+
+export const SocialResponsibilityMobileView = () => {
+  const { t } = useTranslation();
+  const paragraphs = [
+    ...getSocialResponsibilityParagraphs(t),
+    ...getCustomerRightsParagraphs(t),
+  ];
+
+  return (
+    <RewardsMobile
+      id='social-responsibility'
+      title={t('cooperate_culture.social_responsibility.title')}
+      subtitle={t('cooperate_culture.social_responsibility.subtitle')}
+      contentTitle={t(
+        'cooperate_culture.social_responsibility.customer_rights'
+      )}
+      paragraphs={paragraphs}
+      imageSrc='https://cdn.liman.group/culture_rewards/1.webp'
+    />
   );
 };

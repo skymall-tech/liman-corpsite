@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import { RotateCard } from '../../components/RotateCard';
 import { RotateCardContent } from '../../components/RotateCard/Content';
 import { useTranslation } from 'react-i18next';
-import { TFunction } from 'i18next';
+import RewardsMobile from './RewardsMobile';
+import { getCustomerRightsParagraphs } from './consts';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
@@ -24,19 +25,9 @@ const RotateCardContainer = styled.div`
   overflow: visible;
 `;
 
-const getParagraphs = (t: TFunction) => {
-  return [
-    t('cooperate_culture.customer_rights.p1'),
-    t('cooperate_culture.customer_rights.p2'),
-    t('cooperate_culture.customer_rights.p3'),
-    t('cooperate_culture.customer_rights.p4'),
-    t('cooperate_culture.customer_rights.p5'),
-  ];
-};
-
 export const CustomerRights = () => {
   const { t } = useTranslation();
-  const paragraphs = getParagraphs(t);
+  const paragraphs = getCustomerRightsParagraphs(t);
   return (
     <Container id='customer-rights'>
       <RotateCardContainer>
@@ -51,5 +42,22 @@ export const CustomerRights = () => {
         ></RotateCard>
       </RotateCardContainer>
     </Container>
+  );
+};
+
+export const CustomerRightsMobileView = () => {
+  const { t } = useTranslation();
+  const paragraphs = getCustomerRightsParagraphs(t);
+
+  return (
+    <RewardsMobile
+      id='customer-rights'
+      contentTitle={t(
+        'cooperate_culture.social_responsibility.customer_rights'
+      )}
+      paragraphs={paragraphs}
+      imageSrc='https://cdn.liman.group/culture_rewards/2.webp'
+      showTitle={false}
+    />
   );
 };
