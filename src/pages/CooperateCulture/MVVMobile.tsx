@@ -8,7 +8,7 @@ import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 
 const Container = styled.div<{ navHeight: number }>`
   height: 100vh;
-  margin-top: 40px;
+  margin-top: 80px;
   width: 100%;
   padding-top: ${({ navHeight }) => navHeight}px;
   display: flex;
@@ -28,7 +28,7 @@ const Container = styled.div<{ navHeight: number }>`
 
   .swiper-slide {
     width: calc(100vw - 80px);
-    opacity: 0.4;
+    opacity: 0.5;
     transition: opacity 0.3s ease;
   }
 
@@ -56,8 +56,8 @@ const Container = styled.div<{ navHeight: number }>`
 `;
 
 const Card = styled.div`
-  width: 80vw;
-  height: 70vh;
+  width: 78vw;
+  height: 69vh;
   border-radius: 16px;
   overflow: hidden;
   padding: 20px 20px;
@@ -73,7 +73,7 @@ const CardContent = styled.div<{ src: string }>`
   width: 100%;
   height: 100%;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 20px 20px;
   background-image: url(${({ src }) => src});
   background-size: cover;
