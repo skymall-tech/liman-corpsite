@@ -60,6 +60,9 @@ export const useScrollSections = ({
         } else {
           scrollToSection(sections[currentIndex - 1]);
         }
+      } else if (event.deltaY < 0 && currentIndex === 0) {
+        // Prevent scrolling up when already at the top section
+        event.preventDefault();
       }
     };
 

@@ -47,6 +47,7 @@ export const LanguageSwitcher = (
           items={languageList.map((lang) => ({
             label: lang.label,
             action: () => {
+              setShowLangPopup(false);
               i18n.changeLanguage(lang.value);
               localStorage.setItem(LAST_SELECT_LANG, lang.value);
             },
