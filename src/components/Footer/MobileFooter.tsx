@@ -60,10 +60,10 @@ const ArrowIcon = styled(motion.img)`
   height: 10px;
 `;
 
-const QRCodeImage = styled.img`
-  width: 60px;
-  height: 60px;
-`;
+// const QRCodeImage = styled.img`
+//   width: 60px;
+//   height: 60px;
+// `;
 
 interface FooterSectionProps {
   title: string;
@@ -145,7 +145,7 @@ const ExpandableSection: React.FC<FooterSectionProps> = ({
         <Title>{title}</Title>
         <ArrowIcon
           src={expandIcon}
-          alt="Expand Icon"
+          alt='Expand Icon'
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         />
@@ -153,9 +153,9 @@ const ExpandableSection: React.FC<FooterSectionProps> = ({
       <AnimatePresence initial={false}>
         {isOpen && (
           <SectionContent
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
+            initial='hidden'
+            animate='visible'
+            exit='hidden'
             variants={contentVariants}
           >
             <ContentInner variants={innerVariants}>{children}</ContentInner>
@@ -171,13 +171,13 @@ export const MobileFooter = () => {
 
   return (
     <FooterWrapper>
-      <Logo src={logo} alt="Liman Logo" />
-      <ExpandableSection title={t('footer.search_in_wechat')}>
+      <Logo src={logo} alt='Liman Logo' />
+      {/* <ExpandableSection title={t('footer.search_in_wechat')}>
         <QRCodeImage
           src="https://qyrfpxt160dfdoff.public.blob.vercel-storage.com/qr-temp-9yoMRi4mzKUH1pxEPhKESYyaAEZ50m"
           alt="WeChat QR Code"
         />
-      </ExpandableSection>
+      </ExpandableSection> */}
       <ExpandableSection title={t('footer.business_map')}>
         <LinkList>
           <li>
@@ -215,7 +215,7 @@ export const MobileFooter = () => {
       <ExpandableSection title={t('footer.business_cooperation')}>
         <a
           style={{ color: 'var(--color-primary)' }}
-          href="mailto:bc@liman.group"
+          href='mailto:bc@liman.group'
         >
           bc@liman.group
         </a>
@@ -223,7 +223,7 @@ export const MobileFooter = () => {
       <ExpandableSection title={t('footer.join_us')}>
         <a
           style={{ color: 'var(--color-primary)' }}
-          href="mailto:hr@liman.group"
+          href='mailto:hr@liman.group'
         >
           hr@liman.group
         </a>
