@@ -35,6 +35,7 @@ export const MobileNav = styled.div<{ isOpen?: boolean }>`
   background: var(--color-background-primary);
   z-index: 100;
   padding: 25px 32px;
+  box-shadow: 0px 2px 4.7px 0px #0000001a;
 
   /* Logo container */
   & > :nth-child(2) {
