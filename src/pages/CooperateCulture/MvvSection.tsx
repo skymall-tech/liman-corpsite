@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 import { CultureCard } from '../../components/CultureCard';
 import { useTranslation } from 'react-i18next';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const MVVContainer = styled.div<{ navHeight: number }>`
   width: 100vw;
@@ -11,6 +12,11 @@ const MVVContainer = styled.div<{ navHeight: number }>`
   justify-content: center;
   padding-top: 66px;
   gap: 3vw;
+
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    height: 100vh;
+    padding-top: ${({ navHeight }) => navHeight}px;
+  }
 `;
 
 export const MVVSection = () => {
@@ -18,9 +24,9 @@ export const MVVSection = () => {
   const { t } = useTranslation();
 
   return (
-    <MVVContainer id="mvv-section" navHeight={navHeight}>
+    <MVVContainer id='mvv-section' navHeight={navHeight}>
       <CultureCard
-        src="https://cdn.liman.group/culture_back/1.webp"
+        src='https://cdn.liman.group/culture_back/1.webp'
         title={t('cooperate_culture.mvv.mission.title')}
         shortDescription={t('cooperate_culture.mvv.mission.short_desc')}
       >
@@ -29,7 +35,7 @@ export const MVVSection = () => {
         <p>{t('cooperate_culture.mvv.mission.p3')}</p>
       </CultureCard>
       <CultureCard
-        src="https://cdn.liman.group/culture_back/2.webp"
+        src='https://cdn.liman.group/culture_back/2.webp'
         title={t('cooperate_culture.mvv.value.title')}
         shortDescription={t('cooperate_culture.mvv.value.short_desc')}
       >
@@ -40,7 +46,7 @@ export const MVVSection = () => {
         <p>{t('cooperate_culture.mvv.value.p3')}</p>
       </CultureCard>
       <CultureCard
-        src="https://cdn.liman.group/culture_back/3.webp"
+        src='https://cdn.liman.group/culture_back/3.webp'
         title={t('cooperate_culture.mvv.vision.title')}
         shortDescription={t('cooperate_culture.mvv.vision.short_desc')}
       >
