@@ -23,7 +23,6 @@ export const MainPage = styled.div<{ navHeight: number }>`
   padding-top: 60px;
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     height: 100vh;
-    height: 100dvh;
     padding-top: ${({ navHeight }) => navHeight}px;
   }
 `;

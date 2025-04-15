@@ -5,9 +5,8 @@ import { SectionTitle } from '../../../components/Title';
 import { BREAKPOINTS, useResponsive } from '../../../hooks/useResponsive';
 import { MobileView } from './MobileView';
 import { DesktopView } from './DesktopView';
-import { useNavigationHeight } from '../../../hooks/useNavigationHeight';
 
-const TeamContainer = styled.div<{ navHeight: number }>`
+const TeamContainer = styled.div`
   height: 100vh;
   height: 100dvh;
   display: flex;
@@ -21,22 +20,19 @@ const TeamContainer = styled.div<{ navHeight: number }>`
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     width: 100%;
     min-height: unset;
-    height: 100vh;
-    height: 100dvh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     overflow: visible;
     padding-bottom: 40px;
-    padding-top: ${({ navHeight }) => navHeight}px;
   }
 `;
 
 export const TeamSection = () => {
   const { t } = useTranslation();
   const { isMobile, isTablet } = useResponsive();
-  const navHeight = useNavigationHeight();
 
   const teamData = [
     {
@@ -107,7 +103,7 @@ export const TeamSection = () => {
   ];
 
   return (
-    <TeamContainer id='team-section' navHeight={navHeight}>
+    <TeamContainer id='team-section'>
       <SectionTitle
         title={t('about_us.team.title')}
         subtitle={t('about_us.team.subtitle')}

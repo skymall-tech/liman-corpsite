@@ -1,28 +1,18 @@
 import styled from '@emotion/styled';
-import { useTranslation } from 'react-i18next';
-
 import { SectionTitle } from '../../../components/Title';
 import { ImgWithSearch } from '../../../components/ImgWithSearch';
 import RightArrow from '../../../assets/icons/Right.svg';
-import { useNavigationHeight } from '../../../hooks/useNavigationHeight';
-import { BREAKPOINTS } from '../../../hooks/useResponsive';
-
-const JewelryContainer = styled.div<{ navHeight: number }>`
+import { useTranslation } from 'react-i18next';
+const JewelryContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   min-height: 100dvh;
-  @media screen and (max-width: ${BREAKPOINTS.large}px) {
-    height: 100vh;
-    height: 100dvh;
-    padding-top: ${({ navHeight }) => navHeight}px;
-  }
 `;
 
 export const JewelrySection = () => {
-  const navHeight = useNavigationHeight();
   const { t } = useTranslation();
   return (
-    <JewelryContainer id='jewelry' navHeight={navHeight}>
+    <JewelryContainer id='jewelry'>
       <SectionTitle
         title={t('satellite_paris.jewelry.title')}
         subtitle={t('satellite_paris.jewelry.subtitle')}

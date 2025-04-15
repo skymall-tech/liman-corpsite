@@ -27,7 +27,7 @@ export const DesktopNav = styled.div`
 `;
 
 export const MobileNav = styled.div<{ isOpen?: boolean }>`
-  position: fixed;
+  position: absolute;
   width: 100%;
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@ export const SubMenuItem = styled(MobileMenuItem)`
 `;
 
 export const MobileMenuContainer = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   top: 91px;
   left: 0;
   width: 100vw;

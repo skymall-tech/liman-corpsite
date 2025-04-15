@@ -5,16 +5,14 @@ import { PAGE_PATH } from '../../consts/pagePath';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { BREAKPOINTS } from '../../hooks/useResponsive';
-import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 
-const BusinessMapContainer = styled.div<{ navHeight: number }>`
+const BusinessMapContainer = styled.div`
   width: 100vw;
   height: 100vh;
   height: 100dvh;
   position: relative;
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     overflow: hidden;
-    padding-top: ${({ navHeight }) => navHeight}px;
   }
 `;
 
@@ -39,17 +37,16 @@ const Container = styled.div`
 export const BusinessMapSection = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const navHeight = useNavigationHeight();
 
   return (
-    <BusinessMapContainer id='business-map-section' navHeight={navHeight}>
+    <BusinessMapContainer id="business-map-section">
       <SectionTitle
         title={t('about_us.business_map.title')}
         subtitle={t('about_us.business_map.subtitle')}
       />
       <Container>
         <BusinessCard
-          image='https://cdn.liman.group/business_map/travel.webp'
+          image="https://cdn.liman.group/business_map/travel.webp"
           title={t('common.travel_retail')}
           onClick={() => {
             navigate(PAGE_PATH.businessMap);
@@ -57,7 +54,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image='https://cdn.liman.group/business_map/satellite.webp'
+          image="https://cdn.liman.group/business_map/satellite.webp"
           title={t('common.satellite_paris')}
           onClick={() => {
             navigate(PAGE_PATH.satellite);
@@ -65,7 +62,7 @@ export const BusinessMapSection = () => {
           }}
         />
         <BusinessCard
-          image='https://cdn.liman.group/business_map/estate.webp'
+          image="https://cdn.liman.group/business_map/estate.webp"
           title={t('common.culture_estate')}
           onClick={() => {
             navigate(PAGE_PATH.estate);

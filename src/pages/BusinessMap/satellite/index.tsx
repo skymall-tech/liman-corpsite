@@ -15,14 +15,14 @@ export const SatellitePage: React.FC = () => {
   return (
     <PageContainer>
       <FirstScreen
-        nextSectionId='brand-story'
+        nextSectionId="brand-story"
         title={t('satellite_paris.page_title')}
         desc={t('satellite_paris.page_subtitle')}
         image={'https://cdn.liman.group/first_pic/2.webp'}
       />
       <BrandStorySection />
-      <ArtSection />
-      <JewelrySection />
+      <ArtSection></ArtSection>
+      <JewelrySection></JewelrySection>
       <Footer />
     </PageContainer>
   );

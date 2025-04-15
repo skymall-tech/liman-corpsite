@@ -10,12 +10,8 @@ import arrowLeft from '../../assets/icons/left-primary.svg';
 import arrowRight from '../../assets/icons/right-primary.svg';
 import expandDownIcon from '../../assets/icons/expand-down.svg';
 import { BREAKPOINTS, useResponsive } from '../../hooks/useResponsive';
-import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 
-const OdysseyContainer = styled.div<{
-  backgroundImage: string;
-  navHeight: number;
-}>`
+const OdysseyContainer = styled.div<{ backgroundImage: string }>`
   width: 100vw;
   min-height: 100vh;
   min-height: 100dvh;
@@ -24,7 +20,6 @@ const OdysseyContainer = styled.div<{
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     position: relative;
     overflow: hidden;
-    padding-top: ${({ navHeight }) => navHeight}px;
     &::before {
       content: '';
       position: absolute;
@@ -288,7 +283,6 @@ export const OdysseySection = () => {
   const { isMobile, isTablet } = useResponsive();
   const timelineData = getTimelineData(t, isMobile);
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
-  const navHeight = useNavigationHeight();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -395,7 +389,6 @@ export const OdysseySection = () => {
   return (
     <OdysseyContainer
       id='odyssey-section'
-      navHeight={navHeight}
       backgroundImage={
         timelineData.find((item) => item.year === expandedCard)?.logo ||
         timelineData[0].logo

@@ -3,18 +3,11 @@ import { SectionTitle } from '../../../components/Title';
 import { Carousel } from '../../../components/carousel';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
-import { useNavigationHeight } from '../../../hooks/useNavigationHeight';
-import { BREAKPOINTS } from '../../../hooks/useResponsive';
 
-const BrandContainer = styled.div<{ navHeight: number }>`
+const BrandContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   min-height: 100dvh;
-  @media screen and (max-width: ${BREAKPOINTS.large}px) {
-    height: 100vh;
-    height: 100dvh;
-    padding-top: ${({ navHeight }) => navHeight}px;
-  }
 `;
 
 const getStories = (t: TFunction) => {
@@ -68,9 +61,8 @@ const getStories = (t: TFunction) => {
 export const BrandStorySection = () => {
   const { t } = useTranslation();
   const stories = getStories(t);
-  const navHeight = useNavigationHeight();
   return (
-    <BrandContainer id='brand-story' navHeight={navHeight}>
+    <BrandContainer id='brand-story'>
       <SectionTitle
         title={t('culture_estate.brand_story.title')}
         subtitle={t('culture_estate.brand_story.subtitle')}
