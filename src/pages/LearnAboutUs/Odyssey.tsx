@@ -214,13 +214,15 @@ type TimelineEvent = {
   logo: string;
   shortDesc: string;
 };
-const getTimelineData = (t: TFunction): TimelineEvent[] => {
+const getTimelineData = (t: TFunction, isMobile: boolean): TimelineEvent[] => {
   return [
     {
       year: '2006',
       description1: t('about_us.odyssey.2006.desc1'),
       description2: t('about_us.odyssey.2006.desc2'),
-      logo: 'https://cdn.liman.group/time_line/2006.webp',
+      logo: isMobile
+        ? 'https://cdn.liman.group/time_line/2006_mobile.webp'
+        : 'https://cdn.liman.group/time_line/2006.webp',
       shortDesc: t('about_us.odyssey.2006.short_desc'),
     },
     {
@@ -283,8 +285,8 @@ export const OdysseySection = () => {
   const [activeYear, setActiveYear] = useState<string>('2006');
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
-  const timelineData = getTimelineData(t);
   const { isMobile, isTablet } = useResponsive();
+  const timelineData = getTimelineData(t, isMobile);
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
   const navHeight = useNavigationHeight();
 
