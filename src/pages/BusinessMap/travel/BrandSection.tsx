@@ -17,10 +17,16 @@ const LogoContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2vw;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    justify-content: flex-start;
+  }
 `;
 
 const LogoItem = styled.img`
   width: 12vw;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    width: 25vw;
+  }
 `;
 
 const LogoList = [
