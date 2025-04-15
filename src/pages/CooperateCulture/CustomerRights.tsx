@@ -3,7 +3,10 @@ import { RotateCard } from '../../components/RotateCard';
 import { RotateCardContent } from '../../components/RotateCard/Content';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
-const Container = styled.div`
+import { BREAKPOINTS } from '../../hooks/useResponsive';
+import { useNavigationHeight } from '../../hooks/useNavigationHeight';
+
+const Container = styled.div<{ navHeight: number }>`
   width: 100vw;
   min-height: 100vh;
   min-height: 100dvh;
@@ -12,6 +15,11 @@ const Container = styled.div`
   align-items: center;
   margin-top: 9vh;
   margin-top: 9dvh;
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    height: 100vh;
+    height: 100dvh;
+    padding-top: ${({ navHeight }) => navHeight}px;
+  }
 `;
 
 const RotateCardContainer = styled.div`
@@ -36,9 +44,10 @@ const getParagraphs = (t: TFunction) => {
 
 export const CustomerRights = () => {
   const { t } = useTranslation();
+  const navHeight = useNavigationHeight();
   const paragraphs = getParagraphs(t);
   return (
-    <Container id='customer-rights'>
+    <Container id='customer-rights' navHeight={navHeight}>
       <RotateCardContainer>
         <RotateCardContent
           paragraphs={paragraphs}

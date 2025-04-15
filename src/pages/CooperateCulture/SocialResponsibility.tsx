@@ -4,13 +4,20 @@ import { RotateCard } from '../../components/RotateCard';
 import { RotateCardContent } from '../../components/RotateCard/Content';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
-const Container = styled.div`
+import { useNavigationHeight } from '../../hooks/useNavigationHeight';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
+const Container = styled.div<{ navHeight: number }>`
   width: 100vw;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    height: 100vh;
+    height: 100dvh;
+    padding-top: ${({ navHeight }) => navHeight}px;
+  }
 `;
 
 const RotateCardContainer = styled.div`
@@ -35,9 +42,10 @@ const getParagraphs = (t: TFunction) => {
 
 export const SocialResponsibility = () => {
   const { t } = useTranslation();
+  const navHeight = useNavigationHeight();
   const paragraphs = getParagraphs(t);
   return (
-    <Container id='social-responsibility'>
+    <Container id='social-responsibility' navHeight={navHeight}>
       <SectionTitle
         title={t('cooperate_culture.social_responsibility.title')}
         subtitle={t('cooperate_culture.social_responsibility.subtitle')}

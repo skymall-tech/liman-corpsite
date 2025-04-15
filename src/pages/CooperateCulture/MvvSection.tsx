@@ -15,6 +15,7 @@ const MVVContainer = styled.div<{ navHeight: number }>`
 
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     height: 100vh;
+    height: 100dvh;
     padding-top: ${({ navHeight }) => navHeight}px;
   }
 `;

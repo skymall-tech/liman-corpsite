@@ -1,11 +1,18 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../../components/Title';
 import { useTranslation } from 'react-i18next';
+import { useNavigationHeight } from '../../../hooks/useNavigationHeight';
+import { BREAKPOINTS } from '../../../hooks/useResponsive';
 
-const BrandContainer = styled.div`
+const BrandContainer = styled.div<{ navHeight: number }>`
   width: 100vw;
   min-height: 100vh;
   min-height: 100dvh;
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    height: 100vh;
+    height: 100dvh;
+    padding-top: ${({ navHeight }) => navHeight}px;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,8 +55,9 @@ const LogoList = [
 
 export const BrandSection = () => {
   const { t } = useTranslation();
+  const navHeight = useNavigationHeight();
   return (
-    <BrandContainer id='brand'>
+    <BrandContainer id='brand' navHeight={navHeight}>
       <SectionTitle
         title={t('travel.partner_brands.title')}
         subtitle={t('travel.partner_brands.subtitle')}
