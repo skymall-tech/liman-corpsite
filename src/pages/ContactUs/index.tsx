@@ -46,6 +46,7 @@ const ContactGrid = styled.div`
     flex-wrap: nowrap;
     gap: 40px;
     margin: 24px auto;
+    transform: translateX(-30px);
   }
 `;
 

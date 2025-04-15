@@ -14,7 +14,7 @@ const TitleContainer = styled.div<{ marginTop?: string }>`
 
   // Mobile
   @media screen and (max-width: ${BREAKPOINTS.medium}px) {
-    margin: 60px 60px 20px 60px;
+    margin: 35px 40px 20px 40px;
     overflow: hidden;
   }
 `;
