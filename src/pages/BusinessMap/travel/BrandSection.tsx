@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../../components/Title';
 import { useTranslation } from 'react-i18next';
+import { BREAKPOINTS } from '../../../hooks/useResponsive';
 
 const BrandContainer = styled.div`
   width: 100vw;

@@ -19,7 +19,8 @@ const TeamContainer = styled.div`
   // Mobile
   @media screen and (max-width: ${BREAKPOINTS.large}px) {
     width: 100%;
-    min-height: unset;
+    min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
     display: flex;
     flex-direction: column;
