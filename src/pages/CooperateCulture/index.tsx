@@ -1,7 +1,7 @@
 import { Footer } from '../../components/Footer';
 import { PageContainer } from '../../components/PageConatiner';
 import { useScrollSections } from '../../hooks/useScrollSections';
-import { CustomerRights, CustomerRightsMobileView } from './CustomerRights';
+import { CustomerRightsMobileView } from './CustomerRights';
 import { MVVSection } from './MvvSection';
 import {
   SocialResponsibility,
