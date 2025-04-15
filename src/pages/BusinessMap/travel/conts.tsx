@@ -1,6 +1,13 @@
 import { TFunction } from 'i18next';
 
-export const getBeijingStore = (t: TFunction) => {
+export type Store = {
+  id: string;
+  name: string;
+  images: string[];
+  address: string[];
+};
+
+export const getBeijingStore = (t: TFunction): Store[] => {
   return [
     {
       id: 'TORYBURCH',
@@ -72,7 +79,7 @@ export const getBeijingStore = (t: TFunction) => {
   ];
 };
 
-export const getShenyangStore = (t: TFunction) => {
+export const getShenyangStore = (t: TFunction): Store[] => {
   return [
     {
       id: 'SALVATORE FERRAGAMO',

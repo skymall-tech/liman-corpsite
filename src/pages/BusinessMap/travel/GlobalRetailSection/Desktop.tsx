@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { SectionTitle } from '../../../components/Title';
-import { ShopCard } from '../../../components/ShopCard';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
-import { StoreLargeCard } from '../../../components/StoreLargeCard';
-import { getBeijingStore, getShenyangStore } from './conts';
+import { Dispatch, SetStateAction } from 'react';
+
+import { ShopCard } from '../../../../components/ShopCard';
+import { StoreLargeCard } from '../../../../components/StoreLargeCard';
+import { getBeijingStore, getShenyangStore, type Store } from '../conts';
 
 const Container = styled.div`
   display: flex;
@@ -14,23 +14,21 @@ const Container = styled.div`
   overflow: visible;
 `;
 
-const PartnerPortContainer = styled.div`
-  width: 100vw;
-  min-height: 100vh;
-  min-height: 100dvh;
-`;
-
-export const GlobalRetailSection = () => {
+export const GlobalRetailSectionDesktop = ({
+  showLarge,
+  setShowLarge,
+  currentStore,
+  setCurrentStore,
+}: {
+  showLarge: boolean;
+  setShowLarge: Dispatch<SetStateAction<boolean>>;
+  currentStore: Store[];
+  setCurrentStore: Dispatch<SetStateAction<Store[]>>;
+}) => {
   const { t } = useTranslation();
-  const [currentStore, setCurrentStore] = useState(getBeijingStore(t));
-  const [showLarge, setShowLarge] = useState(false);
 
   return (
-    <PartnerPortContainer id='partner-port' onClick={() => setShowLarge(false)}>
-      <SectionTitle
-        title={t('travel.global_retail_lounge.title')}
-        subtitle={t('travel.global_retail_lounge.subtitle')}
-      />
+    <>
       {!showLarge ? (
         <Container>
           <ShopCard
@@ -68,6 +66,6 @@ export const GlobalRetailSection = () => {
           />
         </Container>
       )}
-    </PartnerPortContainer>
+    </>
   );
 };
