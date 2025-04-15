@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useResponsive } from './useResponsive';
 
 interface UseScrollSectionsProps {
   sections: string[];
@@ -10,6 +11,7 @@ export const useScrollSections = ({
   sections,
   scrollThrottleTime = 1000,
 }: UseScrollSectionsProps) => {
+  const { isDesktop } = useResponsive();
   useEffect(() => {
     let isScrolling = false;
 
@@ -50,7 +52,11 @@ export const useScrollSections = ({
       } else if (event.deltaY < 0 && currentIndex > 0) {
         event.preventDefault();
         if (currentIndex === 1) {
-          scrollToSection('first-screen');
+          scrollToSection(
+            isDesktop
+              ? 'desktop-navigation-container'
+              : 'mobile-navigation-container'
+          );
         } else {
           scrollToSection(sections[currentIndex - 1]);
         }

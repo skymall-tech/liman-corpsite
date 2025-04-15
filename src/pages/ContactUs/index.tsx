@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 export const MainPage = styled.div<{ navHeight: number }>`
-  width: 100%;
+  width: 100vw;
   height: ${({ navHeight }) => `calc(100vh - ${navHeight}px)`};
   display: flex;
   flex-direction: column;
