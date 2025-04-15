@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 export const PopupContainer = styled.div`
   position: absolute;
-  z-index: 10;
+  z-index: 101; // greater than navbar's 100
   padding-top: 10px;
   padding-right: 10px;
 `;
