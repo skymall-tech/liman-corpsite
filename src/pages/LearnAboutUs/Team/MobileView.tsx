@@ -122,6 +122,15 @@ const Description = styled.p`
 `;
 
 export const MobileView = ({ data }: { data: TeamCardProps[] }) => {
+  // // Create a sorted copy of the data for mobile view
+  // const sortedData = [...data].sort((a, b) => {
+  //   // Put Lifenggu first
+  //   if (a.id.includes('leo')) return -1;
+  //   if (a.id.includes('charly')) return -1;
+  //   // Keep original order for others
+  //   return 0;
+  // });
+
   return (
     <Container>
       <Swiper

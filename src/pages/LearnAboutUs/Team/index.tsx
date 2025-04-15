@@ -37,6 +37,7 @@ export const TeamSection = () => {
 
   const teamData = [
     {
+      id: 'luke',
       name: t('about_us.team.luke.name'),
       title: t('about_us.team.luke.title'),
       description: t('about_us.team.luke.description'),
@@ -47,6 +48,7 @@ export const TeamSection = () => {
       },
     },
     {
+      id: 'tim',
       name: t('about_us.team.lizhihua.name'),
       title: t('about_us.team.lizhihua.title'),
       description: t('about_us.team.lizhihua.description'),
@@ -56,6 +58,7 @@ export const TeamSection = () => {
       },
     },
     {
+      id: 'charly',
       name: t('about_us.team.chenli.name'),
       title: t('about_us.team.chenli.title'),
       description: t('about_us.team.chenli.description'),
@@ -65,6 +68,7 @@ export const TeamSection = () => {
       },
     },
     {
+      id: 'leo',
       name: t('about_us.team.lifenggu.name'),
       title: t('about_us.team.lifenggu.title'),
       description: t('about_us.team.lifenggu.description'),
@@ -74,6 +78,7 @@ export const TeamSection = () => {
       },
     },
     {
+      id: 'esa',
       name: t('about_us.team.zhangchi.name'),
       title: t('about_us.team.zhangchi.title'),
       description: t('about_us.team.zhangchi.description'),
@@ -83,6 +88,7 @@ export const TeamSection = () => {
       },
     },
     {
+      id: 'grace',
       name: t('about_us.team.liwan.name'),
       title: t('about_us.team.liwan.title'),
       description: t('about_us.team.liwan.description'),
@@ -92,6 +98,7 @@ export const TeamSection = () => {
       },
     },
     {
+      id: 'jenny',
       name: t('about_us.team.lushaojuan.name'),
       title: t('about_us.team.lushaojuan.title'),
       description: t('about_us.team.lushaojuan.description'),
