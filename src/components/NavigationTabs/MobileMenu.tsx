@@ -39,6 +39,30 @@ export const MobileMenu: React.FC<{
     });
   }, [navItems]);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      // Save current scroll position and disable scroll
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.top = `-${scrollY}px`;
+    } else {
+      // Restore scroll position and enable scroll
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+
+    return () => {
+      // Cleanup when component unmounts
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       <MobileNav id='mobile-navigation-container' isOpen={isMobileMenuOpen}>
