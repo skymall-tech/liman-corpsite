@@ -419,8 +419,8 @@ export const OdysseySection = () => {
                     animate={{ rotate: expandedCard === event.year ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                     style={{
-                      width: '31px',
-                      height: '15px',
+                      width: '20px',
+                      height: '10px',
                       filter:
                         'brightness(0) saturate(100%) invert(83%) sepia(23%) saturate(638%) hue-rotate(332deg) brightness(101%) contrast(101%)',
                     }}
