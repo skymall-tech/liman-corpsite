@@ -2,7 +2,6 @@
 import styled from '@emotion/styled';
 import moreIcon from '../../assets/icons/more.svg';
 import { keyframes } from '@emotion/react';
-import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 import { LargeTitle } from '../../components/largeTitle';
 
 const bounce = keyframes`
@@ -82,8 +81,6 @@ export const FirstScreen = ({
   nextSectionId: string;
   showOverlay?: boolean;
 }) => {
-  const navHeight = useNavigationHeight();
-
   const handleIconClick = () => {
     const element = document.getElementById(nextSectionId);
     if (element) {
@@ -92,7 +89,7 @@ export const FirstScreen = ({
   };
 
   return (
-    <ImageContainer navHeight={navHeight} id='first-screen'>
+    <ImageContainer navHeight={0} id='first-screen'>
       <StyledImage src={image} alt='Main background' />
       {showOverlay && <ImageOverlay />}
       <LargeTitle title={title} desc={desc} />

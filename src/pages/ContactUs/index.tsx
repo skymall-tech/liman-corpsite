@@ -14,15 +14,16 @@ const Container = styled.div`
 `;
 
 export const MainPage = styled.div<{ navHeight: number }>`
-  width: 100vw;
+  width: 100%;
   height: ${({ navHeight }) => `calc(100vh - ${navHeight}px)`};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding-top: 60px;
-  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
-    padding-top: 0;
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    height: 100vh;
+    padding-top: ${({ navHeight }) => navHeight}px;
   }
 `;
 
@@ -36,7 +37,7 @@ const ContactGrid = styled.div`
   width: max(880px, 40vw);
   margin: 126px auto;
   margin-bottom: 0px;
-  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -52,7 +53,7 @@ const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 220px;
-  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
     min-width: none;
   }
 `;
