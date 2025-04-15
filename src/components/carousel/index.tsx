@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { useState, useEffect } from 'react';
+import { BREAKPOINTS, useResponsive } from '../../hooks/useResponsive';
 
 interface StorySlide {
   title?: string;
@@ -12,6 +13,9 @@ const Container = styled.div`
   width: 100%;
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    margin-top: 20px;
+  }
 `;
 
 const SlideContainer = styled.div<{ offset: number }>`
@@ -22,18 +26,26 @@ const SlideContainer = styled.div<{ offset: number }>`
   user-select: none;
   background: var(--color-primary);
   overflow: visible;
+  position: relative;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    height: calc(100vh - 160px);
+  }
 `;
 
 const Slide = styled.div`
   position: relative;
   min-width: 100vw;
   height: calc(100vh - 250px);
+  overflow: hidden;
   background: linear-gradient(
     to right,
     var(--color-primary),
     rgba(0, 0, 0, 0.1)
   );
   color: white;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    height: calc(100vh - 160px);
+  }
 `;
 const Image = styled.img`
   width: 100%;
@@ -51,6 +63,9 @@ const Gradient = styled.div<{ hideMask?: boolean }>`
     props.hideMask
       ? 'linear-gradient(to right, rgba(148, 106, 32, 0.2) 5%, transparent)'
       : 'linear-gradient(to right, rgba(148, 106, 32, 0.7) 5%, transparent)'};
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  }
 `;
 
 const DescContainer = styled.div`
@@ -58,6 +73,18 @@ const DescContainer = styled.div`
   left: 50px;
   top: 58px;
   width: max(30vw, 360px);
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    top: auto;
+    width: 100%;
+    padding: 20px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
 
 const ParagraphContainer = styled.div`
@@ -65,6 +92,10 @@ const ParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    width: 100%;
+    margin-top: 10px;
+  }
 `;
 
 const Title = styled.h2`
@@ -87,6 +118,17 @@ const NavigationDots = styled.div`
   margin-top: 20px;
 `;
 
+const MobileNavigationDots = styled.div`
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+`;
+
 const Dot = styled.button<{ active: boolean }>`
   width: 40px;
   height: 4px;
@@ -94,6 +136,15 @@ const Dot = styled.button<{ active: boolean }>`
   background-color: ${(props) => (props.active ? '#1E4785' : '#D9D9D9')};
   cursor: pointer;
   transition: background-color 0.3s ease;
+`;
+
+const MobileDot = styled.button<{ active: boolean }>`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: ${(props) => (props.active ? '#1E4785' : '#D9D9D9')};
+  cursor: pointer;
 `;
 
 export const Carousel = ({
@@ -108,6 +159,7 @@ export const Carousel = ({
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const { isMobile } = useResponsive();
 
   useEffect(() => {
     if (isPaused) return;
@@ -133,7 +185,9 @@ export const Carousel = ({
 
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const diff = clientX - startX;
-    setDragOffset(diff);
+    const maxDrag = window.innerWidth;
+    const boundedDiff = Math.max(Math.min(diff, maxDrag), -maxDrag);
+    setDragOffset(boundedDiff);
   };
 
   const handleDragEnd = () => {
@@ -162,7 +216,10 @@ export const Carousel = ({
         onMouseUp={handleDragEnd}
         onMouseLeave={handleDragEnd}
         onTouchStart={handleDragStart}
-        onTouchMove={handleDragMove}
+        onTouchMove={(e) => {
+          e.preventDefault();
+          handleDragMove(e);
+        }}
         onTouchEnd={handleDragEnd}
         style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
       >
@@ -181,16 +238,27 @@ export const Carousel = ({
           </Slide>
         ))}
       </SlideContainer>
-
-      <NavigationDots>
-        {stories.map((_, index) => (
-          <Dot
-            key={index}
-            active={currentSlide === index}
-            onClick={() => setCurrentSlide(index)}
-          />
-        ))}
-      </NavigationDots>
+      {isMobile ? (
+        <MobileNavigationDots>
+          {stories.map((_, index) => (
+            <MobileDot
+              key={index}
+              active={currentSlide === index}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </MobileNavigationDots>
+      ) : (
+        <NavigationDots>
+          {stories.map((_, index) => (
+            <Dot
+              key={index}
+              active={currentSlide === index}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </NavigationDots>
+      )}
     </Container>
   );
 };
