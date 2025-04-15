@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { BREAKPOINTS } from '../../hooks/useResponsive';
 
 const Wrapper = styled.div`
   position: relative;
@@ -17,6 +18,11 @@ const ImageContainer = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 16px;
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    width: 100%;
+    border-radius: 0;
+    object-position: top;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -47,6 +53,21 @@ const SearchBar = styled.div`
   img {
     width: 20px;
     height: 20px;
+  }
+  @media screen and (max-width: ${BREAKPOINTS.large}px) {
+    width: 60%;
+  }
+  @media screen and (max-width: ${BREAKPOINTS.medium}px) {
+    width: 70%;
+    height: 45px;
+    font-size: 10px;
+    div {
+      font-size: 10px;
+    }
+    img {
+      width: 12px;
+      height: 12px;
+    }
   }
 `;
 
