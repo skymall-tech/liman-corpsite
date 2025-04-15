@@ -50,7 +50,7 @@ export const useScrollSections = ({
       } else if (event.deltaY < 0 && currentIndex > 0) {
         event.preventDefault();
         if (currentIndex === 1) {
-          scrollToSection('navigation-container');
+          scrollToSection('first-screen');
         } else {
           scrollToSection(sections[currentIndex - 1]);
         }
