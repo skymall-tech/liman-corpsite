@@ -12,6 +12,8 @@ import {
   getShenyangStore,
   getShenzhenStore,
 } from './const';
+import { useResponsive } from '../../../hooks/useResponsive';
+import { ShopCardMobile } from '../../../components/ShopCardMobile/StoreDetail';
 
 const ArtContainer = styled.div`
   width: 100vw;
@@ -31,8 +33,31 @@ export const ArtSection = () => {
   const { t } = useTranslation();
   const [currentStore, setCurrentStore] = useState(getBeijingStore(t));
   const [showLarge, setShowLarge] = useState(false);
+
+  const { isMobile } = useResponsive();
+
+  const storeMap = {
+    beijing: getBeijingStore(t),
+    macau: getMacauStore(t),
+    guangzhou: getGuangzhouStore(t),
+    shenzhen: getShenzhenStore(t),
+    shenyang: getShenyangStore(t),
+  };
+
+  if (isMobile) {
+    return (
+      <ArtContainer id="art-section" onClick={() => setShowLarge(false)}>
+        <SectionTitle
+          title={t('satellite_paris.art.title')}
+          subtitle={t('satellite_paris.art.subtitle')}
+        />{' '}
+        <ShopCardMobile storeMap={storeMap} />{' '}
+      </ArtContainer>
+    );
+  }
+
   return (
-    <ArtContainer id='art-section' onClick={() => setShowLarge(false)}>
+    <ArtContainer id="art-section" onClick={() => setShowLarge(false)}>
       <SectionTitle
         title={t('satellite_paris.art.title')}
         subtitle={t('satellite_paris.art.subtitle')}
@@ -40,7 +65,7 @@ export const ArtSection = () => {
       {!showLarge ? (
         <Container>
           <ShopCard
-            image='https://cdn.liman.group/stores/SATELLITE/beijing1.webp'
+            image="https://cdn.liman.group/stores/SATELLITE/beijing1.webp"
             title={t('common.beijing')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -49,7 +74,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image='https://cdn.liman.group/stores/SATELLITE/sanba1.webp'
+            image="https://cdn.liman.group/stores/SATELLITE/sanba1.webp"
             title={t('common.macau')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -58,7 +83,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image='https://cdn.liman.group/stores/SATELLITE/gaungzhou1.webp'
+            image="https://cdn.liman.group/stores/SATELLITE/gaungzhou1.webp"
             title={t('common.guangzhou')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -67,7 +92,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image='https://cdn.liman.group/stores/SATELLITE/shenzhen1.webp'
+            image="https://cdn.liman.group/stores/SATELLITE/shenzhen1.webp"
             title={t('common.shenzhen')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();
@@ -76,7 +101,7 @@ export const ArtSection = () => {
             }}
           ></ShopCard>
           <ShopCard
-            image='https://cdn.liman.group/stores/SATELLITE/shenyang1.webp'
+            image="https://cdn.liman.group/stores/SATELLITE/shenyang1.webp"
             title={t('common.shenyang')}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
               e.stopPropagation();

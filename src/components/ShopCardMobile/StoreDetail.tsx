@@ -150,6 +150,24 @@ const AddressIcon = styled.img`
   height: 15px;
 `;
 
+const ImageSwitchButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #333;
+  z-index: 1;
+`;
+
 interface StoreSlideProps {
   store: Store;
   showLarge: boolean;
@@ -161,16 +179,36 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
   showLarge,
   onToggleExpand,
 }) => {
+  const hasAddress = store.address.length > 0;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === store.images.length - 1 ? 0 : prev + 1
+    );
+  };
+
   return (
     <div style={{ position: 'relative' }}>
-      <StoreImage src={store.images[0]} alt="" />
-      <BlurredBoxContainer onClick={onToggleExpand}>
-        <ArrowIcon
-          src={expandWhiteIcon}
-          alt="Expand Icon"
-          animate={{ rotate: showLarge ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        />
+      <StoreImage src={store.images[currentImageIndex]} alt="" />
+      {store.images.length > 1 && store.images.length < 1 && (
+        <ImageSwitchButton onClick={handleNextImage}>⟳</ImageSwitchButton>
+      )}
+      <BlurredBoxContainer
+        onClick={() => {
+          if (hasAddress) {
+            onToggleExpand();
+          }
+        }}
+      >
+        {hasAddress && (
+          <ArrowIcon
+            src={expandWhiteIcon}
+            alt="Expand Icon"
+            animate={{ rotate: showLarge ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          />
+        )}
         <div
           style={{
             position: 'relative',
