@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import moreIcon from '../../assets/icons/more.svg';
 import { keyframes } from '@emotion/react';
 import { LargeTitle } from '../../components/largeTitle';
-import { BREAKPOINTS } from '../../hooks/useResponsive';
+import { BREAKPOINTS, useResponsive } from '../../hooks/useResponsive';
+import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 
 const bounce = keyframes`
   0%, 100% {
@@ -76,6 +77,26 @@ const MoreIcon = styled.img`
   user-drag: none;
 `;
 
+const getNavBottom = (): string => {
+  const isWechat = /MicroMessenger/i.test(navigator.userAgent);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const isSafari =
+    /Safari/i.test(navigator.userAgent) && !/Chrome/i.test(navigator.userAgent);
+  const isChrome = /Chrome/i.test(navigator.userAgent) && !isWechat;
+
+  let navBottom = '0px'; // Default for desktop and WeChat
+
+  if (isMobile) {
+    if (isChrome) {
+      navBottom = '80px';
+    } else if (isSafari) {
+      navBottom = '70px';
+    }
+  }
+
+  return navBottom;
+};
+
 export const FirstScreen = ({
   title,
   desc,
@@ -96,16 +117,21 @@ export const FirstScreen = ({
     }
   };
 
-  const isWechat = /MicroMessenger/i.test(navigator.userAgent);
-  const navBottom = isWechat ? '0px' : '80px';
+  const navBottom = getNavBottom();
+  const navHeight = useNavigationHeight();
+  const { isMobile } = useResponsive();
 
   return (
-    <ImageContainer navHeight={0} navBottom={navBottom} id="first-screen">
-      <StyledImage src={image} alt="Main background" />
+    <ImageContainer
+      navHeight={isMobile ? 0 : navHeight}
+      navBottom={navBottom}
+      id='first-screen'
+    >
+      <StyledImage src={image} alt='Main background' />
       {showOverlay && <ImageOverlay />}
       <LargeTitle title={title} desc={desc} />
       <IconContainer onClick={handleIconClick}>
-        <MoreIcon src={moreIcon} alt="More" />
+        <MoreIcon src={moreIcon} alt='More' />
       </IconContainer>
     </ImageContainer>
   );

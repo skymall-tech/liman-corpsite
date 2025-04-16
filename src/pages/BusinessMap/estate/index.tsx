@@ -9,12 +9,12 @@ import { BrandStorySection } from './brandStory';
 export const EstatePage: React.FC = () => {
   const { t } = useTranslation();
   useScrollSections({
-    sections: ['first-screen', 'brand-story', 'armani-casa'],
+    sections: ['first-screen', 'brand-story', 'armani-casa', 'footer'],
   });
   return (
     <PageContainer>
       <FirstScreen
-        nextSectionId="brand-story"
+        nextSectionId='brand-story'
         title={t('culture_estate.page_title')}
         desc={t('culture_estate.page_subtitle')}
         image={'https://cdn.liman.group/first_pic/4.webp'}

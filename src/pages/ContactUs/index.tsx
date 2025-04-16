@@ -4,6 +4,7 @@ import { useNavigationHeight } from '../../hooks/useNavigationHeight';
 import { Footer } from '../../components/Footer';
 import { useTranslation } from 'react-i18next';
 import { BREAKPOINTS } from '../../hooks/useResponsive';
+import { useScrollSections } from '../../hooks/useScrollSections';
 
 const Container = styled.div`
   padding: 0 20px;
@@ -81,10 +82,13 @@ const ContactLink = styled.a`
 export const ContactUsPage = () => {
   const navHeight = useNavigationHeight();
   const { t } = useTranslation();
+  useScrollSections({
+    sections: ['first-screen', 'contact-us', 'footer'],
+  });
 
   return (
     <Container>
-      <MainPage navHeight={navHeight}>
+      <MainPage navHeight={navHeight} id='contact-us'>
         <SectionTitle
           title={t('contact_us.title')}
           subtitle={t('contact_us.subtitle')}

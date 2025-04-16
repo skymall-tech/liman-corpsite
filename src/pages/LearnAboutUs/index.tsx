@@ -17,6 +17,7 @@ export const LearnAboutUsPage: React.FC = () => {
       'business-map-section',
       'odyssey-section',
       'team-section',
+      'footer',
     ],
   });
 
@@ -24,10 +25,10 @@ export const LearnAboutUsPage: React.FC = () => {
     <PageContainer>
       <FirstScreen
         showOverlay={false}
-        nextSectionId="business-map-section"
+        nextSectionId='business-map-section'
         title={t('about_us.page_title')}
         desc={t('about_us.page_subtitle')}
-        image="https://cdn.liman.group/first_pic/1.png"
+        image='https://cdn.liman.group/first_pic/1.png'
       />
       <BusinessMapSection />
       <OdysseySection />

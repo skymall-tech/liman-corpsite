@@ -69,9 +69,9 @@ const Copyright = styled.div`
 export const DesktopFooter = () => {
   const { t } = useTranslation();
   return (
-    <FooterWrapper>
+    <FooterWrapper id='footer'>
       <FooterContent>
-        <LogoImage src={Logo} alt="Liman Logo" />
+        <LogoImage src={Logo} alt='Liman Logo' />
         <Divider />
         <LinkSection style={{ marginLeft: '30px' }}>
           <h3>{t('footer.business_map')}</h3>
@@ -113,13 +113,13 @@ export const DesktopFooter = () => {
           <h3>{t('footer.business_cooperation')}</h3>
           <ul>
             <li>
-              <a href="mailto:bc@liman.group">bc@liman.group</a>
+              <a href='mailto:bc@liman.group'>bc@liman.group</a>
             </li>
           </ul>
           <h3>{t('footer.join_us')}</h3>
           <ul>
             <li>
-              <a href="mailto:hr@liman.group">hr@liman.group</a>
+              <a href='mailto:hr@liman.group'>hr@liman.group</a>
             </li>
           </ul>
         </LinkSection>

@@ -9,13 +9,19 @@ import { JewelrySection } from './JewelrySection';
 
 export const SatellitePage: React.FC = () => {
   useScrollSections({
-    sections: ['first-screen', 'brand-story', 'art-section', 'jewelry'],
+    sections: [
+      'first-screen',
+      'brand-story',
+      'art-section',
+      'jewelry',
+      'footer',
+    ],
   });
   const { t } = useTranslation();
   return (
     <PageContainer>
       <FirstScreen
-        nextSectionId="brand-story"
+        nextSectionId='brand-story'
         title={t('satellite_paris.page_title')}
         desc={t('satellite_paris.page_subtitle')}
         image={'https://cdn.liman.group/first_pic/2.webp'}

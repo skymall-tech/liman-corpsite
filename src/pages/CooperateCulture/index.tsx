@@ -1,7 +1,7 @@
 import { Footer } from '../../components/Footer';
 import { PageContainer } from '../../components/PageConatiner';
 import { useScrollSections } from '../../hooks/useScrollSections';
-import { CustomerRightsMobileView } from './CustomerRights';
+import { CustomerRights } from './CustomerRights';
 import { MVVSection } from './MvvSection';
 import {
   SocialResponsibility,
@@ -16,7 +16,7 @@ export const CooperateCulturePage: React.FC = () => {
   useScrollSections({
     sections: isMobile
       ? ['mvv-section', 'social-responsibility']
-      : ['mvv-section', 'social-responsibility', 'customer-rights'],
+      : ['mvv-section', 'social-responsibility', 'customer-rights', 'footer'],
   });
   return (
     <PageContainer>
@@ -26,7 +26,7 @@ export const CooperateCulturePage: React.FC = () => {
       ) : (
         <SocialResponsibility></SocialResponsibility>
       )}
-      {!isMobile && <CustomerRightsMobileView></CustomerRightsMobileView>}
+      {!isMobile && <CustomerRights></CustomerRights>}
       <Footer></Footer>
     </PageContainer>
   );
