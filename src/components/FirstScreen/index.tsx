@@ -5,6 +5,7 @@ import { keyframes } from '@emotion/react';
 import { LargeTitle } from '../../components/largeTitle';
 import { BREAKPOINTS, useResponsive } from '../../hooks/useResponsive';
 import { useNavigationHeight } from '../../hooks/useNavigationHeight';
+import { getNavBottom } from '../../utils';
 
 const bounce = keyframes`
   0%, 100% {
@@ -76,26 +77,6 @@ const MoreIcon = styled.img`
   -o-user-drag: none;
   user-drag: none;
 `;
-
-const getNavBottom = (): string => {
-  const isWechat = /MicroMessenger/i.test(navigator.userAgent);
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const isSafari =
-    /Safari/i.test(navigator.userAgent) && !/Chrome/i.test(navigator.userAgent);
-  const isChrome = /Chrome/i.test(navigator.userAgent) && !isWechat;
-
-  let navBottom = '0px'; // Default for desktop and WeChat
-
-  if (isMobile) {
-    if (isChrome) {
-      navBottom = '80px';
-    } else if (isSafari) {
-      navBottom = '70px';
-    }
-  }
-
-  return navBottom;
-};
 
 export const FirstScreen = ({
   title,

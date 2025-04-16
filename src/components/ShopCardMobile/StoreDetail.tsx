@@ -52,7 +52,7 @@ const StoreTags = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  padding: 0 20px;
+  padding: 0 0px 0 40px;
 `;
 
 const StoreTag = styled.div<{ isActive?: boolean }>`
@@ -80,6 +80,7 @@ const StoreImage = styled.img`
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+  background-color: rgba(181, 145, 82, 0.7);
 `;
 
 const ArrowIcon = styled(motion.img)`
@@ -153,19 +154,31 @@ const AddressIcon = styled.img`
 const ImageSwitchButton = styled.button`
   position: absolute;
   top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.7);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #333;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid white;
+`;
+
+const Dot = styled.div`
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
 `;
 
 interface StoreSlideProps {
@@ -190,9 +203,13 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
 
   return (
     <div style={{ position: 'relative' }}>
-      <StoreImage src={store.images[currentImageIndex]} alt="" />
-      {store.images.length > 1 && store.images.length < 1 && (
-        <ImageSwitchButton onClick={handleNextImage}>⟳</ImageSwitchButton>
+      <StoreImage src={store.images[currentImageIndex]} alt='' />
+      {store.images.length > 1 && (
+        <ImageSwitchButton onClick={handleNextImage}>
+          <Dot></Dot>
+          <Dot></Dot>
+          <Dot></Dot>
+        </ImageSwitchButton>
       )}
       <BlurredBoxContainer
         onClick={() => {
@@ -204,7 +221,7 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
         {hasAddress && (
           <ArrowIcon
             src={expandWhiteIcon}
-            alt="Expand Icon"
+            alt='Expand Icon'
             animate={{ rotate: showLarge ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           />
@@ -230,7 +247,7 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
                 <AddressContainer>
                   <Address>
                     <span style={{ flexShrink: 0 }}>
-                      <AddressIcon src={locationIcon} alt="location" />
+                      <AddressIcon src={locationIcon} alt='location' />
                     </span>
                     <span style={{ flex: 9 }}>{store.address}</span>
                   </Address>

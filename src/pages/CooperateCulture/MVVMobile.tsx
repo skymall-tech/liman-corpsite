@@ -5,10 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useNavigationHeight } from '../../hooks/useNavigationHeight';
+import { getNavBottom } from '../../utils';
 
-const Container = styled.div<{ navHeight: number }>`
-  height: 100vh;
-  margin-top: 80px;
+const Container = styled.div<{ navHeight: number; navBottom: string }>`
+  height: calc(100vh - ${({ navBottom }) => navBottom});
+  margin-top: 30px;
   width: 100%;
   padding-top: ${({ navHeight }) => navHeight}px;
   display: flex;
@@ -115,9 +116,9 @@ const Paragraph = styled.p`
 export const MVVMobile = () => {
   const navHeight = useNavigationHeight();
   const { t } = useTranslation();
-
+  const navBottom = getNavBottom();
   return (
-    <Container id="mvv-section" navHeight={navHeight}>
+    <Container id='mvv-section' navHeight={navHeight} navBottom={navBottom}>
       <Swiper
         modules={[Pagination]}
         pagination={{
@@ -131,7 +132,7 @@ export const MVVMobile = () => {
       >
         <SwiperSlide>
           <Card>
-            <CardContent src="https://cdn.liman.group/culture_back/1.webp">
+            <CardContent src='https://cdn.liman.group/culture_back/1.webp'>
               <Title>{t('cooperate_culture.mvv.mission.title')}</Title>
               <ShortDescription>
                 {t('cooperate_culture.mvv.mission.short_desc')}
@@ -145,7 +146,7 @@ export const MVVMobile = () => {
 
         <SwiperSlide>
           <Card>
-            <CardContent src="https://cdn.liman.group/culture_back/2.webp">
+            <CardContent src='https://cdn.liman.group/culture_back/2.webp'>
               <Title>{t('cooperate_culture.mvv.value.title')}</Title>
               <ShortDescription>
                 {t('cooperate_culture.mvv.value.short_desc')}
@@ -159,7 +160,7 @@ export const MVVMobile = () => {
 
         <SwiperSlide>
           <Card>
-            <CardContent src="https://cdn.liman.group/culture_back/3.webp">
+            <CardContent src='https://cdn.liman.group/culture_back/3.webp'>
               <Title>{t('cooperate_culture.mvv.vision.title')}</Title>
               <ShortDescription>
                 {t('cooperate_culture.mvv.vision.short_desc')}
