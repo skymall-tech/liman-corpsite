@@ -12,6 +12,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   overflow: visible;
+  margin-top: 40px;
 `;
 
 export const GlobalRetailSectionDesktop = ({
