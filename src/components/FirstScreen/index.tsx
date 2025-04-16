@@ -14,13 +14,17 @@ const bounce = keyframes`
   }
 `;
 
-export const ImageContainer = styled.div<{ navHeight: number }>`
+export const ImageContainer = styled.div<{
+  navHeight: number;
+  navBottom: string;
+}>`
   width: 100vw;
   height: ${({ navHeight }) => `calc(100vh - ${navHeight}px)`};
   overflow: hidden;
   position: relative;
   @media screen and (max-width: ${BREAKPOINTS.medium}px) {
-    height: ${({ navHeight }) => `calc(100vh - ${navHeight}px - 80px)`};
+    height: ${({ navHeight, navBottom }) =>
+      `calc(100vh - ${navHeight}px - ${navBottom})`};
   }
 `;
 
@@ -92,13 +96,16 @@ export const FirstScreen = ({
     }
   };
 
+  const isWechat = /MicroMessenger/i.test(navigator.userAgent);
+  const navBottom = isWechat ? '0px' : '80px';
+
   return (
-    <ImageContainer navHeight={0} id='first-screen'>
-      <StyledImage src={image} alt='Main background' />
+    <ImageContainer navHeight={0} navBottom={navBottom} id="first-screen">
+      <StyledImage src={image} alt="Main background" />
       {showOverlay && <ImageOverlay />}
       <LargeTitle title={title} desc={desc} />
       <IconContainer onClick={handleIconClick}>
-        <MoreIcon src={moreIcon} alt='More' />
+        <MoreIcon src={moreIcon} alt="More" />
       </IconContainer>
     </ImageContainer>
   );

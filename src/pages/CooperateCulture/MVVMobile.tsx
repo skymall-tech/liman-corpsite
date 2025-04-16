@@ -117,7 +117,7 @@ export const MVVMobile = () => {
   const { t } = useTranslation();
 
   return (
-    <Container id='mvv-section' navHeight={navHeight}>
+    <Container id="mvv-section" navHeight={navHeight}>
       <Swiper
         modules={[Pagination]}
         pagination={{
@@ -131,7 +131,7 @@ export const MVVMobile = () => {
       >
         <SwiperSlide>
           <Card>
-            <CardContent src='https://cdn.liman.group/culture_back/1.webp'>
+            <CardContent src="https://cdn.liman.group/culture_back/1.webp">
               <Title>{t('cooperate_culture.mvv.mission.title')}</Title>
               <ShortDescription>
                 {t('cooperate_culture.mvv.mission.short_desc')}
@@ -145,7 +145,7 @@ export const MVVMobile = () => {
 
         <SwiperSlide>
           <Card>
-            <CardContent src='https://cdn.liman.group/culture_back/2.webp'>
+            <CardContent src="https://cdn.liman.group/culture_back/2.webp">
               <Title>{t('cooperate_culture.mvv.value.title')}</Title>
               <ShortDescription>
                 {t('cooperate_culture.mvv.value.short_desc')}
@@ -159,7 +159,7 @@ export const MVVMobile = () => {
 
         <SwiperSlide>
           <Card>
-            <CardContent src='https://cdn.liman.group/culture_back/3.webp'>
+            <CardContent src="https://cdn.liman.group/culture_back/3.webp">
               <Title>{t('cooperate_culture.mvv.vision.title')}</Title>
               <ShortDescription>
                 {t('cooperate_culture.mvv.vision.short_desc')}

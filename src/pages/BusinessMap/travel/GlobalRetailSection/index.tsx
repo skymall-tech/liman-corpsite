@@ -1,17 +1,16 @@
 import styled from '@emotion/styled';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
-import { getBeijingStore } from '../conts';
+import { getBeijingStore, getShenyangStore } from '../conts';
 import { useResponsive } from '../../../../hooks/useResponsive';
 import { GlobalRetailSectionDesktop } from './Desktop';
-import { GlobalRetailSectionMobile } from './Mobile';
 import { SectionTitle } from '../../../../components/Title';
+import { ShopCardMobile } from '../../../../components/ShopCardMobile/StoreDetail';
 
 const PartnerPortContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-  // min-height: 100dvh;
 `;
 
 export const GlobalRetailSection = () => {
@@ -19,10 +18,24 @@ export const GlobalRetailSection = () => {
   const [currentStore, setCurrentStore] = useState(getBeijingStore(t));
   const [showLarge, setShowLarge] = useState(false);
   const { isDesktop } = useResponsive();
+  const storeMap = useMemo(() => {
+    return {
+      beijing: getBeijingStore(t),
+      macau: [
+        {
+          id: 'macau',
+          name: t('common.opening_soon'),
+          address: [],
+          images: ['https://cdn.liman.group/stores/travel/macau/skymall2.webp'],
+        },
+      ],
+      shenyang: getShenyangStore(t),
+    };
+  }, [t]);
 
   return (
     <PartnerPortContainer
-      id='partner-port'
+      id="partner-port"
       onClick={isDesktop ? () => setShowLarge(false) : undefined}
     >
       <SectionTitle
@@ -37,12 +50,7 @@ export const GlobalRetailSection = () => {
           setCurrentStore={setCurrentStore}
         />
       ) : (
-        <GlobalRetailSectionMobile
-          showLarge={showLarge}
-          setShowLarge={setShowLarge}
-          currentStore={currentStore}
-          setCurrentStore={setCurrentStore}
-        />
+        <ShopCardMobile storeMap={storeMap} />
       )}
     </PartnerPortContainer>
   );
