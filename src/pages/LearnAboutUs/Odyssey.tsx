@@ -32,7 +32,6 @@ const OdysseyContainer = styled.div<{ backgroundImage: string }>`
       background-position: center;
       background-repeat: no-repeat;
       object-fit: cover;
-      opacity: 0.2;
       z-index: 0;
       transition: background-image 0.3s ease;
     }
@@ -44,8 +43,9 @@ const OdysseyContainer = styled.div<{ backgroundImage: string }>`
       left: 0;
       right: 0;
       bottom: 0;
-      background: #2c1c00;
-      opacity: 0.7;
+      background: #6e6e6e;
+      mix-blend-mode: multiply;
+      opacity: 1;
       z-index: 0;
     }
 
@@ -120,6 +120,15 @@ const MobileCard = styled.div`
   background: transparent;
   padding: 16px;
   cursor: pointer;
+`;
+
+const ExpandIcon = styled.img<{ isExpanded: boolean }>`
+  width: 20px;
+  height: 10px;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(23%) saturate(638%)
+    hue-rotate(332deg) brightness(101%) contrast(101%);
+  transform: rotate(${(props) => (props.isExpanded ? '180deg' : '0deg')});
+  transition: transform 0.3s ease;
 `;
 
 const MobileDescription = styled(motion.div)`
@@ -413,17 +422,10 @@ export const OdysseySection = () => {
               >
                 <CardHeader>
                   <YearText>{event.year}</YearText>
-                  <motion.img
+                  <ExpandIcon
                     src={expandDownIcon}
                     alt='Expand'
-                    animate={{ rotate: expandedCard === event.year ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    style={{
-                      width: '20px',
-                      height: '10px',
-                      filter:
-                        'brightness(0) saturate(100%) invert(83%) sepia(23%) saturate(638%) hue-rotate(332deg) brightness(101%) contrast(101%)',
-                    }}
+                    isExpanded={expandedCard === event.year}
                   />
                 </CardHeader>
                 <AnimatePresence initial={false}>
