@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -53,6 +52,7 @@ const StoreTags = styled.div`
   justify-content: flex-start;
   gap: 10px;
   padding: 0 0px 0 40px;
+  flex-wrap: wrap;
 `;
 
 const StoreTag = styled.div<{ isActive?: boolean }>`
@@ -83,14 +83,17 @@ const StoreImage = styled.img`
   background-color: rgba(181, 145, 82, 0.7);
 `;
 
-const ArrowIcon = styled(motion.img)`
+const ArrowIcon = styled.img<{ expanded: boolean }>`
   width: 20px;
   height: 10px;
   position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  transform: ${({ expanded }) =>
+    expanded
+      ? 'translateX(-50%) rotate(180deg)'
+      : 'translateX(-50%) rotate(0deg)'};
+  transition: transform 0.5s ease;
 `;
 
 const BlurredBoxContainer = styled.div`
@@ -107,12 +110,18 @@ const BlurredBoxContainer = styled.div`
   }
 `;
 
-const StoreTitleContainer = styled(motion.div)`
+const StoreTitleContainer = styled.div<{ expanded: boolean }>`
   width: 100%;
   background-color: rgba(179, 179, 179, 0.4);
   backdrop-filter: blur(10px);
   border-radius: 8px;
   border: 1px solid white;
+  min-height: ${({ expanded }) => (expanded ? '150px' : '')};
+  padding: 8px;
+  padding-top: ${({ expanded }) => (expanded ? '20px' : '8px')};
+  padding-bottom: ${({ expanded }) => (expanded ? '20px' : '8px')};
+  text-align: center;
+  transition: all 0.2s ease;
 `;
 
 const StoreTitle = styled.h3`
@@ -183,17 +192,12 @@ const Dot = styled.div`
 
 interface StoreSlideProps {
   store: Store;
-  showLarge: boolean;
-  onToggleExpand: () => void;
 }
 
-const StoreSlide: React.FC<StoreSlideProps> = ({
-  store,
-  showLarge,
-  onToggleExpand,
-}) => {
+const StoreSlide: React.FC<StoreSlideProps> = ({ store }) => {
   const hasAddress = store.address.length > 0;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [expanded, setExpanded] = useState(false);
 
   const handleNextImage = () => {
     setCurrentImageIndex((prev) =>
@@ -214,7 +218,7 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
       <BlurredBoxContainer
         onClick={() => {
           if (hasAddress) {
-            onToggleExpand();
+            setExpanded((prev) => !prev);
           }
         }}
       >
@@ -222,8 +226,7 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
           <ArrowIcon
             src={expandWhiteIcon}
             alt='Expand Icon'
-            animate={{ rotate: showLarge ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            expanded={expanded}
           />
         )}
         <div
@@ -234,16 +237,10 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
             cursor: 'pointer',
           }}
         >
-          <StoreTitleContainer
-            animate={{
-              height: showLarge ? '400px' : '',
-              padding: showLarge ? '40px' : '8px',
-            }}
-            transition={{ duration: 0.3 }}
-          >
+          <StoreTitleContainer expanded={expanded}>
             <ExpandableContainer>
               <StoreTitle>{store.name}</StoreTitle>
-              {showLarge && (
+              {expanded && (
                 <AddressContainer>
                   <Address>
                     <span style={{ flexShrink: 0 }}>
@@ -262,8 +259,6 @@ const StoreSlide: React.FC<StoreSlideProps> = ({
 };
 
 const StoreDetail = ({ currentStore }: { currentStore: Store[] }) => {
-  const [showLarge, setShowLarge] = useState(false);
-
   return (
     <Container>
       <Swiper
@@ -279,11 +274,7 @@ const StoreDetail = ({ currentStore }: { currentStore: Store[] }) => {
       >
         {currentStore.map((store) => (
           <SwiperSlide key={store.id}>
-            <StoreSlide
-              store={store}
-              showLarge={showLarge}
-              onToggleExpand={() => setShowLarge((prev) => !prev)}
-            />
+            <StoreSlide store={store} />
           </SwiperSlide>
         ))}
       </Swiper>
