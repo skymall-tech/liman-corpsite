@@ -31,7 +31,7 @@ const ContentTitle = styled.h3`
   margin-top: 20px;
   font-size: var(--font-size-h3);
   color: var(--color-secondary);
-  margin-bottom: 16px;
+  margin-bottom: 25px;
   border-bottom: 1px solid var(--color-primary);
   padding-bottom: 8px;
 `;
@@ -43,6 +43,13 @@ const Paragraph = styled.p`
   margin-bottom: 16px;
 `;
 
+const Divider = styled.div`
+  width: 100%;
+  margin: 40px auto;
+  height: 1px;
+  background-color: var(--color-primary);
+`;
+
 interface RewardsMobileProps {
   id: string;
   title?: string;
@@ -52,6 +59,8 @@ interface RewardsMobileProps {
   imageSrc: string;
   imageAlt?: string;
   showTitle?: boolean;
+  showDivider?: boolean;
+  style?: React.CSSProperties;
 }
 
 export const RewardsMobile = ({
@@ -63,9 +72,11 @@ export const RewardsMobile = ({
   imageSrc,
   imageAlt = 'Rewards',
   showTitle = true,
+  showDivider = true,
+  style,
 }: RewardsMobileProps) => {
   return (
-    <Container id={id}>
+    <Container id={id} style={style}>
       {showTitle && title && subtitle && (
         <SectionTitle title={title} subtitle={subtitle} />
       )}
@@ -78,6 +89,7 @@ export const RewardsMobile = ({
           ))}
         </div>
       </ContentContainer>
+      {showDivider && <Divider />}
     </Container>
   );
 };

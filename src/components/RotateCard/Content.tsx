@@ -9,7 +9,7 @@ const Container = styled.div<{ textAlign: string }>`
 `;
 
 const Divider = styled.div`
-  margin-top: 40px;
+  margin-top: 10px;
   width: 100%;
   height: 1px;
   background-color: var(--color-primary);
@@ -18,11 +18,10 @@ const Divider = styled.div`
 const Title = styled.h2`
   margin-top: 18px;
   color: var(--color-secondary);
-  font-size: calc(var(--font-size-h2) - 2px);
 `;
 const Paragraph = styled.p<{ textAlign: string }>`
   text-align: ${({ textAlign }) => textAlign};
-  font-size: calc(var(--font-size-body) + 4px);
+  font-size: calc(var(--font-size-body) - 1px);
   margin-bottom: 18px;
   color: var(--color-primary);
 `;

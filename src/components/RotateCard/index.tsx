@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   width: max(25vw, 400px);
-  aspect-ratio: 1/1.27;
+  aspect-ratio: 1/1.35;
   position: relative;
   overflow: visible;
 `;

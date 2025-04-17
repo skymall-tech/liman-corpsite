@@ -4,10 +4,7 @@ import { RotateCard } from '../../components/RotateCard';
 import { RotateCardContent } from '../../components/RotateCard/Content';
 import { useTranslation } from 'react-i18next';
 import RewardsMobile from './RewardsMobile';
-import {
-  getCustomerRightsParagraphs,
-  getSocialResponsibilityParagraphs,
-} from './consts';
+import { getSocialResponsibilityParagraphs } from './consts';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
@@ -49,10 +46,7 @@ export const SocialResponsibility = () => {
 
 export const SocialResponsibilityMobileView = () => {
   const { t } = useTranslation();
-  const paragraphs = [
-    ...getSocialResponsibilityParagraphs(t),
-    ...getCustomerRightsParagraphs(t),
-  ];
+  const paragraphs = [...getSocialResponsibilityParagraphs(t)];
 
   return (
     <RewardsMobile

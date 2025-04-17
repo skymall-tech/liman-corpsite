@@ -3,7 +3,10 @@ import { RotateCard } from '../../components/RotateCard';
 import { RotateCardContent } from '../../components/RotateCard/Content';
 import { useTranslation } from 'react-i18next';
 import RewardsMobile from './RewardsMobile';
-import { getCustomerRightsParagraphs } from './consts';
+import {
+  getCommunityParagraphs,
+  getSocialResponsibilityParagraphs,
+} from './consts';
 const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
@@ -25,15 +28,15 @@ const RotateCardContainer = styled.div`
   overflow: visible;
 `;
 
-export const CustomerRights = () => {
+export const CommunityContribution = () => {
   const { t } = useTranslation();
-  const paragraphs = getCustomerRightsParagraphs(t);
+  const paragraphs = getCommunityParagraphs(t);
   return (
-    <Container id='customer-rights'>
+    <Container id='community-contribution'>
       <RotateCardContainer>
         <RotateCardContent
           paragraphs={paragraphs}
-          title={t('cooperate_culture.social_responsibility.customer_rights')}
+          title={t('cooperate_culture.community_contribution.title')}
           textAlign='right'
         ></RotateCardContent>
         <RotateCard
@@ -45,16 +48,35 @@ export const CustomerRights = () => {
   );
 };
 
-export const CustomerRightsMobileView = () => {
+export const SocialResponsibilityMobileView = () => {
   const { t } = useTranslation();
-  const paragraphs = getCustomerRightsParagraphs(t);
+  const paragraphs = getSocialResponsibilityParagraphs(t);
 
   return (
     <RewardsMobile
-      id='customer-rights'
+      id='social-responsibility'
       contentTitle={t(
         'cooperate_culture.social_responsibility.customer_rights'
       )}
+      paragraphs={paragraphs}
+      imageSrc='https://cdn.liman.group/culture_rewards/2.webp'
+      showTitle={false}
+    />
+  );
+};
+
+export const CommunityContributionMobileView = () => {
+  const { t } = useTranslation();
+  const paragraphs = getCommunityParagraphs(t);
+
+  return (
+    <RewardsMobile
+      showDivider={false}
+      style={{
+        marginTop: '3vh',
+      }}
+      id='community-contribution'
+      contentTitle={t('cooperate_culture.community_contribution.title')}
       paragraphs={paragraphs}
       imageSrc='https://cdn.liman.group/culture_rewards/2.webp'
       showTitle={false}

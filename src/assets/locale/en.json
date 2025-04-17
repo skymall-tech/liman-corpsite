@@ -315,14 +315,19 @@
       "p2":"Recognized by Aviation Administration in 2010 with \"Premium Service Merchant\" and \"Best Staff Image Award\".",
       "p3":"In 2011, ten stores under Ruijie received the \"2009 Trusted Consumer Store\" designation from Guangzhou Consumer Council, making the company the most awarded merchant at Baiyun Airport with this honor.",
       "p4":"Honored by Aviation Administration in 2011 with \"Outstanding Asian Games Contribution Merchant Award\".",
-      "p5":"Received 2011 Asian Games Organizing Committee's \"Exceptional Service Contribution Award\"."
+      "p5":"Received 2011 Asian Games Organizing Committee's \"Exceptional Service Contribution Award\".",
+      "p6":"Granted the highest exclusive honor \"Exemplary Integrity Operator Award for Licensed Sales\" by the Asian Games Organizing Committee in 2011 - the sole recipient among licensed merchants.",
+      "p7":"Consecutively certified as \"Guangdong Contract-abiding Credible Enterprise\" by Guangzhou Administration for Market Regulation from 2012 to 2015.",
+      "p8":"Named \"Annual Premium Partner\" by Xiamen Gaoqi Airport in 2017.",
+      "p9":"Awarded \"AAA Credit Enterprise\" certification from 2017 to 2020.",
+      "p10":"Recognized with \"U-Yue Service Model Post\" certification at Shenyang Taoxian Airport."
     },
-    "customer_rights": {
-      "p1":"Granted the highest exclusive honor \"Exemplary Integrity Operator Award for Licensed Sales\" by the Asian Games Organizing Committee in 2011 - the sole recipient among licensed merchants.",
-      "p2":"Consecutively certified as \"Guangdong Contract-abiding Credible Enterprise\" by Guangzhou Administration for Market Regulation from 2012 to 2015.",
-      "p3":"Named \"Annual Premium Partner\" by Xiamen Gaoqi Airport in 2017.",
-      "p4":"Awarded \"AAA Credit Enterprise\" certification from 2017 to 2020.",
-      "p5":"Recognized with \"U-Yue Service Model Post\" certification at Shenyang Taoxian Airport."
+    "community_contribution": {
+      "title": "Community Contribution",
+      "p1": "Honored with the \"Public Welfare Supporter Enterprise\" award by Huadu District, Guangzhou City from 2010 to 2011.",
+      "p2": "Awarded the \"Community Ambassador Award\" by Huadong Town, Huadu District, Guangzhou City in 2014.",
+      "p3": "Received the \"Outstanding Philanthropy Award\" from Huadu District, Guangzhou City between 2014 and 2015.",
+      "p4": "Recognized as a \"Caring Enterprise\" for the Jiusan-New Social Stratum Association – Love & Peace Philanthropy Initiative in 2015."
     }
   },
   "contact_us":{
