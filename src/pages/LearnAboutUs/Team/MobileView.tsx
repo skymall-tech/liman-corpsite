@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { TeamCardProps } from './types';
+import { useEffect, useRef } from 'react';
 
 const Container = styled.div`
   width: 100%;
@@ -130,10 +131,27 @@ export const MobileView = ({ data }: { data: TeamCardProps[] }) => {
   //   // Keep original order for others
   //   return 0;
   // });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const swiperRef = useRef<any>(null);
+  useEffect(() => {
+    // Small timeout to ensure Swiper is fully initialized on mobile
+    const timer = setTimeout(() => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.slideTo(3, 0);
+      }
+    }, 100);
 
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <Container>
       <Swiper
+        onInit={(swiper) => {
+          // Additional initialization to ensure slider starts at slide 3
+          setTimeout(() => {
+            swiper.slideTo(3, 0);
+          }, 0);
+        }}
         modules={[Pagination]}
         pagination={{
           clickable: true,
