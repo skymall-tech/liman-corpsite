@@ -142,7 +142,7 @@ export const MobileView = ({ data }: { data: TeamCardProps[] }) => {
         spaceBetween={20}
         slidesPerView={'auto'}
         centeredSlides={true}
-        initialSlide={0}
+        initialSlide={3}
       >
         {data.map((member, index) => (
           <SwiperSlide key={index}>
