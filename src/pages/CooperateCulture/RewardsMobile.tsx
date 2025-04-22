@@ -3,8 +3,7 @@ import { SectionTitle } from '../../components/Title';
 
 const Container = styled.div`
   width: 100%;
-  min-height: 100vh;
-  // min-height: 100dvh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;

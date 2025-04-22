@@ -72,12 +72,12 @@ const Logo = styled.img`
 
   // Tablet
   @media screen and (min-width: ${BREAKPOINTS.medium}px) and (max-width: ${BREAKPOINTS.large}px) {
-    transform: scale(0.8);
+    transform: scale(0.6) translateY(100px);
   }
 
   // Mobile
   @media screen and (max-width: ${BREAKPOINTS.medium}px) {
-    transform: scale(0.6);
+    transform: scale(0.45) translateY(240px);
   }
 `;
 

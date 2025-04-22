@@ -4,15 +4,15 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 export const Logo = styled.img`
-  width: 93x;
-  height: 41px;
+  width: 69px;
+  height: 30px;
   cursor: pointer;
 `;
 
 export const LangIcon = styled.img`
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 `;
 
 export const DesktopNav = styled.div`
@@ -34,7 +34,7 @@ export const MobileNav = styled.div<{ isOpen?: boolean }>`
   top: ${({ isOpen }) => (isOpen ? '0' : undefined)};
   background: var(--color-background-primary);
   z-index: 100;
-  padding: 25px 32px;
+  padding: 10px 20px;
   box-shadow: 0px 2px 4.7px 0px #0000001a;
 
   /* Logo container */
@@ -51,8 +51,8 @@ export const MobileNav = styled.div<{ isOpen?: boolean }>`
 `;
 
 export const MenuIcon = styled.img<{ isOpen?: boolean }>`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   opacity: ${({ isOpen }) => (isOpen ? 0 : 1)};
   visibility: ${({ isOpen }) => (isOpen ? 'hidden' : 'visible')};
@@ -62,8 +62,8 @@ export const MenuIcon = styled.img<{ isOpen?: boolean }>`
 `;
 
 export const CloseIcon = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -119,10 +119,10 @@ export const SubMenuItem = styled(MobileMenuItem)`
 
 export const MobileMenuContainer = styled(motion.div)`
   position: absolute;
-  top: 91px;
+  top: 50px;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 91px);
+  height: calc(100vh - 50px);
   // height: calc(100dvh - 91px);
   background-color: var(--color-background-primary);
   z-index: 99;
