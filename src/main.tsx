@@ -5,6 +5,9 @@ import { RouterProvider } from 'react-router';
 import { router } from './routes.ts';
 import i18n from './i18n';
 import { LAST_SELECT_LANG } from './utils.ts';
+import { inject } from '@vercel/analytics';
+
+inject();
 
 const browserLang = navigator.language.toLowerCase();
 const savedLanguage = localStorage.getItem(LAST_SELECT_LANG);
