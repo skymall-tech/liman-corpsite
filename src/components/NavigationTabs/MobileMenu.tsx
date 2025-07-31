@@ -65,13 +65,13 @@ export const MobileMenu: React.FC<{
 
   return (
     <>
-      <MobileNav id='mobile-navigation-container' isOpen={isMobileMenuOpen}>
+      <MobileNav id="mobile-navigation-container" isOpen={isMobileMenuOpen}>
         <MenuIcon
           src={menuIcon}
           isOpen={isMobileMenuOpen}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         />
-        <Logo src={logo} />
+        <Logo src={logo} onClick={() => navigate('/')} />
         {isMobileMenuOpen ? (
           <CloseIcon
             src={closeIcon}
