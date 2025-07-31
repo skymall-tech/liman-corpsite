@@ -133,6 +133,7 @@ export const MobileView = ({ data }: { data: TeamCardProps[] }) => {
   // });
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const swiperRef = useRef<any>(null);
+
   useEffect(() => {
     // Small timeout to ensure Swiper is fully initialized on mobile
     const timer = setTimeout(() => {
@@ -143,9 +144,37 @@ export const MobileView = ({ data }: { data: TeamCardProps[] }) => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Add intersection observer to detect when swiper becomes visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && swiperRef.current?.swiper) {
+            // When swiper becomes visible, slide to position 3,0
+            setTimeout(() => {
+              swiperRef.current.swiper.slideTo(3, 0);
+            }, 50);
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    if (swiperRef.current) {
+      observer.observe(swiperRef.current);
+    }
+
+    return () => {
+      if (swiperRef.current) {
+        observer.unobserve(swiperRef.current);
+      }
+    };
+  }, []);
   return (
     <Container>
       <Swiper
+        ref={swiperRef}
         onInit={(swiper) => {
           // Additional initialization to ensure slider starts at slide 3
           setTimeout(() => {
