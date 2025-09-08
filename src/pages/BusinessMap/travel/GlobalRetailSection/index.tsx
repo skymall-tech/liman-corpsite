@@ -26,7 +26,7 @@ export const GlobalRetailSection = () => {
           id: 'macau',
           name: t('common.opening_soon'),
           address: [],
-          images: ['https://cdn.liman.group/stores/travel/macau/skymall2.webp'],
+          images: ['https://cdn.liman.group/stores/travel/macau/skymall3.webp'],
         },
       ],
       shenyang: getShenyangStore(t),
@@ -35,7 +35,7 @@ export const GlobalRetailSection = () => {
 
   return (
     <PartnerPortContainer
-      id="partner-port"
+      id='partner-port'
       onClick={isDesktop ? () => setShowLarge(false) : undefined}
     >
       <SectionTitle

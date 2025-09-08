@@ -59,10 +59,11 @@ const OverlayMaskActive = styled.div`
   mix-blend-mode: multiply;
 `;
 
-const CardImage = styled.div<{ image: string }>`
+const CardImage = styled.div<{ image: string; imagePosition?: string }>`
   background-image: url(${(props) => props.image});
   background-size: cover;
-  background-position: center;
+  background-position: ${(props) =>
+    props.imagePosition === 'left' ? '90% center' : 'center'};
   height: 100%;
   transition: filter 0.3s;
   display: flex;
@@ -127,16 +128,22 @@ export const ShopCard = ({
   title,
   notOpen,
   onClick,
+  imagePosition,
 }: {
   image: string;
   title: string;
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   notOpen?: boolean;
+  imagePosition?: string;
 }) => {
   const { t } = useTranslation();
   return (
     <CardContainer onClick={onClick}>
-      <CardImage image={image} className='card-image' />
+      <CardImage
+        image={image}
+        imagePosition={imagePosition}
+        className='card-image'
+      />
       <OverlayNormal className='overlay-normal'></OverlayNormal>
       <OverlayMaskActive className='overlay-mask-active'></OverlayMaskActive>
       <OverlayTextContainer>
