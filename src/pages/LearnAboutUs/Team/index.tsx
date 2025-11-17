@@ -37,17 +37,6 @@ export const TeamSection = () => {
 
   const teamData = [
     {
-      id: 'luke',
-      name: t('about_us.team.luke.name'),
-      title: t('about_us.team.luke.title'),
-      description: t('about_us.team.luke.description'),
-      image: 'https://cdn.liman.group/team/1.webp',
-      _style: {
-        objectPosition: '15%',
-        transformX: '23%',
-      },
-    },
-    {
       id: 'tim',
       name: t('about_us.team.lizhihua.name'),
       title: t('about_us.team.lizhihua.title'),
@@ -95,17 +84,6 @@ export const TeamSection = () => {
       image: 'https://cdn.liman.group/team/6.webp',
       _style: {
         objectPosition: '15%',
-      },
-    },
-    {
-      id: 'jenny',
-      name: t('about_us.team.lushaojuan.name'),
-      title: t('about_us.team.lushaojuan.title'),
-      description: t('about_us.team.lushaojuan.description'),
-      image: 'https://cdn.liman.group/team/7.webp',
-      _style: {
-        objectPosition: '5%',
-        transformX: '-23%',
       },
     },
   ];
